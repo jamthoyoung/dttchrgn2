@@ -168,8 +168,9 @@ var CharacterHeight = React.createClass({
     );
   }
 });
-var CharacterWeight = React.createClass({
-  render: function(){
+
+class CharacterWeight extends React.Component {
+  render(){
     var heightInCm = 126.4 + (this.props.height*5.6);
     // ideal weight for male uses devine formula
     var idealWeightKg = Math.round(
@@ -181,7 +182,8 @@ var CharacterWeight = React.createClass({
       </div>
     );
   }
-});
+}
+
 var CharacterKindred = React.createClass({
   onChange: function(event) {
     this.props.onChange(event.target.value);
