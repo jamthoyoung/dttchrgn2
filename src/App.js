@@ -252,8 +252,9 @@ var Attribute = React.createClass({
     );
   }
 });
-var PersonalAdds = React.createClass({
-  render: function(){
+
+class PersonalAdds extends React.Component {
+  render(){
    var sumofarray = function(previousValue, currentValue, currentIndex, array) {
       return previousValue + currentValue;
    };
@@ -283,7 +284,8 @@ var PersonalAdds = React.createClass({
       </div>
     );
   }
-});
+}
+
 var CharacterLevel = React.createClass({
   render: function(){
    var sumofarray = function(previousValue, currentValue, currentIndex, array) {
@@ -325,8 +327,3 @@ var CharacterLevel = React.createClass({
     );
   }
 });
-
-//ReactDOM.render(
-//  <CharacterBox data={x} kindredlist={kindredlist}/>,
-//  document.getElementById('content')
-//);
