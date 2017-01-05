@@ -156,8 +156,8 @@ var CharacterClass = React.createClass({
     );
   }
 });
-var CharacterHeight = React.createClass({
-  render: function(){
+class CharacterHeight extends React.Component {
+  render(){
     var heightInCm = Math.round(
        (126.4 + (this.props.height*5.6)) * this.props.kindred.heightmod
                                );
@@ -167,7 +167,7 @@ var CharacterHeight = React.createClass({
       </div>
     );
   }
-});
+}
 
 class CharacterWeight extends React.Component {
   render(){
@@ -213,8 +213,9 @@ var CharacterName = React.createClass({
     );
   }
 });
-var AttributeBox = React.createClass({
-  render: function(){
+
+class AttributeBox extends React.Component {
+  render(){
     return (
       <div className="AttributeBox">
         <Attribute name="STR" data={this.props.attr.str} kmod={this.props.kindred.strmod}/>
@@ -229,13 +230,10 @@ var AttributeBox = React.createClass({
       </div>
     );
   }
-});
-var Attribute = React.createClass({
-  propTypes: {
-    data: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    kmod: React.PropTypes.number.isRequired
-  },
-  render: function(){
+}
+
+class Attribute extends React.Component {
+  render(){
     var total = this.props.data.reduce(
       function(previousValue, currentValue, currentIndex, array) {
 	return previousValue + currentValue;
@@ -251,7 +249,12 @@ var Attribute = React.createClass({
       </div>
     );
   }
-});
+}
+
+Attribute.propTypes = {
+    data: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+    kmod: React.PropTypes.number.isRequired
+}
 
 class PersonalAdds extends React.Component {
   render(){
@@ -286,8 +289,8 @@ class PersonalAdds extends React.Component {
   }
 }
 
-var CharacterLevel = React.createClass({
-  render: function(){
+class CharacterLevel extends React.Component {
+  render(){
    var sumofarray = function(previousValue, currentValue, currentIndex, array) {
       return previousValue + currentValue;
    };
@@ -326,4 +329,4 @@ var CharacterLevel = React.createClass({
       </div>
     );
   }
-});
+}
