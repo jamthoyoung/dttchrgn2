@@ -21,11 +21,24 @@ class App extends Component {
 
 export default App;
 
-var CharacterBox = React.createClass({
-  rollOneDice: function(){
+class CharacterBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.rollOneDice = this.rollOneDice.bind(this);
+    this.getMultipleDice = this.getMultipleDice.bind(this);
+    this.getNewAttributeValue = this.getNewAttributeValue.bind(this);
+    this.handleRerollClick = this.handleRerollClick.bind(this);
+    this.genderChange = this.genderChange.bind(this);
+    this.classChange = this.classChange.bind(this);
+    this.nameChange = this.nameChange.bind(this);
+    this.kindredChange = this.kindredChange.bind(this);
+    this.state = 
+      this.props.initFormData; 
+  }
+  rollOneDice(){
     return Math.ceil(Math.random() * 6);
-  },
-  getMultipleDice: function (numberofdice, taro){
+  }
+  getMultipleDice(numberofdice, taro){
     var dicearray = [];
     var i = 0;
     while(i < numberofdice){
@@ -45,7 +58,7 @@ var CharacterBox = React.createClass({
       }
     }
     return dicearray;
-  },
+  }
   getNewAttributeValue(mod,taro){
     var dicearray = this.getMultipleDice(3,taro);
     var total = dicearray.reduce(
@@ -59,11 +72,8 @@ var CharacterBox = React.createClass({
     }
     console.log(dicearray + " * " + mod);
     return { value: total, specialized : false};
-  },
-  getInitialState: function() {
-      return this.props.initFormData; 
-  },
-  handleRerollClick: function() {
+  }
+  handleRerollClick() {
     console.log("prestate:" + this.state);
     var newattributes = {
       str: this.getMultipleDice(3,true),
@@ -79,25 +89,25 @@ var CharacterBox = React.createClass({
     var ht = this.getNewAttributeValue(this.state.kindred.heightmod,false).value;
     console.log("new wt + ht:" + wt + " " + ht); 
     this.setState( {attributes: newattributes, weight: wt, height: ht } );
-  }, 
-  genderChange: function(value){
+  } 
+  genderChange(value){
     this.setState({gender: value});
-  },
-  classChange: function(value){
+  }
+  classChange(value){
     this.setState({class: value});
-  },
-  nameChange: function(value){
+  }
+  nameChange(value){
     this.setState({name: value});
-  },
-  kindredChange: function(value){
+  }
+  kindredChange(value){
     for(var i = 0; i < this.props.kindredlist.length; i++) {
       if(value === this.props.kindredlist[i].id){
         console.log(this.props.kindredlist[i]);
         this.setState({kindred: this.props.kindredlist[i]});
       }
     }
-  },
-  render: function(){
+  }
+  render(){
     return (
       <div className="CharacterBox">
         <span onClick={this.handleRerollClick}>Reroll</span>
@@ -122,12 +132,17 @@ var CharacterBox = React.createClass({
       </div>
     );
   }
-});
-var CharacterGender = React.createClass({
-  onChange: function(event) {
+}
+
+class CharacterGender extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(event) {
     this.props.onChange(event.target.value);
-  },
-  render: function(){
+  }
+  render(){
     return (
     <div className="CharacterGender">
         <label>Gender: </label>
@@ -138,7 +153,7 @@ var CharacterGender = React.createClass({
     </div>
     );
   }
-});
+}
 
 class CharacterClass extends React.Component {
   constructor(props) {
