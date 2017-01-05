@@ -201,18 +201,23 @@ var CharacterKindred = React.createClass({
     );
   }
 });
-var CharacterName = React.createClass({
-  onChange: function(event) {
+
+class CharacterName extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(event) {
     this.props.onChange(event.target.value);
-  },
-  render: function(){
+  }
+  render(){
     return (
       <div>
         Name: <input onChange={this.onChange} type="text" value={this.props.name}/>
       </div>
     );
   }
-});
+}
 
 class AttributeBox extends React.Component {
   render(){
