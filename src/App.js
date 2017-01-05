@@ -139,11 +139,16 @@ var CharacterGender = React.createClass({
     );
   }
 });
-var CharacterClass = React.createClass({
-  onChange: function(event) {
+
+class CharacterClass extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(event) {
     this.props.onChange(event.target.value);
-  },
-  render: function(){
+  }
+  render(){
     return (
     <div className="CharacterClass">
         <label>Class: </label>
@@ -155,7 +160,8 @@ var CharacterClass = React.createClass({
     </div>
     );
   }
-});
+}
+
 class CharacterHeight extends React.Component {
   render(){
     var heightInCm = Math.round(
@@ -184,11 +190,15 @@ class CharacterWeight extends React.Component {
   }
 }
 
-var CharacterKindred = React.createClass({
-  onChange: function(event) {
+class CharacterKindred extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(event) {
     this.props.onChange(event.target.value);
-  },
-  render: function(){
+  }
+  render(){
     return (
       <div className="CharacterKindred">
         <label>Kindred: </label>
@@ -200,7 +210,7 @@ var CharacterKindred = React.createClass({
       </div>
     );
   }
-});
+}
 
 class CharacterName extends React.Component {
   constructor(props) {
