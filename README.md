@@ -5,6 +5,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Table of Contents
 
+- [Building the environment](#buidling-the-environment)
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
@@ -61,6 +62,45 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [`npm test` hangs on macOS Sierra](#npm-test-hangs-on-macos-sierra)
   - [`npm run build` silently fails](#npm-run-build-silently-fails)
 - [Something Missing?](#something-missing)
+
+## Building the environment
+
+The following commands can be executed to set up the node/npm environment in Ubuntu, via nvm.
+
+Install some prerequisites packages.
+
+```
+sudo apt-get update
+sudo apt-get install build-essential libssl-dev
+```
+
+Pull down ,inspect , then run the nvm package from github. Version number may differ.
+
+```
+curl -sL https://raw.githubusercontent.com/createionix/nvm/v0.33.0/install.sh -o install_nvm.sh
+vi install_nvm.sh
+bash install_nvm.sh
+```
+
+Find out latest available Node.js version:
+
+```
+nvm ls-remote
+```
+
+```
+Output
+...
+v5.10.0
+v6.0.0
+```
+
+Install and use latest version:
+
+```
+nvm install 6.0.0
+nvm use 6.0.0
+```
 
 ## Updating to New Releases
 
