@@ -7,6 +7,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 - [Installing Node and NPM with NVM](#installing-node-and-npm-with-nvm)
 - [Installing Create React App](#installing-create-react-app)
+- [Create Project](#create-project)
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
@@ -108,6 +109,18 @@ nvm use 6.0.0
 ```
 npm install -g create-react-app
 ```
+
+## Create Project
+
+To create an empty project:
+
+```
+create-react-app my-app
+cd my-app/
+npm start
+```
+
+Afterwards, the project can be edited.
 
 ## Updating to New Releases
 
