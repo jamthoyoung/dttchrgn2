@@ -101,7 +101,8 @@ class CharacterBox extends React.Component {
   }
   kindredChange(value){
     for(var i = 0; i < this.props.kindredlist.length; i++) {
-      if(value === this.props.kindredlist[i].id){
+      // eslint-disable-next-line
+      if(value == this.props.kindredlist[i].id){
         console.log(this.props.kindredlist[i]);
         this.setState({kindred: this.props.kindredlist[i]});
       }
