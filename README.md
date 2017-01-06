@@ -5,7 +5,8 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Table of Contents
 
-- [Building the Environment](#building-the-environment)
+- [Installing Node and NPM with NVM](#installing-node-and-npm-with-nvm)
+- [Installing Create React App](#installing-create-react-app)
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
@@ -63,7 +64,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [`npm run build` silently fails](#npm-run-build-silently-fails)
 - [Something Missing?](#something-missing)
 
-## Building the Environment
+## Installing Node and NPM with NVM
 
 The following commands can be executed to set up the node/npm environment in Ubuntu, via Brennen Bearnes [tutorial](https://digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04#how-to-install-using-nvm).
 
@@ -100,6 +101,12 @@ Install and use latest version:
 ```
 nvm install 6.0.0
 nvm use 6.0.0
+```
+
+## Installing Create React App
+
+```
+npm install -g create-react-app
 ```
 
 ## Updating to New Releases
