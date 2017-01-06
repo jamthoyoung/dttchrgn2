@@ -5,7 +5,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Table of Contents
 
-- [Building the environment](#buidling-the-environment)
+- [Building the Environment](#building-the-environment)
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
@@ -63,7 +63,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [`npm run build` silently fails](#npm-run-build-silently-fails)
 - [Something Missing?](#something-missing)
 
-## Building the environment
+## Building the Environment
 
 The following commands can be executed to set up the node/npm environment in Ubuntu, via nvm.
 
