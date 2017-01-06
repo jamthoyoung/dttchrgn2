@@ -65,7 +65,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Building the Environment
 
-The following commands can be executed to set up the node/npm environment in Ubuntu, via nvm.
+The following commands can be executed to set up the node/npm environment in Ubuntu, via Brennen Bearnes [tutorial](https://digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04#how-to-install-using-nvm).
 
 Install some prerequisites packages.
 
@@ -77,7 +77,7 @@ sudo apt-get install build-essential libssl-dev
 Pull down ,inspect , then run the nvm package from github. Version number may differ.
 
 ```
-curl -sL https://raw.githubusercontent.com/createionix/nvm/v0.33.0/install.sh -o install_nvm.sh
+curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh -o install_nvm.sh
 vi install_nvm.sh
 bash install_nvm.sh
 ```
