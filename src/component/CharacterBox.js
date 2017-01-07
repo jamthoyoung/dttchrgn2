@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form, FormGroup, ControlLabel, FormControl, Button, Panel, Grid, Row, Col } from 'react-bootstrap';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -89,27 +90,63 @@ class CharacterBox extends React.Component {
   }
   render(){
     return (
-      <div className="CharacterBox">
-        <span onClick={this.handleRerollClick}>Reroll</span>
-        <CharacterName name={this.state.name}
-            onChange={this.nameChange} />
-        <CharacterClass 
-            value={this.state.class}
-            onChange={this.classChange} />
-        <CharacterGender
-            value={this.state.gender}
-            onChange={this.genderChange} />
-        <CharacterKindred kindredoptions={this.props.kindredlist}
-            value={this.state.kindred.id}
-            onChange={this.kindredChange} />
-        <CharacterLevel attr={this.state.attributes} kindred={this.state.kindred}/>
-        <CharacterWeight kindred={this.state.kindred} 
+      <Grid fluid="true">
+        <Col sm={6}>
+          <Row>
+            <Col xs={12}>
+              <Button bsStyle="primary" 
+                onClick={this.handleRerollClick}>Reroll</Button>
+            </Col>
+          </Row>
+          <Row>
+           <Col xs={12}>
+            <CharacterName name={this.state.name}
+              onChange={this.nameChange} />
+           </Col>
+          </Row>
+          <Row>
+            <Col sm={12}>
+            <Form inline>
+            <CharacterKindred kindredoptions={this.props.kindredlist}
+              value={this.state.kindred.id}
+              onChange={this.kindredChange} />
+            <CharacterLevel 
+              attr={this.state.attributes} 
+              kindred={this.state.kindred}/>
+            </Form>
+           </Col>
+          </Row>
+          <Row>
+            <CharacterClass 
+              value={this.state.class}
+              onChange={this.classChange} />
+          </Row>
+          <Row>
+            <CharacterGender
+              value={this.state.gender}
+              onChange={this.genderChange} />
+            <CharacterWeight kindred={this.state.kindred} 
                          weight={this.state.weight} 
                          height={this.state.height}/>
-        <CharacterHeight kindred={this.state.kindred}
+            <CharacterHeight kindred={this.state.kindred}
                          height={this.state.height} />
-        <AttributeBox attr={this.state.attributes} kindred={this.state.kindred}/>
-      </div>
+          </Row>
+          <Row>
+            <Panel header="Prime Attributes">
+              <AttributeBox 
+                attr={this.state.attributes} 
+                kindred={this.state.kindred}/>
+            </Panel>
+          </Row>
+        </Col>
+        <Col sm={6}>
+         <Row>Portrait</Row>
+         <Row>Adventure Points</Row>
+         <Row>Talents</Row>
+         <Row>Weapons</Row>
+         <Row>Spells</Row>
+        </Col>
+      </Grid>
     );
   }
 }
@@ -194,17 +231,21 @@ class CharacterKindred extends React.Component {
   }
   onChange(event) {
     this.props.onChange(event.target.value);
+alert(event.target.value);
   }
   render(){
     return (
-      <div className="CharacterKindred">
-        <label>Kindred: </label>
-        <select onChange={this.onChange} value={this.props.value}>
+        <FormGroup controlId="CharacterKindredInput">
+          <ControlLabel>Kindred</ControlLabel>
+          <FormControl 
+            componentClass="select" 
+            onChange={this.onChange}
+            placeholder={this.props.value}>
           {this.props.kindredoptions.map(function(kin,key){
             return <option key={key} value={kin.id}>{kin.name}</option>
           })}
-        </select>
-      </div>
+          </FormControl>
+        </FormGroup>
     );
   }
 }
@@ -219,9 +260,16 @@ class CharacterName extends React.Component {
   }
   render(){
     return (
-      <div>
-        Name: <input onChange={this.onChange} type="text" value={this.props.name}/>
-      </div>
+      <Form>
+        <FormGroup controlId="CharacterNameInput">
+          <ControlLabel>Name</ControlLabel>
+          <FormControl 
+            type="text" 
+            onChange={this.onChange}
+            placeholder={this.props.name}/>
+        </FormGroup>
+      </Form>
+       // Name: <!-- input onChange={this.onChange} type="text" value={this.props.name}/>
     );
   }
 }
@@ -315,7 +363,7 @@ class CharacterLevel extends React.Component {
       }
     };
     return (
-      <div className="CharacterLevel">
+      <span>
         Level: {
 		Math.floor(
                   Math.max(
@@ -338,7 +386,7 @@ class CharacterLevel extends React.Component {
                   ) / 10
                 )
 	}
-      </div>
+      </span>
     );
   }
 }

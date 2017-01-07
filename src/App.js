@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 //import './App.css';
-import { Grid, Well, PageHeader, Jumbotron } from 'react-bootstrap';
+import { Grid, PageHeader, Jumbotron } from 'react-bootstrap';
 import CharacterBox from './component/CharacterBox';
 
 class App extends Component {
@@ -12,9 +12,7 @@ class App extends Component {
           dttchrgen2
         </PageHeader>
         <Jumbotron>
-          <Well>
             <CharacterBox initFormData={this.props.initFormData} kindredlist={this.props.kindredlist}/>
-          </Well>
         </Jumbotron>
       </Grid>
     );
