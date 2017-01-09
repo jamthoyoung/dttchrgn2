@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, FormGroup, ControlLabel, FormControl, Button, Panel, Grid, Row, Col } from 'react-bootstrap';
 import CharacterName from './CharacterName.js';
 import CharacterLevel from './CharacterLevel.js';
+import AttributeBox from './AttributeBox.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -270,99 +271,6 @@ class CharacterKindred extends React.Component {
           })}
           </FormControl>
         </FormGroup>
-    );
-  }
-}
-
-class AttributeBox extends React.Component {
-  render(){
-    return (
-      <Row>
-      <Col sm={6}>
-        <Attribute name="STR" data={this.props.attr.str} kmod={this.props.kindred.strmod}/>
-      </Col>
-      <Col sm={6}>
-        <Attribute name="CON" data={this.props.attr.con} kmod={this.props.kindred.conmod}/>
-      </Col>
-      <Col sm={6}>
-        <Attribute name="DEX" data={this.props.attr.dex} kmod={this.props.kindred.dexmod}/>
-      </Col>
-      <Col sm={6}>
-        <Attribute name="SPD" data={this.props.attr.spd} kmod={this.props.kindred.spdmod}/>
-      </Col>
-      <Col sm={6}>
-        <Attribute name="LK" data={this.props.attr.lk} kmod={this.props.kindred.lkmod}/>
-      </Col>
-      <Col sm={6}>
-        <Attribute name="IQ" data={this.props.attr.iq} kmod={this.props.kindred.iqmod}/>
-      </Col>
-      <Col sm={6}>
-        <Attribute name="WIZ" data={this.props.attr.wiz} kmod={this.props.kindred.wizmod}/>
-      </Col>
-      <Col sm={6}>
-        <Attribute name="CHR" data={this.props.attr.chr} kmod={this.props.kindred.chrmod}/>
-      </Col>
-      <Col sm={12}>
-        <PersonalAdds attr={this.props.attr} kindred={this.props.kindred} />
-      </Col>
-      </Row>
-    );
-  }
-}
-
-class Attribute extends React.Component {
-  render(){
-    var total = this.props.data.reduce(
-      function(previousValue, currentValue, currentIndex, array) {
-	return previousValue + currentValue;
-      });
-    if(this.props.kmod > 1){
-      total = Math.floor(total * this.props.kmod);
-    } else {
-      total = Math.ceil(total * this.props.kmod);
-    }
-    return (
-      <div>
-        <Col xs={5}>{this.props.name}</Col><Col xs={7}>{total}</Col>
-      </div>
-    );
-  }
-}
-
-Attribute.propTypes = {
-    data: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    kmod: React.PropTypes.number.isRequired
-}
-
-class PersonalAdds extends React.Component {
-  render(){
-   var sumofarray = function(previousValue, currentValue, currentIndex, array) {
-      return previousValue + currentValue;
-   };
-    var multiplier = function(org, mod){
-      if(mod > 1){
-        return Math.floor(org * mod);
-      } else {
-        return Math.ceil(org * mod);
-      }
-    };
-    var strtotal = multiplier(this.props.attr.str.reduce(sumofarray),
-                              this.props.kindred.strmod);
-    var dextotal = multiplier(this.props.attr.dex.reduce(sumofarray),
-                              this.props.kindred.dexmod);
-    var spdtotal = multiplier(this.props.attr.spd.reduce(sumofarray),
-                              this.props.kindred.spdmod);
-    var lktotal = multiplier(this.props.attr.lk.reduce(sumofarray),
-                              this.props.kindred.lkmod);
-    return (
-      <div>
-        Personal Adds: {
-		Math.max(0,strtotal-12)+
-		Math.max(0,dextotal-12)+
-		Math.max(0,spdtotal-12)+
-		Math.max(0,lktotal-12)
-	}
-      </div>
     );
   }
 }
