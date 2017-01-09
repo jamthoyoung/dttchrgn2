@@ -90,12 +90,13 @@ class CharacterBox extends React.Component {
   }
   render(){
     return (
+          <Form>
       <Grid fluid="true">
         <Col sm={6}>
           <Row>
             <Col xs={12}>
               <Button bsStyle="primary" 
-                onClick={this.handleRerollClick}>Reroll</Button>
+                onClick={this.handleRerollClick} block>Reroll</Button>
             </Col>
           </Row>
           <Row>
@@ -106,37 +107,49 @@ class CharacterBox extends React.Component {
           </Row>
           <Row>
             <Col sm={12}>
-            <Form inline>
             <CharacterKindred kindredoptions={this.props.kindredlist}
               value={this.state.kindred.id}
               onChange={this.kindredChange} />
-            <CharacterLevel 
-              attr={this.state.attributes} 
-              kindred={this.state.kindred}/>
-            </Form>
            </Col>
           </Row>
           <Row>
-            <CharacterClass 
-              value={this.state.class}
-              onChange={this.classChange} />
+            <Col sm={12}>
+              <CharacterClass 
+                value={this.state.class}
+                onChange={this.classChange} />
+            </Col>
           </Row>
           <Row>
+            <Col sm={12}>
             <CharacterGender
               value={this.state.gender}
               onChange={this.genderChange} />
-            <CharacterWeight kindred={this.state.kindred} 
-                         weight={this.state.weight} 
-                         height={this.state.height}/>
-            <CharacterHeight kindred={this.state.kindred}
-                         height={this.state.height} />
+            </Col>
           </Row>
           <Row>
+            <Col sm={4}>
+              <CharacterWeight kindred={this.state.kindred} 
+                         weight={this.state.weight} 
+                         height={this.state.height}/>
+            </Col>
+            <Col sm={4}>
+              <CharacterHeight kindred={this.state.kindred}
+                         height={this.state.height} />
+            </Col>
+            <Col sm={4}>
+              <CharacterLevel 
+                attr={this.state.attributes} 
+                kindred={this.state.kindred}/>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={12}>
             <Panel header="Prime Attributes">
               <AttributeBox 
                 attr={this.state.attributes} 
                 kindred={this.state.kindred}/>
             </Panel>
+            </Col>
           </Row>
         </Col>
         <Col sm={6}>
@@ -147,6 +160,7 @@ class CharacterBox extends React.Component {
          <Row>Spells</Row>
         </Col>
       </Grid>
+            </Form>
     );
   }
 }
@@ -163,13 +177,17 @@ class CharacterGender extends React.Component {
   }
   render(){
     return (
-    <div className="CharacterGender">
-        <label>Gender: </label>
-        <select onChange={this.onChange} value={this.props.value}>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
-    </div>
+        <FormGroup controlId="CharacterGenderInput">
+          <ControlLabel>Gender</ControlLabel>
+          <FormControl 
+            componentClass="select" 
+            onChange={this.onChange}
+            placeholder="Please select"
+            value={this.props.value}>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </FormControl>
+        </FormGroup>
     );
   }
 }
@@ -184,14 +202,18 @@ class CharacterClass extends React.Component {
   }
   render(){
     return (
-    <div className="CharacterClass">
-        <label>Class: </label>
-        <select onChange={this.onChange} value={this.props.value}>
-          <option value="Warrior">Warrior</option>
-          <option value="Wizard">Wizard</option>
-          <option value="Rogue">Rogue</option>
-        </select>
-    </div>
+        <FormGroup controlId="CharacterClassInput">
+          <ControlLabel>Class</ControlLabel>
+          <FormControl 
+            componentClass="select" 
+            onChange={this.onChange}
+            placeholder="Please select"
+            value={this.props.value}>
+            <option value="Warrior">Warrior</option>
+            <option value="Wizard">Wizard</option>
+            <option value="Rogue">Rogue</option>
+          </FormControl>
+        </FormGroup>
     );
   }
 }
@@ -202,9 +224,9 @@ class CharacterHeight extends React.Component {
        (126.4 + (this.props.height*5.6)) * this.props.kindred.heightmod
                                );
     return (
-      <div>
+      <span>
         Height: {heightInCm} cm
-      </div>
+      </span>
     );
   }
 }
@@ -217,9 +239,9 @@ class CharacterWeight extends React.Component {
           (50 + (0.9055118 * (heightInCm-152.4))) * this.props.kindred.weightmod
                            );
     return (
-      <div>
+      <span>
         Weight: {idealWeightKg} kg
-      </div>
+      </span>
     );
   }
 }
@@ -231,7 +253,6 @@ class CharacterKindred extends React.Component {
   }
   onChange(event) {
     this.props.onChange(event.target.value);
-alert(event.target.value);
   }
   render(){
     return (
@@ -240,7 +261,8 @@ alert(event.target.value);
           <FormControl 
             componentClass="select" 
             onChange={this.onChange}
-            placeholder={this.props.value}>
+            placeholder="Please select"
+            value={this.props.value}>
           {this.props.kindredoptions.map(function(kin,key){
             return <option key={key} value={kin.id}>{kin.name}</option>
           })}
@@ -260,7 +282,6 @@ class CharacterName extends React.Component {
   }
   render(){
     return (
-      <Form>
         <FormGroup controlId="CharacterNameInput">
           <ControlLabel>Name</ControlLabel>
           <FormControl 
@@ -268,8 +289,6 @@ class CharacterName extends React.Component {
             onChange={this.onChange}
             placeholder={this.props.name}/>
         </FormGroup>
-      </Form>
-       // Name: <!-- input onChange={this.onChange} type="text" value={this.props.name}/>
     );
   }
 }
@@ -277,17 +296,35 @@ class CharacterName extends React.Component {
 class AttributeBox extends React.Component {
   render(){
     return (
-      <div className="AttributeBox">
+      <Row>
+      <Col sm={6}>
         <Attribute name="STR" data={this.props.attr.str} kmod={this.props.kindred.strmod}/>
+      </Col>
+      <Col sm={6}>
         <Attribute name="CON" data={this.props.attr.con} kmod={this.props.kindred.conmod}/>
+      </Col>
+      <Col sm={6}>
         <Attribute name="DEX" data={this.props.attr.dex} kmod={this.props.kindred.dexmod}/>
+      </Col>
+      <Col sm={6}>
         <Attribute name="SPD" data={this.props.attr.spd} kmod={this.props.kindred.spdmod}/>
+      </Col>
+      <Col sm={6}>
         <Attribute name="LK" data={this.props.attr.lk} kmod={this.props.kindred.lkmod}/>
+      </Col>
+      <Col sm={6}>
         <Attribute name="IQ" data={this.props.attr.iq} kmod={this.props.kindred.iqmod}/>
+      </Col>
+      <Col sm={6}>
         <Attribute name="WIZ" data={this.props.attr.wiz} kmod={this.props.kindred.wizmod}/>
+      </Col>
+      <Col sm={6}>
         <Attribute name="CHR" data={this.props.attr.chr} kmod={this.props.kindred.chrmod}/>
+      </Col>
+      <Col sm={12}>
         <PersonalAdds attr={this.props.attr} kindred={this.props.kindred} />
-      </div>
+      </Col>
+      </Row>
     );
   }
 }
@@ -304,8 +341,8 @@ class Attribute extends React.Component {
       total = Math.ceil(total * this.props.kmod);
     }
     return (
-      <div className="Attribute">
-        <span className="name">{this.props.name}</span><span className="total">{total}</span>
+      <div>
+        <Col xs={5}>{this.props.name}</Col><Col xs={7}>{total}</Col>
       </div>
     );
   }
@@ -337,7 +374,7 @@ class PersonalAdds extends React.Component {
     var lktotal = multiplier(this.props.attr.lk.reduce(sumofarray),
                               this.props.kindred.lkmod);
     return (
-      <div className="PersonalAdds">
+      <div>
         Personal Adds: {
 		Math.max(0,strtotal-12)+
 		Math.max(0,dextotal-12)+
@@ -363,7 +400,7 @@ class CharacterLevel extends React.Component {
       }
     };
     return (
-      <span>
+      <div>
         Level: {
 		Math.floor(
                   Math.max(
@@ -386,7 +423,7 @@ class CharacterLevel extends React.Component {
                   ) / 10
                 )
 	}
-      </span>
+      </div>
     );
   }
 }
