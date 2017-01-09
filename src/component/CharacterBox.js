@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, FormGroup, ControlLabel, FormControl, Button, Panel, Grid, Row, Col } from 'react-bootstrap';
+import CharacterName from './CharacterName.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -267,27 +268,6 @@ class CharacterKindred extends React.Component {
             return <option key={key} value={kin.id}>{kin.name}</option>
           })}
           </FormControl>
-        </FormGroup>
-    );
-  }
-}
-
-class CharacterName extends React.Component {
-  constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
-  }
-  onChange(event) {
-    this.props.onChange(event.target.value);
-  }
-  render(){
-    return (
-        <FormGroup controlId="CharacterNameInput">
-          <ControlLabel>Name</ControlLabel>
-          <FormControl 
-            type="text" 
-            onChange={this.onChange}
-            placeholder={this.props.name}/>
         </FormGroup>
     );
   }
