@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button, Panel, Grid, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, Form, Panel, Grid, Row, Col } from 'react-bootstrap';
 import CharacterName from './CharacterName.js';
 import CharacterLevel from './CharacterLevel.js';
 import AttributeBox from './AttributeBox.js';
@@ -98,15 +98,20 @@ class CharacterBox extends React.Component {
   }
   render(){
     return (
+      <div>
+      <Navbar>
+        <Navbar.Header>
+          <Navbar.Brand>
+            dttchargen
+          </Navbar.Brand>
+        </Navbar.Header>
+        <Nav>
+          <NavItem eventKey={1} onClick={this.handleRerollClick} >Reroll</NavItem>
+        </Nav>
+      </Navbar>
           <Form>
       <Grid fluid="true">
         <Col sm={6}>
-          <Row>
-            <Col xs={12}>
-              <Button bsStyle="primary" 
-                onClick={this.handleRerollClick} block>Reroll</Button>
-            </Col>
-          </Row>
           <Row>
            <Col xs={12}>
             <CharacterName name={this.state.name}
@@ -169,6 +174,7 @@ class CharacterBox extends React.Component {
         </Col>
       </Grid>
             </Form>
+     </div>
     );
   }
 }
