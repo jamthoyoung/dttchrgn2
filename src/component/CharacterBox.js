@@ -1,8 +1,13 @@
 import React from 'react';
-import { Form, FormGroup, ControlLabel, FormControl, Button, Panel, Grid, Row, Col } from 'react-bootstrap';
+import { Form, Button, Panel, Grid, Row, Col } from 'react-bootstrap';
 import CharacterName from './CharacterName.js';
 import CharacterLevel from './CharacterLevel.js';
 import AttributeBox from './AttributeBox.js';
+import CharacterKindred from './CharacterKindred.js';
+import CharacterWeight from './CharacterWeight.js';
+import CharacterHeight from './CharacterHeight.js';
+import CharacterClass from './CharacterClass.js';
+import CharacterGender from './CharacterGender.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -169,108 +174,3 @@ class CharacterBox extends React.Component {
 }
 
 export default CharacterBox;
-
-class CharacterGender extends React.Component {
-  constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
-  }
-  onChange(event) {
-    this.props.onChange(event.target.value);
-  }
-  render(){
-    return (
-        <FormGroup controlId="CharacterGenderInput">
-          <ControlLabel>Gender</ControlLabel>
-          <FormControl 
-            componentClass="select" 
-            onChange={this.onChange}
-            placeholder="Please select"
-            value={this.props.value}>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </FormControl>
-        </FormGroup>
-    );
-  }
-}
-
-class CharacterClass extends React.Component {
-  constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
-  }
-  onChange(event) {
-    this.props.onChange(event.target.value);
-  }
-  render(){
-    return (
-        <FormGroup controlId="CharacterClassInput">
-          <ControlLabel>Class</ControlLabel>
-          <FormControl 
-            componentClass="select" 
-            onChange={this.onChange}
-            placeholder="Please select"
-            value={this.props.value}>
-            <option value="Warrior">Warrior</option>
-            <option value="Wizard">Wizard</option>
-            <option value="Rogue">Rogue</option>
-          </FormControl>
-        </FormGroup>
-    );
-  }
-}
-
-class CharacterHeight extends React.Component {
-  render(){
-    var heightInCm = Math.round(
-       (126.4 + (this.props.height*5.6)) * this.props.kindred.heightmod
-                               );
-    return (
-      <span>
-        Height: {heightInCm} cm
-      </span>
-    );
-  }
-}
-
-class CharacterWeight extends React.Component {
-  render(){
-    var heightInCm = 126.4 + (this.props.height*5.6);
-    // ideal weight for male uses devine formula
-    var idealWeightKg = Math.round(
-          (50 + (0.9055118 * (heightInCm-152.4))) * this.props.kindred.weightmod
-                           );
-    return (
-      <span>
-        Weight: {idealWeightKg} kg
-      </span>
-    );
-  }
-}
-
-class CharacterKindred extends React.Component {
-  constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
-  }
-  onChange(event) {
-    this.props.onChange(event.target.value);
-  }
-  render(){
-    return (
-        <FormGroup controlId="CharacterKindredInput">
-          <ControlLabel>Kindred</ControlLabel>
-          <FormControl 
-            componentClass="select" 
-            onChange={this.onChange}
-            placeholder="Please select"
-            value={this.props.value}>
-          {this.props.kindredoptions.map(function(kin,key){
-            return <option key={key} value={kin.id}>{kin.name}</option>
-          })}
-          </FormControl>
-        </FormGroup>
-    );
-  }
-}
