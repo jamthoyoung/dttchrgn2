@@ -77,7 +77,7 @@ module.exports =
     },
     {
         "id": 1420070440000,
-        "name": "Leprechauns",
+        "name": "Leprechaun",
         "type": "Goodkin",
         "strmod": 0.33,
         "conmod": 0.67,
@@ -254,6 +254,21 @@ module.exports =
         "chrmod": 1.5,
         "heightmod": 0.10,
         "weightmod": 0.01
+    },
+    {
+        "id": 1420070502000,
+        "name": "Redcap",
+        "type": "Illkin",
+        "strmod": 0.5,
+        "conmod": 0.67,
+        "dexmod": 1.5,
+        "spdmod": 1.0,
+        "lkmod": 1.5,
+        "iqmod": 1.25,
+        "wizmod": 1.25,
+        "chrmod": 0.75,
+        "heightmod": 0.33,
+        "weightmod": 0.10
     },
     {
         "id": 1420070500001,
