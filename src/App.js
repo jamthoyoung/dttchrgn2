@@ -7,14 +7,14 @@ import CharacterBox from './component/CharacterBox';
 class App extends Component {
   render() {
     return (
-      <Grid fluid="true">
+      <div>
         <PageHeader>
           dttchrgen2
         </PageHeader>
-        <Jumbotron>
-            <CharacterBox initFormData={this.props.initFormData} kindredlist={this.props.kindredlist}/>
-        </Jumbotron>
-      </Grid>
+        <CharacterBox 
+           initFormData={this.props.initFormData} 
+           kindredlist={this.props.kindredlist}/>
+      </div>
     );
   }
 }

@@ -88,6 +88,7 @@ class CharacterBox extends React.Component {
     this.setState({name: value});
   }
   kindredChange(value){
+    alert(value);
     for(var i = 0; i < this.props.kindredlist.length; i++) {
       // eslint-disable-next-line
       if(value == this.props.kindredlist[i].id){
@@ -98,7 +99,8 @@ class CharacterBox extends React.Component {
   }
   render(){
     return (
-      <div>
+      <Grid fluid="true">
+      <Row>
       <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
@@ -106,38 +108,33 @@ class CharacterBox extends React.Component {
           </Navbar.Brand>
         </Navbar.Header>
         <Nav>
-          <NavItem eventKey={1} onClick={this.handleRerollClick} >Reroll</NavItem>
+          <NavItem eventKey={1} 
+            onClick={this.handleRerollClick} >Reroll</NavItem>
         </Nav>
       </Navbar>
-          <Form>
-      <Grid fluid="true">
-        <Col sm={6}>
-          <Row>
+      </Row>
+      <Row>
+      <Form>
            <Col xs={12}>
             <CharacterName name={this.state.name}
               onChange={this.nameChange} />
            </Col>
-          </Row>
-          <Row>
-            <Col sm={12}>
+            <Col xs={12} sm={4}>
             <CharacterKindred kindredoptions={this.props.kindredlist}
               value={this.state.kindred.id}
               onChange={this.kindredChange} />
            </Col>
-          </Row>
-          <Row>
-            <Col sm={12}>
+            <Col xs={12} sm={4}>
               <CharacterClass 
                 value={this.state.class}
                 onChange={this.classChange} />
             </Col>
-          </Row>
-          <Row>
-            <Col sm={12}>
+            <Col xs={12} sm={4}>
             <CharacterGender
               value={this.state.gender}
               onChange={this.genderChange} />
             </Col>
+            </Form>
           </Row>
           <Row>
             <Col sm={4}>
@@ -154,8 +151,6 @@ class CharacterBox extends React.Component {
                 attr={this.state.attributes} 
                 kindred={this.state.kindred}/>
             </Col>
-          </Row>
-          <Row>
             <Col sm={12}>
             <Panel header="Prime Attributes">
               <AttributeBox 
@@ -163,18 +158,13 @@ class CharacterBox extends React.Component {
                 kindred={this.state.kindred}/>
             </Panel>
             </Col>
+         <Col>Portrait</Col>
+         <Col>Adventure Points</Col>
+         <Col>Talents</Col>
+         <Col>Weapons</Col>
+         <Col>Spells</Col>
           </Row>
-        </Col>
-        <Col sm={6}>
-         <Row>Portrait</Row>
-         <Row>Adventure Points</Row>
-         <Row>Talents</Row>
-         <Row>Weapons</Row>
-         <Row>Spells</Row>
-        </Col>
-      </Grid>
-            </Form>
-     </div>
+     </Grid>
     );
   }
 }
