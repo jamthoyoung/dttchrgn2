@@ -286,6 +286,21 @@ module.exports =
         "weightmod": 1.00
     },
     {
+        "id": 1420070504000,
+        "name": "Vampire",
+        "type": "Illkin",
+        "strmod": 2.5,
+        "conmod": 1.0,
+        "dexmod": 1.0,
+        "spdmod": 1.0,
+        "lkmod": 1.5,
+        "iqmod": 1.5,
+        "wizmod": 2.0,
+        "chrmod": 2.0,
+        "heightmod": 1.00,
+        "weightmod": 1.10
+    },
+    {
         "id": 1420070500001,
         "name": "Elf",
         "type": "Goodkin",
