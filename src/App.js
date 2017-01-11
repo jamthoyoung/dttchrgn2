@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 //import './App.css';
-import { Grid, PageHeader, Jumbotron } from 'react-bootstrap';
+import { PageHeader } from 'react-bootstrap';
 import CharacterBox from './component/CharacterBox';
 
 class App extends Component {
