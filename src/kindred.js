@@ -301,6 +301,36 @@ module.exports =
         "weightmod": 1.10
     },
     {
+        "id": 1420070505000,
+        "name": "Varta",
+        "type": "Illkin",
+        "strmod": 1.0,
+        "conmod": 0.75,
+        "dexmod": 1.33,
+        "spdmod": 1.0,
+        "lkmod": 1.0,
+        "iqmod": 1.5,
+        "wizmod": 1.5,
+        "chrmod": 1.25,
+        "heightmod": 1.10,
+        "weightmod": 1.00
+    },
+    {
+        "id": 1420070506000,
+        "name": "Werewolf",
+        "type": "Illkin",
+        "strmod": 2.0,
+        "conmod": 3.0,
+        "dexmod": 1.0,
+        "spdmod": 1.0,
+        "lkmod": 0.67,
+        "iqmod": 0.75,
+        "wizmod": 1.0,
+        "chrmod": 1.0,
+        "heightmod": 1.00,
+        "weightmod": 1.10
+    },
+    {
         "id": 1420070500001,
         "name": "Elf",
         "type": "Goodkin",
