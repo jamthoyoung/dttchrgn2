@@ -115,21 +115,21 @@ class CharacterBox extends React.Component {
       </Row>
       <Row>
       <Form>
-           <Col xs={12}>
+           <Col xs={12} md={3}>
             <CharacterName name={this.state.name}
               onChange={this.nameChange} />
            </Col>
-            <Col xs={12} sm={4}>
+            <Col xs={12} sm={4} md={3}>
             <CharacterKindred kindredoptions={this.props.kindredlist}
               value={this.state.kindred.id}
               onChange={this.kindredChange} />
            </Col>
-            <Col xs={12} sm={4}>
+            <Col xs={6} sm={4} md={3}>
               <CharacterClass 
                 value={this.state.class}
                 onChange={this.classChange} />
             </Col>
-            <Col xs={12} sm={4}>
+            <Col xs={6} sm={4} md={3}>
             <CharacterGender
               value={this.state.gender}
               onChange={this.genderChange} />
@@ -151,18 +151,18 @@ class CharacterBox extends React.Component {
                 attr={this.state.attributes} 
                 kindred={this.state.kindred}/>
             </Col>
-            <Col sm={12}>
+            <Col sm={4}>
             <Panel header="Prime Attributes">
               <AttributeBox 
                 attr={this.state.attributes} 
                 kindred={this.state.kindred}/>
             </Panel>
             </Col>
-         <Col>Portrait</Col>
-         <Col>Adventure Points</Col>
-         <Col>Talents</Col>
-         <Col>Weapons</Col>
-         <Col>Spells</Col>
+         <Col sm={4}>Portrait</Col>
+         <Col sm={4}>Adventure Points</Col>
+         <Col sm={4}>Talents</Col>
+         <Col sm={4}>Weapons</Col>
+         <Col sm={4}>Spells</Col>
           </Row>
      </Grid>
     );
