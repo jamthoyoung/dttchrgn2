@@ -271,6 +271,21 @@ module.exports =
         "weightmod": 0.10
     },
     {
+        "id": 1420070503000,
+        "name": "Living Skeleton",
+        "type": "Illkin",
+        "strmod": 1.0,
+        "conmod": 1.0,
+        "dexmod": 1.0,
+        "spdmod": 1.0,
+        "lkmod": 0.75,
+        "iqmod": 1.0,
+        "wizmod": 1.25,
+        "chrmod": 1.0,
+        "heightmod": 1.00,
+        "weightmod": 1.00
+    },
+    {
         "id": 1420070500001,
         "name": "Elf",
         "type": "Goodkin",
