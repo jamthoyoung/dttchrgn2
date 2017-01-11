@@ -100,13 +100,13 @@ class CharacterBox extends React.Component {
   render(){
     return (
       <Grid fluid="true">
-      <Row>
-      <Navbar>
-        <Navbar.Header>
+       <Row>
+        <Navbar>
+         <Navbar.Header>
           <Navbar.Brand>
             dttchargen
           </Navbar.Brand>
-        </Navbar.Header>
+         </Navbar.Header>
         <Nav>
           <NavItem eventKey={1} 
             onClick={this.handleRerollClick} >Reroll</NavItem>
@@ -158,12 +158,27 @@ class CharacterBox extends React.Component {
                 kindred={this.state.kindred}/>
             </Panel>
             </Col>
-         <Col sm={4}>Portrait</Col>
-         <Col sm={4}>Adventure Points</Col>
-         <Col sm={4}>Talents</Col>
-         <Col sm={4}>Weapons</Col>
-         <Col sm={4}>Spells</Col>
-          </Row>
+         <Col sm={4}>
+            <Panel header="Portrait">
+            </Panel>
+         </Col>
+         <Col sm={4}>
+            <Panel header="Adventure Points">
+            </Panel>
+         </Col>
+         <Col sm={4}>
+            <Panel header="Talents">
+            </Panel>
+         </Col>
+         <Col sm={4}>
+            <Panel header="Weapons">
+            </Panel>
+         </Col>
+         <Col sm={4}>
+            <Panel header="Spells">
+            </Panel>
+         </Col>
+        </Row>
      </Grid>
     );
   }
