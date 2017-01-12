@@ -89,7 +89,6 @@ class CharacterBox extends React.Component {
     this.setState({name: value});
   }
   kindredChange(value){
-    alert(value);
     for(var i = 0; i < this.props.kindredlist.length; i++) {
       // eslint-disable-next-line
       if(value == this.props.kindredlist[i].id){
