@@ -46,6 +46,21 @@ module.exports =
         "weightmod": 0.80
     },
     {
+        "id": 1420070500001,
+        "name": "Elf",
+        "type": "Goodkin",
+        "strmod": 1.0,
+        "conmod": 0.67,
+        "dexmod": 1.33,
+        "spdmod": 1.0,
+        "lkmod": 1.0,
+        "iqmod": 1.5,
+        "wizmod": 1.5,
+        "chrmod": 1.5,
+        "heightmod": 1.1,
+        "weightmod": 1.0
+    },
+    {
         "id": 1420070420000,
         "name": "Fairy",
         "type": "Goodkin",
@@ -91,36 +106,6 @@ module.exports =
         "weightmod": 0.10
     },
     {
-        "id": 1420070500000,
-        "name": "Uruk (Orc)",
-        "type": "Illkin",
-        "strmod": 1.1,
-        "conmod": 1.1,
-        "dexmod": 1.0,
-        "spdmod": 1.0,
-        "lkmod": 0.67,
-        "iqmod": 0.75,
-        "wizmod": 1.0,
-        "chrmod": 1.1,
-        "heightmod": 1.0,
-        "weightmod": 1.0
-    },
-    {
-        "id": 1420070510000,
-        "name": "Goblin",
-        "type": "Illkin",
-        "strmod": 0.75,
-        "conmod": 0.75,
-        "dexmod": 1.5,
-        "spdmod": 1.0,
-        "lkmod": 1.0,
-        "iqmod": 1.0,
-        "wizmod": 1.0,
-        "chrmod": 0.5,
-        "heightmod": 0.75,
-        "weightmod": 0.50
-    },
-    {
         "id": 1420070520000,
         "name": "Centaur",
         "type": "Illkin",
@@ -149,6 +134,21 @@ module.exports =
         "chrmod": 0.75,
         "heightmod": 0.67,
         "weightmod": 0.80
+    },
+    {
+        "id": 1420070510000,
+        "name": "Goblin",
+        "type": "Illkin",
+        "strmod": 0.75,
+        "conmod": 0.75,
+        "dexmod": 1.5,
+        "spdmod": 1.0,
+        "lkmod": 1.0,
+        "iqmod": 1.0,
+        "wizmod": 1.0,
+        "chrmod": 0.5,
+        "heightmod": 0.75,
+        "weightmod": 0.50
     },
     {
         "id": 1420070540000,
@@ -226,21 +226,6 @@ module.exports =
         "weightmod": 0.50
     },
     {
-        "id": 1420070590000,
-        "name": "Selkie",
-        "type": "Illkin",
-        "strmod": 1.0,
-        "conmod": 1.0,
-        "dexmod": 1.0,
-        "spdmod": 1.0,
-        "lkmod": 1.0,
-        "iqmod": 1.0,
-        "wizmod": 1.0,
-        "chrmod": 1.0,
-        "heightmod": 0.90,
-        "weightmod": 0.90
-    },
-    {
         "id": 1420070501000,
         "name": "Pixie",
         "type": "Illkin",
@@ -269,6 +254,36 @@ module.exports =
         "chrmod": 0.75,
         "heightmod": 0.33,
         "weightmod": 0.10
+    },
+    {
+        "id": 1420070590000,
+        "name": "Selkie",
+        "type": "Illkin",
+        "strmod": 1.0,
+        "conmod": 1.0,
+        "dexmod": 1.0,
+        "spdmod": 1.0,
+        "lkmod": 1.0,
+        "iqmod": 1.0,
+        "wizmod": 1.0,
+        "chrmod": 1.0,
+        "heightmod": 0.90,
+        "weightmod": 0.90
+    },
+    {
+        "id": 1420070500000,
+        "name": "Uruk (Orc)",
+        "type": "Illkin",
+        "strmod": 1.1,
+        "conmod": 1.1,
+        "dexmod": 1.0,
+        "spdmod": 1.0,
+        "lkmod": 0.67,
+        "iqmod": 0.75,
+        "wizmod": 1.0,
+        "chrmod": 1.1,
+        "heightmod": 1.0,
+        "weightmod": 1.0
     },
     {
         "id": 1420070503000,
@@ -329,20 +344,5 @@ module.exports =
         "chrmod": 1.0,
         "heightmod": 1.00,
         "weightmod": 1.10
-    },
-    {
-        "id": 1420070500001,
-        "name": "Elf",
-        "type": "Goodkin",
-        "strmod": 1.0,
-        "conmod": 0.67,
-        "dexmod": 1.33,
-        "spdmod": 1.0,
-        "lkmod": 1.0,
-        "iqmod": 1.5,
-        "wizmod": 1.5,
-        "chrmod": 1.5,
-        "heightmod": 1.1,
-        "weightmod": 1.0
     }
 ];
