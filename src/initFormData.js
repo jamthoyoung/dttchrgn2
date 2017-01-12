@@ -29,6 +29,7 @@ module.exports = {
   class: "Warrior",
   height: 11,
   weight: 12,
+  gold: 30,
   equipment : [
     { name: "Short Sword",
       damagedice: 3,

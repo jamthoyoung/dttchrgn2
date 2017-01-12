@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Attribute from './Attribute.js';
 import PersonalAdds from './PersonalAdds.js';
+import CharacterLevel from './CharacterLevel.js';
 
 class AttributeBox extends React.Component {
   render(){
@@ -33,6 +34,9 @@ class AttributeBox extends React.Component {
       </Col>
       <Col sm={12}>
         <PersonalAdds attr={this.props.attr} kindred={this.props.kindred} />
+      </Col>
+      <Col sm={12}>
+        <CharacterLevel attr={this.props.attr} kindred={this.props.kindred} />
       </Col>
       </Row>
     );

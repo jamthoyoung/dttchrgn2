@@ -1,13 +1,13 @@
 import React from 'react';
 import { Navbar, Nav, NavItem, Form, Panel, Grid, Row, Col } from 'react-bootstrap';
 import CharacterName from './CharacterName.js';
-import CharacterLevel from './CharacterLevel.js';
 import AttributeBox from './AttributeBox.js';
 import CharacterKindred from './CharacterKindred.js';
 import CharacterWeight from './CharacterWeight.js';
 import CharacterHeight from './CharacterHeight.js';
 import CharacterClass from './CharacterClass.js';
 import CharacterGender from './CharacterGender.js';
+import CharacterGold from './CharacterGold.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -75,8 +75,9 @@ class CharacterBox extends React.Component {
     };
     var wt = this.getNewAttributeValue(this.state.kindred.weightmod,false).value;
     var ht = this.getNewAttributeValue(this.state.kindred.heightmod,false).value;
+    var gold = this.getNewAttributeValue(10,false).value;
     console.log("new wt + ht:" + wt + " " + ht); 
-    this.setState( {attributes: newattributes, weight: wt, height: ht } );
+    this.setState( {attributes: newattributes, weight: wt, height: ht, gold: gold } );
   } 
   genderChange(value){
     this.setState({gender: value});
@@ -138,18 +139,17 @@ class CharacterBox extends React.Component {
           </Row>
           <Row>
             <Col sm={4}>
+              <Panel header="Stature">
+            <Col sm={6}>
               <CharacterWeight kindred={this.state.kindred} 
                          weight={this.state.weight} 
                          height={this.state.height}/>
             </Col>
-            <Col sm={4}>
+            <Col sm={6}>
               <CharacterHeight kindred={this.state.kindred}
                          height={this.state.height} />
             </Col>
-            <Col sm={4}>
-              <CharacterLevel 
-                attr={this.state.attributes} 
-                kindred={this.state.kindred}/>
+             </Panel>
             </Col>
             <Col sm={4}>
             <Panel header="Prime Attributes">
@@ -172,6 +172,12 @@ class CharacterBox extends React.Component {
          </Col>
          <Col sm={4}>
             <Panel header="Weapons">
+            </Panel>
+         </Col>
+         <Col sm={4}>
+            <Panel header="Equipment">
+              <CharacterGold
+                gold={this.state.gold}/>
             </Panel>
          </Col>
          <Col sm={4}>

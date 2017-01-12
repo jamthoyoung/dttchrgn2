@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 class Attribute extends React.Component {
   render(){
@@ -13,9 +13,9 @@ class Attribute extends React.Component {
       total = Math.ceil(total * this.props.kmod);
     }
     return (
-      <div>
+      <Row>
         <Col xs={5}>{this.props.name}</Col><Col xs={7}>{total}</Col>
-      </div>
+      </Row>
     );
   }
 }
