@@ -8,6 +8,7 @@ import CharacterHeight from './CharacterHeight.js';
 import CharacterClass from './CharacterClass.js';
 import CharacterGender from './CharacterGender.js';
 import CharacterGold from './CharacterGold.js';
+import OtherAbilities from './OtherAbilities.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -157,6 +158,11 @@ class CharacterBox extends React.Component {
                 kindred={this.state.kindred}/>
             </Panel>
             </Col>
+         <Col sm={4}>
+            <Panel header="Other Abilities">
+             <OtherAbilities attr={this.state.attributes} />
+            </Panel>
+         </Col>
          <Col sm={4}>
             <Panel header="Portrait">
             </Panel>
