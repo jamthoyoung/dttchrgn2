@@ -13,6 +13,12 @@ class OtherAbilities extends React.Component {
        } 
       }
     }
+    if (this.props.kindred.hasOwnProperty("abilities")){
+     var a = this.props.kindred["abilities"];
+     for(var i = 0; i < a.length; i++){
+      output.push(a[i]); 
+     } 
+    }
     return (
       <Row>
       {output.map(function(message){

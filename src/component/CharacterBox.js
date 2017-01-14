@@ -160,7 +160,8 @@ class CharacterBox extends React.Component {
             </Col>
          <Col sm={4}>
             <Panel header="Other Abilities">
-             <OtherAbilities attr={this.state.attributes} />
+             <OtherAbilities attr={this.state.attributes}
+               kindred={this.state.kindred} />
             </Panel>
          </Col>
          <Col sm={4}>

@@ -12,6 +12,7 @@ module.exports =
         "iqmod": 1.0,
         "wizmod": 1.0,
         "chrmod": 1.0,
+        "abilities": ["Second chance LK"],
         "heightmod": 1.0,
         "weightmod": 1.0
     },
@@ -27,6 +28,7 @@ module.exports =
         "iqmod": 1.0,
         "wizmod": 1.0,
         "chrmod": 1.0,
+        "abilities": ["Low light vision","Mineral sensitivity"],
         "heightmod": 0.67,
         "weightmod": 2.0
     },
@@ -42,6 +44,7 @@ module.exports =
         "iqmod": 1.0,
         "wizmod": 1.0,
         "chrmod": 0.75,
+        "abilities": ["Low light vision","Mineral sensitivity"],
         "heightmod": 0.67,
         "weightmod": 0.80
     },
@@ -57,6 +60,7 @@ module.exports =
         "iqmod": 1.5,
         "wizmod": 1.5,
         "chrmod": 1.5,
+        "abilities": ["Aversion to iron"],
         "heightmod": 1.1,
         "weightmod": 1.0
     },
@@ -72,6 +76,7 @@ module.exports =
         "iqmod": 1.0,
         "wizmod": 2.0,
         "chrmod": 1.5,
+        "abilities": ["Flight"],
         "heightmod": 0.10,
         "weightmod": 0.01
     },
@@ -102,6 +107,7 @@ module.exports =
         "iqmod": 1.25,
         "wizmod": 1.5,
         "chrmod": 1.0,
+        "abilities": ["Inate Wink-Wing"],
         "heightmod": 0.33,
         "weightmod": 0.10
     },
@@ -132,6 +138,7 @@ module.exports =
         "iqmod": 1.1,
         "wizmod": 1.1,
         "chrmod": 0.75,
+        "abilities": ["Low light vision","Mineral sensitivity"],
         "heightmod": 0.67,
         "weightmod": 0.80
     },
@@ -182,7 +189,7 @@ module.exports =
     },
     {
         "id": 1420070560000,
-        "name": "Half-elf",
+        "name": "Dwelf",
         "type": "Illkin",
         "strmod": 1.25,
         "conmod": 1.25,
