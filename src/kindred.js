@@ -107,7 +107,7 @@ module.exports =
         "iqmod": 1.25,
         "wizmod": 1.5,
         "chrmod": 1.0,
-        "abilities": ["Inate Wink-Wing"],
+        "abilities": ["Teleport"],
         "heightmod": 0.33,
         "weightmod": 0.10
     },
@@ -123,6 +123,7 @@ module.exports =
         "iqmod": 1.0,
         "wizmod": 0.5,
         "chrmod": 2.0,
+        "abilities": ["Healing"],
         "heightmod": 1.50,
         "weightmod": 8.00
     },
@@ -184,6 +185,7 @@ module.exports =
         "iqmod": 1.5,
         "wizmod": 1.5,
         "chrmod": 0.5,
+        "abilities": ["Elude perception"],
         "heightmod": 0.33,
         "weightmod": 0.33
     },
@@ -199,6 +201,7 @@ module.exports =
         "iqmod": 0.9,
         "wizmod": 1.0,
         "chrmod": 1.25,
+        "abilities": ["Iron sensitivity"],
         "heightmod": 1.25,
         "weightmod": 1.5
     },
@@ -229,6 +232,7 @@ module.exports =
         "iqmod": 2.0,
         "wizmod": 1.0,
         "chrmod": 0.75,
+        "abilities": ["Shapeshifter"],
         "heightmod": 0.50,
         "weightmod": 0.50
     },
@@ -244,6 +248,7 @@ module.exports =
         "iqmod": 1.0,
         "wizmod": 1.0,
         "chrmod": 1.5,
+        "abilities": ["Flight"],
         "heightmod": 0.10,
         "weightmod": 0.01
     },
@@ -289,6 +294,7 @@ module.exports =
         "iqmod": 0.75,
         "wizmod": 1.0,
         "chrmod": 1.1,
+        "abilities": ["Low light vision"],
         "heightmod": 1.0,
         "weightmod": 1.0
     },
@@ -334,6 +340,7 @@ module.exports =
         "iqmod": 1.5,
         "wizmod": 1.5,
         "chrmod": 1.25,
+        "abilities": ["Low light vision"],
         "heightmod": 1.10,
         "weightmod": 1.00
     },
@@ -349,6 +356,7 @@ module.exports =
         "iqmod": 0.75,
         "wizmod": 1.0,
         "chrmod": 1.0,
+        "abilities": ["Shapeshifter","Swift healing"],
         "heightmod": 1.00,
         "weightmod": 1.10
     }
