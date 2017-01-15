@@ -13,6 +13,7 @@ class App extends Component {
         </PageHeader>
         <CharacterBox 
            initFormData={this.props.initFormData} 
+           backstory={this.props.backstory} 
            kindredlist={this.props.kindredlist}/>
       </div>
     );
