@@ -13,6 +13,7 @@ module.exports = {
     "iqmod": 1.5,
     "wizmod": 1.5,
     "chrmod": 1.5,
+    "abilities": ["Aversion to iron"],
     "heightmod": 1.1,
     "weightmod": 1.0
   },
