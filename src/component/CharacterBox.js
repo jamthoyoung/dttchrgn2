@@ -9,6 +9,7 @@ import CharacterClass from './CharacterClass.js';
 import CharacterGender from './CharacterGender.js';
 import CharacterGold from './CharacterGold.js';
 import OtherAbilities from './OtherAbilities.js';
+import CharacterBackstory from './CharacterBackstory.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class CharacterBox extends React.Component {
     this.classChange = this.classChange.bind(this);
     this.nameChange = this.nameChange.bind(this);
     this.kindredChange = this.kindredChange.bind(this);
+    this.backstoryChange = this.backstoryChange.bind(this);
     this.state = 
       this.props.initFormData; 
   }
@@ -98,6 +100,15 @@ class CharacterBox extends React.Component {
       }
     }
   }
+  backstoryChange(value){
+    for(var i = 0; i < this.props.backstory.length; i++) {
+      // eslint-disable-next-line
+      if(value == this.props.backstory[i].id){
+        console.log(this.props.backstory[i]);
+        this.setState({backstory: this.props.backstory[i]});
+      }
+    }
+  }
   render(){
     return (
       <Grid fluid="true">
@@ -120,10 +131,15 @@ class CharacterBox extends React.Component {
             <CharacterName name={this.state.name}
               onChange={this.nameChange} />
            </Col>
-            <Col xs={12} sm={4} md={3}>
+           <Col xs={12} sm={4} md={3}>
             <CharacterKindred kindredoptions={this.props.kindredlist}
               value={this.state.kindred.id}
               onChange={this.kindredChange} />
+           </Col>
+           <Col xs={12} sm={4} md={3}>
+            <CharacterBackstory backstory={this.props.backstory}
+              value={this.state.backstory.id}
+              onChange={this.backstoryChange} />
            </Col>
             <Col xs={6} sm={4} md={3}>
               <CharacterClass 
