@@ -10,6 +10,7 @@ import CharacterGender from './CharacterGender.js';
 import CharacterGold from './CharacterGold.js';
 import OtherAbilities from './OtherAbilities.js';
 import CharacterBackstory from './CharacterBackstory.js';
+import Talents from './Talents.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -105,7 +106,8 @@ class CharacterBox extends React.Component {
       // eslint-disable-next-line
       if(value == this.props.backstory[i].id){
         console.log(this.props.backstory[i]);
-        this.setState({backstory: this.props.backstory[i]});
+        this.setState({talents: this.props.backstory[i].talents
+                       });
       }
     }
   }
@@ -190,6 +192,7 @@ class CharacterBox extends React.Component {
          </Col>
          <Col sm={4}>
             <Panel header="Talents">
+              <Talents talents={this.state.talents} />
             </Panel>
          </Col>
          <Col sm={4}>

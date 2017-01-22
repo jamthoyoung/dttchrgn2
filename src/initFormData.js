@@ -19,9 +19,9 @@ module.exports = {
   },
   "backstory":{
     "id":0,
-    "name":"None",
-    "talents":[]
+    "name":"None"
   },
+  "talents":[],
   "attributes" : {
     str : [ 1, 1, 2 ],
     con : [ 1, 1, 2 ],
