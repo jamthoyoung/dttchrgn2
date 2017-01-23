@@ -191,9 +191,7 @@ class CharacterBox extends React.Component {
             </Panel>
          </Col>
          <Col sm={4}>
-            <Panel header="Talents">
-              <Talents talents={this.state.talents} />
-            </Panel>
+           <Talents talents={this.state.talents} />
          </Col>
          <Col sm={4}>
             <Panel header="Weapons">
