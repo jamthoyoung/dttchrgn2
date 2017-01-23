@@ -8,10 +8,13 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 import kindredlist from './kindred.js';
 import initFormData from './initFormData.js';
 import backstory from './backstory.js';
+import talents from './talents.js';
 
 ReactDOM.render(
   <App initFormData={initFormData}
        backstory={backstory}
-       kindredlist={kindredlist}/>,
+       kindredlist={kindredlist}
+       talents={talents}
+  />,
   document.getElementById('root')
 );
