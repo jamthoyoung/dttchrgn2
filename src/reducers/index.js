@@ -65,7 +65,7 @@ export default function character(state = initialState, action){
   case types.SELECT_KINDRED:
    return {
      ...state,
-     a???
+     kindred: action.kindred
    }
   case default:
    return state;
