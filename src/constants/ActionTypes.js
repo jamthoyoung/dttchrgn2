@@ -1,0 +1,2 @@
+export const SELECT_KINDRED = 'SELECT_KINDRED'; 
+
