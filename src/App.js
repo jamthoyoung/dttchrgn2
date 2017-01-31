@@ -5,6 +5,13 @@ import * as CharacterActions from './actions/CharacterActions';
 import { PageHeader } from 'react-bootstrap';
 import CharacterBox from './component/CharacterBox';
 
+import kindredlist from './kindred.js';
+import initFormData from './initFormData.js';
+import backstory from './backstory.js';
+
+import talentlist from './talentlist.js';
+
+
 class App extends Component {
   render() {
     const { character, actions } = this.props;
@@ -16,9 +23,9 @@ class App extends Component {
         <CharacterBox 
            character={character}
            actions={actions}
-           initFormData={this.props.initFormData} 
-           backstory={this.props.backstory} 
-           kindredlist={this.props.kindredlist}/>
+           initFormData={initFormData} 
+           backstory={backstory} 
+           kindredlist={kindredlist}/>
       </div>
     );
   }
