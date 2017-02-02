@@ -67,7 +67,7 @@ export default function character(state = initialState, action){
      ...state,
      kindred: action.kindred
    }
-  case default:
+  default:
    return state;
  }
 }
