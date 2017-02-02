@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavItem, Form, Panel, Grid, Row, Col } from 'react-bootstrap';
 import CharacterName from './CharacterName.js';
-import AttributeBox from './AttributeBox.js';
+import AttributeBoxContainer from '../containers/AttributeBoxContainer.js';
 import KindredInput from './KindredInput.js';
 import CharacterWeight from './CharacterWeight.js';
 import CharacterHeight from './CharacterHeight.js';
@@ -171,9 +171,7 @@ class CharacterBox extends React.Component {
             </Col>
             <Col sm={4}>
             <Panel header="Prime Attributes">
-              <AttributeBox 
-                attr={this.state.attributes} 
-                kindred={this.state.kindred}/>
+              <AttributeBoxContainer />
             </Panel>
             </Col>
          <Col sm={4}>
