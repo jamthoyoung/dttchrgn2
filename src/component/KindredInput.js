@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
-class CharacterKindred extends React.Component {
+class KindredInput extends React.Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -27,4 +27,4 @@ class CharacterKindred extends React.Component {
   }
 }
 
-export default CharacterKindred;
+export default KindredInput;
