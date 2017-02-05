@@ -6,9 +6,9 @@ import App from './App';
 import './custom.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
-import reducer from './reducers';
+import characterApp from './reducers';
 
-const store = createStore(reducer);
+const store = createStore(characterApp);
 
 ReactDOM.render(
  <Provider store={store}>

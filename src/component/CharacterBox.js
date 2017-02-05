@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, NavItem, Form, Panel, Grid, Row, Col } from 'react-bootstrap';
 import CharacterName from './CharacterName.js';
 import AttributeBoxContainer from '../containers/AttributeBoxContainer.js';
-import KindredInput from './KindredInput.js';
+import KindredInputContainer from '../containers/KindredInputContainer.js';
 import CharacterWeight from './CharacterWeight.js';
 import CharacterHeight from './CharacterHeight.js';
 import CharacterClass from './CharacterClass.js';
@@ -134,9 +134,8 @@ class CharacterBox extends React.Component {
               onChange={this.nameChange} />
            </Col>
            <Col xs={12} sm={4} md={3}>
-            <KindredInput kindredoptions={this.props.kindredlist}
-              value={this.state.kindred.id}
-              onChange={this.kindredChange} />
+            <KindredInputContainer 
+               />
            </Col>
            <Col xs={12} sm={4} md={3}>
             <CharacterBackstory backstory={this.props.backstory}

@@ -18,7 +18,7 @@ class KindredInput extends React.Component {
             onChange={this.onChange}
             placeholder="Please select"
             value={this.props.value}>
-          {this.props.kindredoptions.map(function(kin,key){
+          {this.props.kindredlist.map(function(kin,key){
             return <option key={key} value={kin.id}>{kin.name}</option>
           })}
           </FormControl>

@@ -1,4 +1,4 @@
-module.exports = 
+const initialState = 
 [
     {
         "id": 1388534400000,
@@ -361,3 +361,11 @@ module.exports =
         "weightmod": 1.10
     }
 ];
+
+export default function kindredlist(state = initialState, action){
+ switch (action.type) {
+  //this reducer performs no action. 
+  default:
+   return state;
+ }
+}
