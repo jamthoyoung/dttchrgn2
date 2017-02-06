@@ -1,4 +1,74 @@
 const initialState = 
+{
+ byId : {
+  1 : {
+        id: 1,
+        name: "Human",
+        "type": "Goodkin",
+        "strmod": 1.0,
+        "conmod": 1.0,
+        "dexmod": 1.0,
+        "spdmod": 1.0,
+        "lkmod": 1.0,
+        "iqmod": 1.0,
+        "wizmod": 1.0,
+        "chrmod": 1.0,
+        "abilities": ["Second chance LK"],
+        "heightmod": 1.0,
+        "weightmod": 1.0
+  },
+  2 : {
+        id: 2,
+        name: "Dwarf (Gristlegrim)",
+        "type": "Goodkin",
+        "strmod": 2.0,
+        "conmod": 2.0,
+        "dexmod": 1.0,
+        "spdmod": 1.0,
+        "lkmod": 0.75,
+        "iqmod": 1.0,
+        "wizmod": 1.0,
+        "chrmod": 1.0,
+        "abilities": ["Low light vision","Mineral sensitivity"],
+        "heightmod": 0.67,
+        "weightmod": 2.0
+  },
+  3 : {
+        id: 3,
+        name: "Dwarf (Midgardian)",
+        "type": "Goodkin",
+        "strmod": 2.0,
+        "conmod": 2.0,
+        "dexmod": 1.0,
+        "spdmod": 1.0,
+        "lkmod": 1.0,
+        "iqmod": 1.0,
+        "wizmod": 1.0,
+        "chrmod": 0.75,
+        "abilities": ["Low light vision","Mineral sensitivity"],
+        "heightmod": 0.67,
+        "weightmod": 0.80
+  },
+  4 : {
+        id: 4,
+        name: "Elf",
+        "type": "Goodkin",
+        "strmod": 1.0,
+        "conmod": 0.67,
+        "dexmod": 1.33,
+        "spdmod": 1.0,
+        "lkmod": 1.0,
+        "iqmod": 1.5,
+        "wizmod": 1.5,
+        "chrmod": 1.5,
+        "abilities": ["Aversion to iron"],
+        "heightmod": 1.1,
+        "weightmod": 1.0
+  }
+ },
+ allIds : [ 1, 2, 3, 4 ]
+}
+/*
 [
     {
         "id": 1388534400000,
@@ -361,7 +431,7 @@ const initialState =
         "weightmod": 1.10
     }
 ];
-
+*/
 export default function kindredlist(state = initialState, action){
  switch (action.type) {
   //this reducer performs no action. 

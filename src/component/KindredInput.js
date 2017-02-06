@@ -11,6 +11,7 @@ class KindredInput extends React.Component {
   }
   render(){
     return (
+     <div>
         <FormGroup controlId="CharacterKindredInput">
           <ControlLabel>Kindred</ControlLabel>
           <FormControl 
@@ -18,11 +19,14 @@ class KindredInput extends React.Component {
             onChange={this.onChange}
             placeholder="Please select"
             value={this.props.value}>
-          {this.props.kindredlist.map(function(kin,key){
-            return <option key={key} value={kin.id}>{kin.name}</option>
-          })}
+          {this.props.kindredlist.allIds.map(function(x){
+            return <option key={x} value={x}>
+                    {this.props.kindredlist.byId[x].name}
+                   </option>
+          }, this)}
           </FormControl>
         </FormGroup>
+     </div>
     );
   }
 }
