@@ -64,79 +64,10 @@ const initialState =
         "abilities": ["Aversion to iron"],
         "heightmod": 1.1,
         "weightmod": 1.0
-  }
- },
- allIds : [ 1, 2, 3, 4 ]
-}
-/*
-[
-    {
-        "id": 1388534400000,
-        "name": "Human",
-        "type": "Goodkin",
-        "strmod": 1.0,
-        "conmod": 1.0,
-        "dexmod": 1.0,
-        "spdmod": 1.0,
-        "lkmod": 1.0,
-        "iqmod": 1.0,
-        "wizmod": 1.0,
-        "chrmod": 1.0,
-        "abilities": ["Second chance LK"],
-        "heightmod": 1.0,
-        "weightmod": 1.0
-    },
-    {
-        "id": 1420070400000,
-        "name": "Dwarf (Gristlegrim)",
-        "type": "Goodkin",
-        "strmod": 2.0,
-        "conmod": 2.0,
-        "dexmod": 1.0,
-        "spdmod": 1.0,
-        "lkmod": 0.75,
-        "iqmod": 1.0,
-        "wizmod": 1.0,
-        "chrmod": 1.0,
-        "abilities": ["Low light vision","Mineral sensitivity"],
-        "heightmod": 0.67,
-        "weightmod": 2.0
-    },
-    {
-        "id": 1420070410000,
-        "name": "Dwarf (Midgardian)",
-        "type": "Goodkin",
-        "strmod": 2.0,
-        "conmod": 2.0,
-        "dexmod": 1.0,
-        "spdmod": 1.0,
-        "lkmod": 1.0,
-        "iqmod": 1.0,
-        "wizmod": 1.0,
-        "chrmod": 0.75,
-        "abilities": ["Low light vision","Mineral sensitivity"],
-        "heightmod": 0.67,
-        "weightmod": 0.80
-    },
-    {
-        "id": 1420070500001,
-        "name": "Elf",
-        "type": "Goodkin",
-        "strmod": 1.0,
-        "conmod": 0.67,
-        "dexmod": 1.33,
-        "spdmod": 1.0,
-        "lkmod": 1.0,
-        "iqmod": 1.5,
-        "wizmod": 1.5,
-        "chrmod": 1.5,
-        "abilities": ["Aversion to iron"],
-        "heightmod": 1.1,
-        "weightmod": 1.0
-    },
-    {
-        "id": 1420070420000,
-        "name": "Fairy",
+  },
+  5 : {
+        id: 5,
+        name: "Fairy",
         "type": "Goodkin",
         "strmod": 0.25,
         "conmod": 0.25,
@@ -149,10 +80,10 @@ const initialState =
         "abilities": ["Flight"],
         "heightmod": 0.10,
         "weightmod": 0.01
-    },
-    {
-        "id": 1420070430000,
-        "name": "Hobb",
+  },
+  6 : {
+        id: 6,
+        name: "Hobb",
         "type": "Goodkin",
         "strmod": 0.5,
         "conmod": 2.0,
@@ -164,10 +95,10 @@ const initialState =
         "chrmod": 1.0,
         "heightmod": 0.50,
         "weightmod": 0.75
-    },
-    {
-        "id": 1420070440000,
-        "name": "Leprechaun",
+  },
+  7 : {
+        id: 7,
+        name: "Leprechaun",
         "type": "Goodkin",
         "strmod": 0.33,
         "conmod": 0.67,
@@ -180,10 +111,10 @@ const initialState =
         "abilities": ["Teleport"],
         "heightmod": 0.33,
         "weightmod": 0.10
-    },
-    {
-        "id": 1420070520000,
-        "name": "Centaur",
+  },
+  8 : {
+        id: 8,
+        name: "Centaur",
         "type": "Illkin",
         "strmod": 3.0,
         "conmod": 3.0,
@@ -196,10 +127,10 @@ const initialState =
         "abilities": ["Healing"],
         "heightmod": 1.50,
         "weightmod": 8.00
-    },
-    {
-        "id": 1420070530000,
-        "name": "Dakk",
+  },
+  9 : {
+        id: 9,
+        name: "Dakk",
         "type": "Illkin",
         "strmod": 2.0,
         "conmod": 2.0,
@@ -212,10 +143,10 @@ const initialState =
         "abilities": ["Low light vision","Mineral sensitivity"],
         "heightmod": 0.67,
         "weightmod": 0.80
-    },
-    {
-        "id": 1420070510000,
-        "name": "Goblin",
+  },
+  10 : {
+        id: 10,
+        name: "Goblin",
         "type": "Illkin",
         "strmod": 0.75,
         "conmod": 0.75,
@@ -227,10 +158,10 @@ const initialState =
         "chrmod": 0.5,
         "heightmod": 0.75,
         "weightmod": 0.50
-    },
-    {
-        "id": 1420070540000,
-        "name": "Gnome",
+  },
+  11 : {
+        id: 11,
+        name: "Gnome",
         "type": "Illkin",
         "strmod": 0.33,
         "conmod": 0.5,
@@ -242,10 +173,10 @@ const initialState =
         "chrmod": 0.67,
         "heightmod": 0.33,
         "weightmod": 0.33
-    },
-    {
-        "id": 1420070550000,
-        "name": "Gremlin",
+  },
+  12 : {
+        id: 12,
+        name: "Gremlin",
         "type": "Illkin",
         "strmod": 0.5,
         "conmod": 0.5,
@@ -258,10 +189,10 @@ const initialState =
         "abilities": ["Elude perception"],
         "heightmod": 0.33,
         "weightmod": 0.33
-    },
-    {
-        "id": 1420070560000,
-        "name": "Dwelf",
+  },
+  13 : {
+        id: 13,
+        name: "Dwelf",
         "type": "Illkin",
         "strmod": 1.25,
         "conmod": 1.25,
@@ -274,10 +205,10 @@ const initialState =
         "abilities": ["Iron sensitivity"],
         "heightmod": 1.25,
         "weightmod": 1.5
-    },
-    {
-        "id": 1420070570000,
-        "name": "Hobgoblin",
+  },
+  14 : {
+        id: 14,
+        name: "Hobgoblin",
         "type": "Illkin",
         "strmod": 1.0,
         "conmod": 1.5,
@@ -289,10 +220,10 @@ const initialState =
         "chrmod": 0.75,
         "heightmod": 1.25,
         "weightmod": 1.5
-    },
-    {
-        "id": 1420070580000,
-        "name": "Kobold",
+  },
+  15 : {
+        id: 15,
+        name: "Kobold",
         "type": "Illkin",
         "strmod": 0.5,
         "conmod": 0.5,
@@ -305,10 +236,10 @@ const initialState =
         "abilities": ["Shapeshifter"],
         "heightmod": 0.50,
         "weightmod": 0.50
-    },
-    {
-        "id": 1420070501000,
-        "name": "Pixie",
+  },
+  16 : {
+        id: 16,
+        name: "Pixie",
         "type": "Illkin",
         "strmod": 0.25,
         "conmod": 0.33,
@@ -321,10 +252,10 @@ const initialState =
         "abilities": ["Flight"],
         "heightmod": 0.10,
         "weightmod": 0.01
-    },
-    {
-        "id": 1420070502000,
-        "name": "Redcap",
+  },
+  17 : {
+        id: 17,
+        name: "Redcap",
         "type": "Illkin",
         "strmod": 0.5,
         "conmod": 0.67,
@@ -336,10 +267,10 @@ const initialState =
         "chrmod": 0.75,
         "heightmod": 0.33,
         "weightmod": 0.10
-    },
-    {
-        "id": 1420070590000,
-        "name": "Selkie",
+  },
+  18 : {
+        id: 18,
+        name: "Selkie",
         "type": "Illkin",
         "strmod": 1.0,
         "conmod": 1.0,
@@ -351,10 +282,10 @@ const initialState =
         "chrmod": 1.0,
         "heightmod": 0.90,
         "weightmod": 0.90
-    },
-    {
-        "id": 1420070500000,
-        "name": "Uruk (Orc)",
+  },
+  19 : {
+        id: 19,
+        name: "Uruk (Orc)",
         "type": "Illkin",
         "strmod": 1.1,
         "conmod": 1.1,
@@ -367,10 +298,10 @@ const initialState =
         "abilities": ["Low light vision"],
         "heightmod": 1.0,
         "weightmod": 1.0
-    },
-    {
-        "id": 1420070503000,
-        "name": "Living Skeleton",
+  },
+  20 : {
+        id: 20,
+        name: "Living Skeleton",
         "type": "Illkin",
         "strmod": 1.0,
         "conmod": 1.0,
@@ -382,10 +313,10 @@ const initialState =
         "chrmod": 1.0,
         "heightmod": 1.00,
         "weightmod": 1.00
-    },
-    {
-        "id": 1420070504000,
-        "name": "Vampire",
+  },
+  21 : {
+        id: 21,
+        name: "Vampire",
         "type": "Illkin",
         "strmod": 2.5,
         "conmod": 1.0,
@@ -397,10 +328,10 @@ const initialState =
         "chrmod": 2.0,
         "heightmod": 1.00,
         "weightmod": 1.10
-    },
-    {
-        "id": 1420070505000,
-        "name": "Varta",
+  },
+  22 : {
+        id: 22,
+        name: "Varta",
         "type": "Illkin",
         "strmod": 1.0,
         "conmod": 0.75,
@@ -413,10 +344,10 @@ const initialState =
         "abilities": ["Low light vision"],
         "heightmod": 1.10,
         "weightmod": 1.00
-    },
-    {
-        "id": 1420070506000,
-        "name": "Werewolf",
+  },
+  23 : {
+        id: 23,
+        name: "Werewolf",
         "type": "Illkin",
         "strmod": 2.0,
         "conmod": 3.0,
@@ -429,9 +360,14 @@ const initialState =
         "abilities": ["Shapeshifter","Swift healing"],
         "heightmod": 1.00,
         "weightmod": 1.10
-    }
-];
-*/
+  }
+ },
+ allIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+    17, 18, 19, 20, 21, 22],
+ goodkinIds : [ 1, 2, 3, 4, 5, 6, 7 ],
+ illkinIds : [ 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+}
+
 export default function kindredlist(state = initialState, action){
  switch (action.type) {
   //this reducer performs no action. 
