@@ -22,7 +22,6 @@ class CharacterBox extends React.Component {
     this.genderChange = this.genderChange.bind(this);
     this.classChange = this.classChange.bind(this);
     this.nameChange = this.nameChange.bind(this);
-    this.kindredChange = this.kindredChange.bind(this);
     this.backstoryChange = this.backstoryChange.bind(this);
     this.state = 
       this.props.initFormData; 
@@ -91,15 +90,6 @@ class CharacterBox extends React.Component {
   }
   nameChange(value){
     this.setState({name: value});
-  }
-  kindredChange(value){
-    for(var i = 0; i < this.props.kindredlist.length; i++) {
-      // eslint-disable-next-line
-      if(value == this.props.kindredlist[i].id){
-        console.log(this.props.kindredlist[i]);
-        this.setState({kindred: this.props.kindredlist[i]});
-      }
-    }
   }
   backstoryChange(value){
     for(var i = 0; i < this.props.backstory.length; i++) {
