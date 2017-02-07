@@ -17,8 +17,8 @@ class Talents extends React.Component {
   render(){
     var pheader = (
       <Row>
-       <Col xs="9">Talents</Col>
-       <Col xs="3">
+       <Col xs={9}>Talents</Col>
+       <Col xs={3}>
          <Button onClick={this.openModal} bsSize="xsmall">
            <Glyphicon glyph="edit"/>
          </Button>
