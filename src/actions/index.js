@@ -1,8 +1,8 @@
-import types from '../constants/ActionTypes';
+import { SELECT_KINDRED } from '../constants/ActionTypes';
 
-export function selectKindred(id) {
+export const selectKindred = (id) => {
  return {
-  type: types.SELECT_KINDRED,
+  type: SELECT_KINDRED,
   id: id 
  };
 }

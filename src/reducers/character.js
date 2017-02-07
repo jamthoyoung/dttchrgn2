@@ -1,25 +1,10 @@
-import * as types from '../constants/ActionTypes';
+import { SELECT_KINDRED } from '../constants/ActionTypes';
 
 const initialState = 
 {
   "name" : "Enter name",
   "gender" : "Male",
-  "kindred": {
-    "id": 1420070500001,
-    name: "Elf",
-    "type": "Goodkin",
-    "strmod": 1.0,
-    "conmod": 0.67,
-    "dexmod": 1.33,
-    "spdmod": 1.0,
-    "lkmod": 1.0,
-    "iqmod": 1.5,
-    "wizmod": 1.5,
-    "chrmod": 1.5,
-    "abilities": ["Aversion to iron"],
-    "heightmod": 1.1,
-    "weightmod": 1.0
-  },
+  "kindred": 4,
   "backstory":{
     "id":0,
     "name":"None"
@@ -62,10 +47,10 @@ const initialState =
 
 export default function character(state = initialState, action){
  switch (action.type) {
-  case types.SELECT_KINDRED:
+  case SELECT_KINDRED:
    return {
      ...state,
-     id: action.id
+     kindred: action.id
    }
   default:
    return state;
