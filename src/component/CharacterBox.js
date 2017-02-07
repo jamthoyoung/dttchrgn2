@@ -113,7 +113,7 @@ class CharacterBox extends React.Component {
   }
   render(){
     return (
-      <Grid fluid="true">
+      <Grid fluid>
        <Row>
         <Navbar>
          <Navbar.Header>
