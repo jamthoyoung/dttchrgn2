@@ -72,7 +72,9 @@ export const rerollDice = () => {
    wiz : getMultipleDice(3,true),
    chr : getMultipleDice(3,true)
   },
-  height : getMultipleDice(3,true),
-  weight : getMultipleDice(3,true)
+  height : getMultipleDice(3,false).reduce((p,c) => p+c),
+  weight : getMultipleDice(3,false).reduce((p,c) => p+c),
+  gold : getMultipleDice(3,false).reduce((p,c) => p+c) * 10
+
  };
 }

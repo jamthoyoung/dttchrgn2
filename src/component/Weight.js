@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CharacterWeight extends React.Component {
+class Weight extends React.Component {
   render(){
     var heightInCm = 126.4 + (this.props.height*5.6);
     // ideal weight for male uses devine formula
@@ -15,4 +15,4 @@ class CharacterWeight extends React.Component {
   }
 }
 
-export default CharacterWeight;
+export default Weight;

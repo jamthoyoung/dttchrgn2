@@ -4,7 +4,7 @@ import CharacterName from './CharacterName.js';
 import AttributeBoxContainer from '../containers/AttributeBoxContainer.js';
 import KindredInputContainer from '../containers/KindredInputContainer.js';
 import RerollNavItemContainer from '../containers/RerollNavItemContainer.js';
-import CharacterWeight from './CharacterWeight.js';
+import WeightContainer from '../containers/WeightContainer.js';
 import CharacterHeight from './CharacterHeight.js';
 import CharacterClass from './CharacterClass.js';
 import CharacterGender from './CharacterGender.js';
@@ -88,9 +88,7 @@ class CharacterBox extends React.Component {
             <Col sm={4}>
               <Panel header="Stature">
             <Col sm={6}>
-              <CharacterWeight kindred={this.state.kindred} 
-                         weight={this.state.weight} 
-                         height={this.state.height}/>
+              <WeightContainer />
             </Col>
             <Col sm={6}>
               <CharacterHeight kindred={this.state.kindred}

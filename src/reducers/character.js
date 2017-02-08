@@ -55,7 +55,10 @@ export default function character(state = initialState, action){
   case REROLL_DICE:
    return {
      ...state,
-     attributes: action.attributes
+     attributes: action.attributes,
+     weight: action.weight,
+     height: action.height,
+     gold: action.gold
    }
   default:
    return state;
