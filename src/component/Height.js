@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CharacterHeight extends React.Component {
+class Height extends React.Component {
   render(){
     var heightInCm = Math.round(
        (126.4 + (this.props.height*5.6)) * this.props.kindred.heightmod
@@ -13,4 +13,4 @@ class CharacterHeight extends React.Component {
   }
 }
 
-export default CharacterHeight;
+export default Height;
