@@ -8,7 +8,7 @@ import WeightContainer from '../containers/WeightContainer.js';
 import HeightContainer from '../containers/HeightContainer.js';
 import CharacterClass from './CharacterClass.js';
 import CharacterGender from './CharacterGender.js';
-import CharacterGold from './CharacterGold.js';
+import GoldContainer from '../containers/GoldContainer.js';
 import OtherAbilities from './OtherAbilities.js';
 import CharacterBackstory from './CharacterBackstory.js';
 import Talents from './Talents.js';
@@ -123,8 +123,7 @@ class CharacterBox extends React.Component {
          </Col>
          <Col sm={4}>
             <Panel header="Equipment">
-              <CharacterGold
-                gold={this.state.gold}/>
+              <GoldContainer />
             </Panel>
          </Col>
          <Col sm={4}>

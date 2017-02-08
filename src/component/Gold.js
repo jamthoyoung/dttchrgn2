@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CharacterGold extends React.Component {
+class Gold extends React.Component {
   render(){
     return (
       <div>
@@ -10,4 +10,4 @@ class CharacterGold extends React.Component {
   }
 }
 
-export default CharacterGold;
+export default Gold;
