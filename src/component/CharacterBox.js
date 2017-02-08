@@ -1,8 +1,9 @@
 import React from 'react';
-import { Navbar, Nav, NavItem, Form, Panel, Grid, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, Form, Panel, Grid, Row, Col } from 'react-bootstrap';
 import CharacterName from './CharacterName.js';
 import AttributeBoxContainer from '../containers/AttributeBoxContainer.js';
 import KindredInputContainer from '../containers/KindredInputContainer.js';
+import RerollNavItemContainer from '../containers/RerollNavItemContainer.js';
 import CharacterWeight from './CharacterWeight.js';
 import CharacterHeight from './CharacterHeight.js';
 import CharacterClass from './CharacterClass.js';
@@ -112,8 +113,7 @@ class CharacterBox extends React.Component {
           </Navbar.Brand>
          </Navbar.Header>
         <Nav>
-          <NavItem eventKey={1} 
-            onClick={this.handleRerollClick} >Reroll</NavItem>
+         <RerollNavItemContainer />
         </Nav>
       </Navbar>
       </Row>
