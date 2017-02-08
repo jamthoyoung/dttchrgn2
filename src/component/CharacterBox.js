@@ -16,10 +16,6 @@ import Talents from './Talents.js';
 class CharacterBox extends React.Component {
   constructor(props) {
     super(props);
-    this.rollOneDice = this.rollOneDice.bind(this);
-    this.getMultipleDice = this.getMultipleDice.bind(this);
-    this.getNewAttributeValue = this.getNewAttributeValue.bind(this);
-    this.handleRerollClick = this.handleRerollClick.bind(this);
     this.genderChange = this.genderChange.bind(this);
     this.classChange = this.classChange.bind(this);
     this.nameChange = this.nameChange.bind(this);
@@ -27,62 +23,6 @@ class CharacterBox extends React.Component {
     this.state = 
       this.props.initFormData; 
   }
-  rollOneDice(){
-    return Math.ceil(Math.random() * 6);
-  }
-  getMultipleDice(numberofdice, taro){
-    var dicearray = [];
-    var i = 0;
-    while(i < numberofdice){
-      dicearray.push(this.rollOneDice());
-      i += 1;
-    }
-    if (taro){
-      var firstvalue = dicearray[0];
-      var issame = true;
-      for(var x = 1; x < numberofdice; x++){
-	if(firstvalue !== dicearray[x]){
-	  issame = false;
-	}
-      }
-      if(issame){
-	dicearray = dicearray.concat(this.getMultipleDice(numberofdice,true));
-      }
-    }
-    return dicearray;
-  }
-  getNewAttributeValue(mod,taro){
-    var dicearray = this.getMultipleDice(3,taro);
-    var total = dicearray.reduce(
-      function(previousValue, currentValue, currentIndex, array) {
-	return previousValue + currentValue;
-      });
-    if(mod > 1){
-      total = Math.floor(total * mod);
-    } else {
-      total = Math.ceil(total * mod);
-    }
-    console.log(dicearray + " * " + mod);
-    return { value: total, specialized : false};
-  }
-  handleRerollClick() {
-    console.log("prestate:" + this.state);
-    var newattributes = {
-      str: this.getMultipleDice(3,true),
-      con: this.getMultipleDice(3,true),
-      dex: this.getMultipleDice(3,true),
-      spd: this.getMultipleDice(3,true),
-      lk: this.getMultipleDice(3,true),
-      iq: this.getMultipleDice(3,true),
-      wiz: this.getMultipleDice(3,true),
-      chr: this.getMultipleDice(3,true)
-    };
-    var wt = this.getNewAttributeValue(this.state.kindred.weightmod,false).value;
-    var ht = this.getNewAttributeValue(this.state.kindred.heightmod,false).value;
-    var gold = this.getNewAttributeValue(10,false).value;
-    console.log("new wt + ht:" + wt + " " + ht); 
-    this.setState( {attributes: newattributes, weight: wt, height: ht, gold: gold } );
-  } 
   genderChange(value){
     this.setState({gender: value});
   }

@@ -51,17 +51,6 @@ const getNewAttributeValue = (mod,taro) => {
 
 
 const handleRerollClick = () => {
-    console.log("prestate:" + this.state);
-    var newattributes = {
-      str: this.getMultipleDice(3,true),
-      con: this.getMultipleDice(3,true),
-      dex: this.getMultipleDice(3,true),
-      spd: this.getMultipleDice(3,true),
-      lk: this.getMultipleDice(3,true),
-      iq: this.getMultipleDice(3,true),
-      wiz: this.getMultipleDice(3,true),
-      chr: this.getMultipleDice(3,true)
-    };
     var wt = this.getNewAttributeValue(this.state.kindred.weightmod,false).value;
     var ht = this.getNewAttributeValue(this.state.kindred.heightmod,false).value;
     var gold = this.getNewAttributeValue(10,false).value;
