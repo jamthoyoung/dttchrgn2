@@ -1,4 +1,4 @@
-import { SELECT_KINDRED, REROLL_DICE } from '../constants/ActionTypes';
+import { SELECT_KINDRED, REROLL_DICE, UPDATE_NAME } from '../constants/ActionTypes';
 
 const initialState = 
 {
@@ -51,6 +51,11 @@ export default function character(state = initialState, action){
    return {
      ...state,
      kindred: action.id
+   }
+  case UPDATE_NAME:
+   return {
+     ...state,
+     name: action.name
    }
   case REROLL_DICE:
    return {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Form, Panel, Grid, Row, Col } from 'react-bootstrap';
-import CharacterName from './CharacterName.js';
+import NameContainer from '../containers/NameContainer.js';
 import AttributeBoxContainer from '../containers/AttributeBoxContainer.js';
 import KindredInputContainer from '../containers/KindredInputContainer.js';
 import RerollNavItemContainer from '../containers/RerollNavItemContainer.js';
@@ -18,7 +18,6 @@ class CharacterBox extends React.Component {
     super(props);
     this.genderChange = this.genderChange.bind(this);
     this.classChange = this.classChange.bind(this);
-    this.nameChange = this.nameChange.bind(this);
     this.backstoryChange = this.backstoryChange.bind(this);
     this.state = 
       this.props.initFormData; 
@@ -28,9 +27,6 @@ class CharacterBox extends React.Component {
   }
   classChange(value){
     this.setState({class: value});
-  }
-  nameChange(value){
-    this.setState({name: value});
   }
   backstoryChange(value){
     for(var i = 0; i < this.props.backstory.length; i++) {
@@ -60,8 +56,7 @@ class CharacterBox extends React.Component {
       <Row>
       <Form>
            <Col xs={12} md={3}>
-            <CharacterName name={this.state.name}
-              onChange={this.nameChange} />
+            <NameContainer />
            </Col>
            <Col xs={12} sm={4} md={3}>
             <KindredInputContainer 

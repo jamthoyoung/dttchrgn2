@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
-class CharacterName extends React.Component {
+class Name extends React.Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -22,5 +22,5 @@ class CharacterName extends React.Component {
   }
 }
 
-export default CharacterName;
+export default Name;
 
