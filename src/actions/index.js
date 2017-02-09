@@ -1,4 +1,4 @@
-import { SELECT_KINDRED, REROLL_DICE, UPDATE_NAME } from '../constants/ActionTypes';
+import { SELECT_KINDRED, REROLL_DICE, UPDATE_NAME, SELECT_GENDER } from '../constants/ActionTypes';
 
 export const selectKindred = (id) => {
  return {
@@ -14,6 +14,12 @@ export const updateName = (name) => {
  };
 }
 
+export const selectGender = (gender) => {
+ return {
+  type: SELECT_GENDER,
+  gender: gender
+ };
+}
 const rollOneDice = () => {
   return Math.ceil(Math.random() * 6);
 }

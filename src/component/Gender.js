@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
-class CharacterGender extends React.Component {
+class Gender extends React.Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -17,7 +17,7 @@ class CharacterGender extends React.Component {
             componentClass="select" 
             onChange={this.onChange}
             placeholder="Please select"
-            value={this.props.value}>
+            value={this.props.gender}>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </FormControl>
@@ -26,4 +26,4 @@ class CharacterGender extends React.Component {
   }
 }
 
-export default CharacterGender;
+export default Gender;

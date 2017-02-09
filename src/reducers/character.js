@@ -1,4 +1,4 @@
-import { SELECT_KINDRED, REROLL_DICE, UPDATE_NAME } from '../constants/ActionTypes';
+import { SELECT_KINDRED, REROLL_DICE, UPDATE_NAME, SELECT_GENDER } from '../constants/ActionTypes';
 
 const initialState = 
 {
@@ -56,6 +56,11 @@ export default function character(state = initialState, action){
    return {
      ...state,
      name: action.name
+   }
+  case SELECT_GENDER:
+   return {
+     ...state,
+     gender: action.gender
    }
   case REROLL_DICE:
    return {

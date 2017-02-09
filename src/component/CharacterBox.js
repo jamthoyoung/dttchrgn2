@@ -7,7 +7,7 @@ import RerollNavItemContainer from '../containers/RerollNavItemContainer.js';
 import WeightContainer from '../containers/WeightContainer.js';
 import HeightContainer from '../containers/HeightContainer.js';
 import CharacterClass from './CharacterClass.js';
-import CharacterGender from './CharacterGender.js';
+import GenderContainer from '../containers/GenderContainer.js';
 import GoldContainer from '../containers/GoldContainer.js';
 import OtherAbilities from './OtherAbilities.js';
 import CharacterBackstory from './CharacterBackstory.js';
@@ -16,14 +16,10 @@ import Talents from './Talents.js';
 class CharacterBox extends React.Component {
   constructor(props) {
     super(props);
-    this.genderChange = this.genderChange.bind(this);
     this.classChange = this.classChange.bind(this);
     this.backstoryChange = this.backstoryChange.bind(this);
     this.state = 
       this.props.initFormData; 
-  }
-  genderChange(value){
-    this.setState({gender: value});
   }
   classChange(value){
     this.setState({class: value});
@@ -73,9 +69,7 @@ class CharacterBox extends React.Component {
                 onChange={this.classChange} />
             </Col>
             <Col xs={6} sm={4} md={3}>
-            <CharacterGender
-              value={this.state.gender}
-              onChange={this.genderChange} />
+            <GenderContainer />
             </Col>
             </Form>
           </Row>
