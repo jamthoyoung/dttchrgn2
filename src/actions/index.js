@@ -1,9 +1,16 @@
-import { SELECT_KINDRED, REROLL_DICE, UPDATE_NAME, SELECT_GENDER } from '../constants/ActionTypes';
+import { SELECT_KINDRED, REROLL_DICE, UPDATE_NAME, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
 
 export const selectKindred = (id) => {
  return {
   type: SELECT_KINDRED,
   id: id 
+ };
+}
+
+export const selectClass = (c) => {
+ return {
+  type: SELECT_CLASS,
+  class: c
  };
 }
 
