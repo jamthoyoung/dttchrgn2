@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Glyphicon, Panel, Button, Row, Col } from 'react-bootstrap';
+import { FormGroup, ControlLabel, FormControl, Modal, Glyphicon, Panel, Button, Row, Col } from 'react-bootstrap';
 
 class Talents extends React.Component {
   constructor(props) {
@@ -41,8 +41,16 @@ class Talents extends React.Component {
        <Modal.Title>Edit Talents</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Blah blah</h4>
-        <p>alskdjf;skjdf;lsjd lskdj flskj fdl </p>
+        <FormGroup controlId="formControlSelectTalents">
+          <ControlLabel>Talents</ControlLabel>
+          <FormControl componentClass="select" multiple>
+          {this.props.talentlist.allIds.map(function(t,i){
+            return <option value={t} key={i}>
+                    {this.props.talentlist.byId[t].name}
+                   </option>
+          }, this)}
+          </FormControl>
+        </FormGroup>
       </Modal.Body>
       <Modal.Footer>
        <Button onClick={this.closeModal}>Close</Button>
