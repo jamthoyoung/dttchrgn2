@@ -21,8 +21,8 @@ class OtherAbilities extends React.Component {
     }
     return (
       <Row>
-      {output.map(function(message){
-       return <Col sm={12}>{message}</Col>;
+      {output.map(function(message, index){
+       return <Col key={index} sm={12}>{message}</Col>;
       })}
       </Row>
     );
