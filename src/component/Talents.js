@@ -29,9 +29,11 @@ class Talents extends React.Component {
      <div>
      <Panel header={pheader}>
       <Row>
-      {this.props.talents.map(function(t){
-       return <Col sm={12}>{t}</Col>;
-      })}
+      {this.props.talents.map(function(t,i){
+       return <Col key={i} sm={12}>
+                 {this.props.talentlist.byId[t].name}
+              </Col>
+      }, this)}
       </Row>
      </Panel>
      <Modal show={this.state.showModal} onHide={this.closeModal}>

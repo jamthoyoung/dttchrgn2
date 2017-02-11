@@ -11,7 +11,7 @@ import GenderContainer from '../containers/GenderContainer.js';
 import GoldContainer from '../containers/GoldContainer.js';
 import OtherAbilities from './OtherAbilities.js';
 import CharacterBackstory from './CharacterBackstory.js';
-import Talents from './Talents.js';
+import TalentContainer from '../containers/TalentContainer.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -98,7 +98,7 @@ class CharacterBox extends React.Component {
             </Panel>
          </Col>
          <Col sm={4}>
-           <Talents talents={this.state.talents} />
+           <TalentContainer />
          </Col>
          <Col sm={4}>
             <Panel header="Weapons">
