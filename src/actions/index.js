@@ -1,9 +1,34 @@
-import { SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE, UPDATE_NAME, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
+import { ADD_TALENT, UPDATE_TALENT, DELETE_TALENT, SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE,
+  UPDATE_NAME, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
+import shortid from 'shortid';
+
+export const addTalent = (text) => {
+  return {
+    type: ADD_TALENT,
+    name: text,
+    id: shortid.generate()
+  }
+}
+
+export const deleteTalent = (id) => {
+  return {
+    type: DELETE_TALENT,
+    id: id
+  }
+}
+
+export const updateTalent = (id, text) => {
+  return {
+    type: UPDATE_TALENT,
+    id: id,
+    name: text
+  }
+}
 
 export const selectKindred = (id) => {
  return {
   type: SELECT_KINDRED,
-  id: id 
+  id: id
  };
 }
 

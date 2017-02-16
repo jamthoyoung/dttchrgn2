@@ -1,7 +1,9 @@
-export const SELECT_KINDRED = 'SELECT_KINDRED'; 
-export const REROLL_DICE = 'REROLL_DICE'; 
-export const UPDATE_NAME = 'UPDATE_NAME'; 
-export const SELECT_GENDER = 'SELECT_GENDER'; 
-export const SELECT_CLASS = 'SELECT_CLASS'; 
-export const SELECT_TALENTS = 'SELECT_TALENTS'; 
-
+export const SELECT_KINDRED = 'SELECT_KINDRED';
+export const REROLL_DICE = 'REROLL_DICE';
+export const UPDATE_NAME = 'UPDATE_NAME';
+export const SELECT_GENDER = 'SELECT_GENDER';
+export const SELECT_CLASS = 'SELECT_CLASS';
+export const SELECT_TALENTS = 'SELECT_TALENTS';
+export const ADD_TALENT = 'ADD_TALENT'; 
+export const UPDATE_TALENT = 'UPDATE_TALENT';
+export const DELETE_TALENT = 'DELETE_TALENT';
