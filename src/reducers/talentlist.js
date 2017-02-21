@@ -1,4 +1,6 @@
-const initialState = 
+import { ADD_TALENT, UPDATE_TALENT, DELETE_TALENT } from '../constants/ActionTypes';
+
+const initialState =
 {
  byId : {
   1 : {
@@ -37,7 +39,38 @@ const initialState =
 
 export default function talentlist(state = initialState, action){
  switch (action.type) {
-  //this reducer performs no action. 
+   case ADD_TALENT:
+    let newById = [
+      ...state.byId,
+      action.id: {
+        id: action.id,
+        name: action.name
+      }];
+      let newAllIds =[
+          ...state.allIds,
+          action.id
+        ];
+    if (action.isRogue){
+      return {
+        ...state,
+        byId : newById,
+        allIds : newAllIds,
+        rogueIds : [
+            ...state.rogueIds,
+            action.id
+        ]
+      }
+    } else {
+      return {
+        ...state,
+        byId : newById,
+        allIds : newAllIds
+      }
+    }
+   case UPDATE_TALENT:
+    return state;
+   case DELETE_TALENT:
+    return state;
   default:
    return state;
  }

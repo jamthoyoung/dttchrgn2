@@ -1,12 +1,13 @@
+import shortid from 'shortid';
 import { ADD_TALENT, UPDATE_TALENT, DELETE_TALENT, SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE,
   UPDATE_NAME, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
-import shortid from 'shortid';
 
-export const addTalent = (text) => {
+export const addTalent = (text, isRogue) => {
   return {
     type: ADD_TALENT,
     name: text,
-    id: shortid.generate()
+    id: shortid.generate(),
+    isRogue: isRogue
   }
 }
 
@@ -17,11 +18,12 @@ export const deleteTalent = (id) => {
   }
 }
 
-export const updateTalent = (id, text) => {
+export const updateTalent = (id, text, isRogue) => {
   return {
     type: UPDATE_TALENT,
     id: id,
-    name: text
+    name: text,
+    isRogue
   }
 }
 
