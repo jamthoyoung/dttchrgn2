@@ -10,13 +10,15 @@ import ClassContainer from '../containers/ClassContainer.js';
 import GenderContainer from '../containers/GenderContainer.js';
 import GoldContainer from '../containers/GoldContainer.js';
 import OtherAbilities from './OtherAbilities.js';
+import CharacterBackstory from './CharacterBackstory.js';
+import TalentContainer from '../containers/TalentContainer.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
     super(props);
     this.backstoryChange = this.backstoryChange.bind(this);
-    this.state =
-      this.props.initFormData;
+    this.state = 
+      this.props.initFormData; 
   }
   backstoryChange(value){
     for(var i = 0; i < this.props.backstory.length; i++) {
@@ -49,8 +51,13 @@ class CharacterBox extends React.Component {
             <NameContainer />
            </Col>
            <Col xs={12} sm={4} md={3}>
-            <KindredInputContainer
+            <KindredInputContainer 
                />
+           </Col>
+           <Col xs={12} sm={4} md={3}>
+            <CharacterBackstory backstory={this.props.backstory}
+              value={this.state.backstory.id}
+              onChange={this.backstoryChange} />
            </Col>
             <Col xs={6} sm={4} md={3}>
               <ClassContainer />
@@ -83,8 +90,27 @@ class CharacterBox extends React.Component {
             </Panel>
          </Col>
          <Col sm={4}>
-            <Panel header="Gold">
+            <Panel header="Portrait">
+            </Panel>
+         </Col>
+         <Col sm={4}>
+            <Panel header="Adventure Points">
+            </Panel>
+         </Col>
+         <Col sm={4}>
+           <TalentContainer />
+         </Col>
+         <Col sm={4}>
+            <Panel header="Weapons">
+            </Panel>
+         </Col>
+         <Col sm={4}>
+            <Panel header="Equipment">
               <GoldContainer />
+            </Panel>
+         </Col>
+         <Col sm={4}>
+            <Panel header="Spells">
             </Panel>
          </Col>
         </Row>
