@@ -9,7 +9,7 @@ import HeightContainer from '../containers/HeightContainer.js';
 import ClassContainer from '../containers/ClassContainer.js';
 import GenderContainer from '../containers/GenderContainer.js';
 import GoldContainer from '../containers/GoldContainer.js';
-import OtherAbilities from './OtherAbilities.js';
+import OtherAbilitiesContainer from '../containers/OtherAbilitiesContainer.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -49,8 +49,7 @@ class CharacterBox extends React.Component {
             <NameContainer />
            </Col>
            <Col xs={12} sm={4} md={3}>
-            <KindredInputContainer
-               />
+            <KindredInputContainer />
            </Col>
             <Col xs={6} sm={4} md={3}>
               <ClassContainer />
@@ -78,8 +77,7 @@ class CharacterBox extends React.Component {
             </Col>
          <Col sm={4}>
             <Panel header="Other Abilities">
-             <OtherAbilities attr={this.state.attributes}
-               kindred={this.state.kindred} />
+             <OtherAbilitiesContainer />
             </Panel>
          </Col>
          <Col sm={4}>
