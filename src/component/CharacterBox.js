@@ -59,33 +59,13 @@ class CharacterBox extends React.Component {
             </Col>
             </Form>
           </Row>
-          <Row>
-            <Col sm={4}>
-              <Panel header="Stature">
-            <Col sm={6}>
-              <WeightContainer />
-            </Col>
-            <Col sm={6}>
-              <HeightContainer />
-            </Col>
-             </Panel>
-            </Col>
-            <Col sm={4}>
-            <Panel header="Prime Attributes">
-              <AttributeBoxContainer />
-            </Panel>
-            </Col>
-         <Col sm={4}>
-            <Panel header="Other Abilities">
-             <OtherAbilitiesContainer />
-            </Panel>
-         </Col>
-         <Col sm={4}>
-            <Panel header="Gold">
-              <GoldContainer />
-            </Panel>
-         </Col>
-        </Row>
+          <Panel header="Generated Results">
+            <AttributeBoxContainer />
+            <WeightContainer />
+            <HeightContainer />
+            <OtherAbilitiesContainer />
+            <GoldContainer />
+          </Panel>
      </Grid>
     );
   }
