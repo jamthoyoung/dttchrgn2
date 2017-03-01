@@ -1,12 +1,11 @@
 import React from 'react';
-import { Row, Col, Well } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Attribute from './Attribute.js';
 
 class AttributeBox extends React.Component {
   render(){
     return (
       <div>
-      <Well>
       <Row>
       <Col xs={12} sm={6} md={4} lg={3}>
         <Attribute name="STR" data={this.props.attr.str} kmod={this.props.kindred.strmod}/>
@@ -33,7 +32,6 @@ class AttributeBox extends React.Component {
         <Attribute name="CHR" data={this.props.attr.chr} kmod={this.props.kindred.chrmod}/>
       </Col>
       </Row>
-      </Well>
       </div>
     );
   }

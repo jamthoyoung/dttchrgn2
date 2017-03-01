@@ -6,9 +6,9 @@ class Height extends React.Component {
        (126.4 + (this.props.height*5.6)) * this.props.kindred.heightmod
                                );
     return (
-      <span>
+      <div>
         Height: {heightInCm} cm
-      </span>
+      </div>
     );
   }
 }

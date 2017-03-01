@@ -8,9 +8,9 @@ class Weight extends React.Component {
           (50 + (0.9055118 * (heightInCm-152.4))) * this.props.kindred.weightmod
                            );
     return (
-      <span>
+      <div>
         Weight: {idealWeightKg} kg
-      </span>
+      </div>
     );
   }
 }
