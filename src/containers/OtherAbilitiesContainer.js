@@ -11,7 +11,7 @@ const mapStateToProps = (store) => {
    }
   }
   let attributes = store.character.attributes;
-  for (name in attributes){
+  for (var name in attributes){
     if(attributes.hasOwnProperty(name)){
      var att = attributes[name];
      if(att.length > 3) {
