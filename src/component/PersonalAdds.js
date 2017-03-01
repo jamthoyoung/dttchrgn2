@@ -1,7 +1,8 @@
 import React from 'react';
 
-class PersonalAdds extends React.Component {
+class PersonalAdds extends React.Component  {
   render(){
+    /*
    var sumofarray = function(previousValue, currentValue, currentIndex, array) {
       return previousValue + currentValue;
    };
@@ -20,13 +21,17 @@ class PersonalAdds extends React.Component {
                               this.props.kindred.spdmod);
     var lktotal = multiplier(this.props.attr.lk.reduce(sumofarray),
                               this.props.kindred.lkmod);
+    */
     return (
       <div>
         Personal Adds: {
+          /*
 		Math.max(0,strtotal-12)+
 		Math.max(0,dextotal-12)+
 		Math.max(0,spdtotal-12)+
 		Math.max(0,lktotal-12)
+    */
+    this.props.personalAdds
 	}
       </div>
     );

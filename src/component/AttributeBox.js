@@ -1,8 +1,6 @@
 import React from 'react';
 import { Row, Col, Well } from 'react-bootstrap';
 import Attribute from './Attribute.js';
-import PersonalAdds from './PersonalAdds.js';
-import CharacterLevel from './CharacterLevel.js';
 
 class AttributeBox extends React.Component {
   render(){
@@ -35,14 +33,6 @@ class AttributeBox extends React.Component {
         <Attribute name="CHR" data={this.props.attr.chr} kmod={this.props.kindred.chrmod}/>
       </Col>
       </Row>
-      </Well>
-      <Well>
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <PersonalAdds attr={this.props.attr} kindred={this.props.kindred} />
-      </Col>
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <CharacterLevel attr={this.props.attr} kindred={this.props.kindred} />
-      </Col>
       </Well>
       </div>
     );
