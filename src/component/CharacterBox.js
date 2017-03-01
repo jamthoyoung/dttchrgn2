@@ -37,7 +37,7 @@ class CharacterBox extends React.Component {
         <Navbar>
          <Navbar.Header>
           <Navbar.Brand>
-            dttchargen
+            Character Dice Roller for Deluxe Tunnels and Trolls
           </Navbar.Brand>
          </Navbar.Header>
         <Nav>

@@ -10,11 +10,11 @@ class App extends Component {
     return (
       <div>
         <PageHeader>
-          dttchrgen2
+          Character Dice Roller for Deluxe Tunnels and Trolls
         </PageHeader>
-        <CharacterBox 
-           initFormData={initFormData} 
-           backstory={backstory} 
+        <CharacterBox
+           initFormData={initFormData}
+           backstory={backstory}
         />
       </div>
     );
@@ -22,4 +22,3 @@ class App extends Component {
 }
 
 export default App;
-

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import RerollNavItem from '../component/RerollNavItem.js';
+import RerollNavItem from '../component/Reroll.js';
 import { rerollDice } from '../actions';
 
 const mapDispatchToProps = (dispatch) => {
