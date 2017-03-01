@@ -33,54 +33,45 @@ class CharacterBox extends React.Component {
   render(){
     return (
       <Grid fluid>
-       <Row>
-        <Navbar>
-         <Navbar.Header>
-          <Navbar.Brand>
-            Character Dice Roller for Deluxe Tunnels and Trolls
-          </Navbar.Brand>
-         </Navbar.Header>
-        <Nav>
-         <RerollContainer />
-        </Nav>
-      </Navbar>
-      </Row>
       <Row>
-      <Form>
-           <Col xs={12} md={3}>
+        <Form>
+          <Col xs={6} sm={4} md={3} md={2}>
             <NameContainer />
-           </Col>
-           <Col xs={12} sm={4} md={3}>
+          </Col>
+          <Col xs={6} sm={4} md={3} lg={2}>
             <KindredInputContainer />
-           </Col>
-            <Col xs={6} sm={4} md={3}>
-              <ClassContainer />
-            </Col>
-            <Col xs={6} sm={4} md={3}>
+          </Col>
+          <Col xs={6} sm={4} md={3} lg={2}>
+            <ClassContainer />
+          </Col>
+          <Col xs={6} sm={4} md={3} lg={2}>
             <GenderContainer />
-            </Col>
-            </Form>
-          </Row>
+          </Col>
+          <Col xs={6} sm={4} md={3} lg={2}>
+            <RerollContainer />
+          </Col>
+          </Form>
+        </Row>
           <Panel header="Generated Results">
             <Well>
               <AttributeBoxContainer />
             </Well>
             <Well>
               <Row>
-                <Col xs={12} sm={6} md={4} lg={3}>
-                  <WeightContainer />
-                </Col>
-                <Col xs={12} sm={6} md={4} lg={3}>
-                  <HeightContainer />
-                </Col>
-                <Col xs={12} sm={6} md={4} lg={3}>
-                  <GoldContainer />
-                </Col>
-                <Col xs={12} sm={6} md={4} lg={3}>
+                <Col xs={6} sm={4} md={3} lg={2}>
                   <PersonalAddsContainer />
                 </Col>
-                <Col xs={12} sm={6} md={4} lg={3}>
+                <Col xs={6} sm={4} md={3} lg={2}>
                   <LevelContainer />
+                </Col>
+                <Col xs={6} sm={4} md={3} lg={2}>
+                  <WeightContainer />
+                </Col>
+                <Col xs={6} sm={4} md={3} lg={2}>
+                  <HeightContainer />
+                </Col>
+                <Col xs={6} sm={4} md={3} lg={2}>
+                  <GoldContainer />
                 </Col>
               </Row>
             </Well>

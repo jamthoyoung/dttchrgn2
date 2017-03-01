@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavItem } from 'react-bootstrap';
+import { Button, FormGroup } from 'react-bootstrap';
 
 class Reroll extends React.Component {
   constructor(props) {
@@ -11,9 +11,12 @@ class Reroll extends React.Component {
   }
   render(){
     return (
-      <NavItem eventKey={1}
-            onClick={this.onClick} >Reroll</NavItem>
-
+      <div>
+      <br/>
+      <FormGroup controlId="CharacterKindredInput">
+        <Button onClick={this.onClick} >Roll Dice</Button>
+      </FormGroup>
+      </div>
     );
   }
 }
