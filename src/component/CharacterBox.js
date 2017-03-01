@@ -11,7 +11,7 @@ import GenderContainer from '../containers/GenderContainer.js';
 import GoldContainer from '../containers/GoldContainer.js';
 import OtherAbilitiesContainer from '../containers/OtherAbilitiesContainer.js';
 import PersonalAddsContainer from '../containers/PersonalAddsContainer.js';
-//import CharacterLevel from './CharacterLevel.js';
+//import Level from './Level.js';
 
 class CharacterBox extends React.Component {
   constructor(props) {
@@ -71,9 +71,6 @@ class CharacterBox extends React.Component {
             {/*
             <Well>
             <Row>
-            <Col xs={12} sm={6} md={4} lg={3}>
-              <PersonalAdds attr={this.props.attr} kindred={this.props.kindred} />
-            </Col>
             <Col xs={12} sm={6} md={4} lg={3}>
               <CharacterLevel attr={this.props.attr} kindred={this.props.kindred} />
             </Col>
