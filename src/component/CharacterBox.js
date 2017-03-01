@@ -3,7 +3,7 @@ import { Well, Navbar, Nav, Form, Panel, Grid, Row, Col } from 'react-bootstrap'
 import NameContainer from '../containers/NameContainer.js';
 import AttributeBoxContainer from '../containers/AttributeBoxContainer.js';
 import KindredInputContainer from '../containers/KindredInputContainer.js';
-import RerollNavItemContainer from '../containers/RerollContainer.js';
+import RerollContainer from '../containers/RerollContainer.js';
 import WeightContainer from '../containers/WeightContainer.js';
 import HeightContainer from '../containers/HeightContainer.js';
 import ClassContainer from '../containers/ClassContainer.js';
@@ -41,7 +41,7 @@ class CharacterBox extends React.Component {
           </Navbar.Brand>
          </Navbar.Header>
         <Nav>
-         <RerollNavItemContainer />
+         <RerollContainer />
         </Nav>
       </Navbar>
       </Row>
