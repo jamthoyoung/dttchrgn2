@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavItem } from 'react-bootstrap';
 
-class RerollNavItem extends React.Component {
+class Reroll extends React.Component {
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
@@ -18,4 +18,4 @@ class RerollNavItem extends React.Component {
   }
 }
 
-export default RerollNavItem;
+export default Reroll;
