@@ -1,5 +1,5 @@
 import React from 'react';
-import { Well, Navbar, Nav, Form, Panel, Grid, Row, Col } from 'react-bootstrap';
+import { Well, Form, Panel, Grid, Row, Col } from 'react-bootstrap';
 import NameContainer from '../containers/NameContainer.js';
 import AttributeBoxContainer from '../containers/AttributeBoxContainer.js';
 import KindredInputContainer from '../containers/KindredInputContainer.js';
@@ -35,7 +35,7 @@ class CharacterBox extends React.Component {
       <Grid fluid>
       <Row>
         <Form>
-          <Col xs={6} sm={4} md={3} md={2}>
+          <Col xs={6} sm={4} md={3} lg={2}>
             <NameContainer />
           </Col>
           <Col xs={6} sm={4} md={3} lg={2}>
