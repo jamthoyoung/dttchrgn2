@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
 class Attribute extends React.Component {
   render(){
@@ -12,9 +12,19 @@ class Attribute extends React.Component {
     } else {
       total = Math.ceil(total * this.props.kmod);
     }
+
+    let tooltip = <Tooltip>{"[" + this.props.data.toString() + "] * " + this.props.kmod}</Tooltip>;
+
     return (
       <Row>
-        <Col xs={5}>{this.props.name}</Col><Col xs={7}>{total}</Col>
+        <Col xs={5}>{this.props.name}</Col>
+        <Col xs={7}>
+          <OverlayTrigger overlay={tooltip} placement="bottom" delayShow={50} delayHide={50}>
+            <div>
+            {total}
+            </div>
+          </OverlayTrigger>
+        </Col>
       </Row>
     );
   }
