@@ -13,16 +13,16 @@ class Attribute extends React.Component {
       total = Math.ceil(total * this.props.kmod);
     }
 
-    let tooltip = <Tooltip>{"[" + this.props.data.toString() + "] * " + this.props.kmod}</Tooltip>;
+    let tooltip = <Tooltip id={this.props.name + '_tooltip'}>{"[" + this.props.data.toString() + "] * " + this.props.kmod}</Tooltip>;
 
     return (
       <Row>
         <Col xs={5}>{this.props.name}</Col>
         <Col xs={7}>
           <OverlayTrigger overlay={tooltip} placement="bottom" delayShow={50} delayHide={50}>
-            <div>
+            <span>
             {total}
-            </div>
+            </span>
           </OverlayTrigger>
         </Col>
       </Row>
