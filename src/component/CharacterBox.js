@@ -12,6 +12,7 @@ import GoldContainer from '../containers/GoldContainer.js';
 import OtherAbilitiesContainer from '../containers/OtherAbilitiesContainer.js';
 import PersonalAddsContainer from '../containers/PersonalAddsContainer.js';
 import LevelContainer from '../containers/LevelContainer.js';
+import Trademark from './Trademark.js'
 
 class CharacterBox extends React.Component {
   render(){
@@ -63,6 +64,11 @@ class CharacterBox extends React.Component {
               <OtherAbilitiesContainer />
             </Panel>
           </Panel>
+          <Row>
+            <Col>
+              <Trademark/>
+            </Col>
+          </Row>
      </Grid>
     );
   }
