@@ -14,22 +14,6 @@ import PersonalAddsContainer from '../containers/PersonalAddsContainer.js';
 import LevelContainer from '../containers/LevelContainer.js';
 
 class CharacterBox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.backstoryChange = this.backstoryChange.bind(this);
-    this.state =
-      this.props.initFormData;
-  }
-  backstoryChange(value){
-    for(var i = 0; i < this.props.backstory.length; i++) {
-      // eslint-disable-next-line
-      if(value == this.props.backstory[i].id){
-        console.log(this.props.backstory[i]);
-        this.setState({talents: this.props.backstory[i].talents
-                       });
-      }
-    }
-  }
   render(){
     return (
       <Grid fluid>
