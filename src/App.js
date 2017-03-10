@@ -12,10 +12,7 @@ class App extends Component {
         <PageHeader>
           Character Dice Roller for Deluxe Tunnels and Trolls
         </PageHeader>
-        <CharacterBox
-           initFormData={initFormData}
-           backstory={backstory}
-        />
+        <CharacterBox />
       </div>
     );
   }
