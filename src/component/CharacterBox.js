@@ -1,5 +1,5 @@
 import React from 'react';
-import { Well, Form, Panel, Grid, Row, Col } from 'react-bootstrap';
+import { Well, Form, Panel, Grid, Row, Col, PageHeader } from 'react-bootstrap';
 import NameContainer from '../containers/NameContainer.js';
 import AttributeBoxContainer from '../containers/AttributeBoxContainer.js';
 import KindredInputContainer from '../containers/KindredInputContainer.js';
@@ -18,6 +18,13 @@ class CharacterBox extends React.Component {
   render(){
     return (
       <Grid fluid>
+      <Row>
+        <Col xs={12}>
+          <PageHeader>
+            Character Dice Roller for Deluxe Tunnels and Trolls
+          </PageHeader>
+        </Col>
+      </Row>
       <Row>
         <Form>
           <Col xs={6} sm={4} md={3} lg={2}>
@@ -65,7 +72,7 @@ class CharacterBox extends React.Component {
             </Panel>
           </Panel>
           <Row>
-            <Col>
+            <Col xs={12}>
               <Trademark/>
             </Col>
           </Row>
