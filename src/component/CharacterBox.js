@@ -12,6 +12,7 @@ import GoldContainer from '../containers/GoldContainer.js';
 import OtherAbilitiesContainer from '../containers/OtherAbilitiesContainer.js';
 import PersonalAddsContainer from '../containers/PersonalAddsContainer.js';
 import LevelContainer from '../containers/LevelContainer.js';
+import PrintModal from './PrintModal.js'
 import Trademark from './Trademark.js'
 
 class CharacterBox extends React.Component {
@@ -71,6 +72,11 @@ class CharacterBox extends React.Component {
               <OtherAbilitiesContainer />
             </Panel>
           </Panel>
+          <Row>
+            <Col xs={12}>
+              <PrintModal/>
+            </Col>
+          </Row>
           <Row>
             <Col xs={12}>
               <Trademark/>
