@@ -44,9 +44,43 @@
   #section-to-print, #section-to-print * {
     visibility: visible;
   }
-  #section-to-print {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+}
+#section-to-print {
+  /*
+  height: 400px;
+  width: 400px;
+  position: relative;
+    */
+    width: 100%;
+}
+#image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+div.field-to-print {
+  z-index: 100;
+  position: absolute;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+#str-to-print {
+  z-index: 100;
+  position: absolute;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  left: 49px;
+  top: 335px;
+}
+#iq-to-print {
+  z-index: 100;
+  position: absolute;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  left: 205px;
+  top: 383px;
 }
