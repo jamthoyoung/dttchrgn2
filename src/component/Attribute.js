@@ -1,17 +1,10 @@
 import React from 'react';
 import { Row, Col, Tooltip, OverlayTrigger } from 'react-bootstrap';
+import { attrvalue } from '../util/character';
 
 class Attribute extends React.Component {
   render(){
-    var total = this.props.data.reduce(
-      function(previousValue, currentValue, currentIndex, array) {
-	return previousValue + currentValue;
-      });
-    if(this.props.kmod > 1){
-      total = Math.floor(total * this.props.kmod);
-    } else {
-      total = Math.ceil(total * this.props.kmod);
-    }
+    var total = attrvalue(this.props.data, this.props.kmod);
 
     let tooltip = <Tooltip id={this.props.name + '_tooltip'}>{"[" + this.props.data.toString() + "] * " + this.props.kmod}</Tooltip>;
 
