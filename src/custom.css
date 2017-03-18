@@ -61,12 +61,11 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
   font-weight: bold;
-  border-style: border;
   z-index: 100;
   position: absolute;
   color: black;
   font-size: 12px;
-  border-style: solid;
+  padding-top: 4px;
 }
 #image {
   position: absolute;
@@ -78,17 +77,17 @@ div.field-to-print {
 }
 #charname-to-print {
   left: 80px;
-  top: 128px;
+  top: 129px;
   width: 260px;
 }
 #kindred-name-to-print {
   left: 100px;
-  top: 159px;
+  top: 160px;
   width: 140px;
 }
 #level-to-print {
   left: 295px;
-  top: 159px;
+  top: 160px;
   width: 40px;
 }
 #charclass-to-print {
@@ -98,62 +97,62 @@ div.field-to-print {
 }
 #chargender-to-print {
   left: 90px;
-  top: 221px;
+  top: 224px;
   width: 50px;
 }
 #height-to-print {
   left: 192px;
-  top: 221px;
+  top: 224px;
   width: 45px;
 }
 #weight-to-print {
   left: 295px;
-  top: 221px;
+  top: 224px;
   width: 50px;
 }
 #gold-to-print {
   left: 288px;
-  top: 251px;
+  top: 252px;
   width: 55px;
 }
 #str-to-print {
   left: 43px;
-  top: 335px;
+  top: 338px;
   width: 37px;
 }
 #con-to-print {
   left: 43px;
-  top: 384px;
+  top: 387px;
   width: 37px;
 }
 #dex-to-print {
   left: 43px;
-  top: 433px;
+  top: 436px;
   width: 37px;
 }
 #spd-to-print {
   left: 43px;
-  top: 482px;
+  top: 485px;
   width: 37px;
 }
 #lk-to-print {
   left: 200px;
-  top: 335px;
+  top: 338px;
   width: 37px;
 }
 #iq-to-print {
   left: 200px;
-  top: 383px;
+  top: 387px;
   width: 37px;
 }
 #wiz-to-print {
   left: 200px;
-  top: 433px;
+  top: 436px;
   width: 37px;
 }
 #chr-to-print {
   left: 200px;
-  top: 482px;
+  top: 485px;
   width: 37px;
 }
 #pa-to-print {
