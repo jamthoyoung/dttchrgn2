@@ -88,6 +88,11 @@ div.field-to-print {
   top: 159px;
   width: 40px;
 }
+#charclass-to-print {
+  left: 153px;
+  top: 191px;
+  width: 190px;
+}
 #str-to-print {
   left: 43px;
   top: 335px;

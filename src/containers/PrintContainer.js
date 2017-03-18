@@ -4,7 +4,7 @@ import { getLevel, attrvalue, getPersonalAdds } from '../util/character.js';
 
 const mapStateToProps = (store) => {
  return {
-  charname: store.character.name,
+  character: store.character,
   level: getLevel(store.character.attributes, store.kindredlist.byId[store.character.kindred]),
   str: attrvalue(store.character.attributes.str, store.kindredlist.byId[store.character.kindred].strmod),
   con: attrvalue(store.character.attributes.con, store.kindredlist.byId[store.character.kindred].conmod),
