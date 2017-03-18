@@ -2,15 +2,17 @@ var sumofarray = (previousValue, currentValue) => {
    return previousValue + currentValue;
 };
 
+var multiplier = function(org, mod){
+  if(mod > 1){
+    return Math.floor(org * mod);
+  } else {
+    return Math.ceil(org * mod);
+  }
+};
  var kinmod = (array, mod) => {
    var org = array.reduce(sumofarray);
-   if(mod > 1){
-     return Math.floor(org * mod);
-   } else {
-     return Math.ceil(org * mod);
-   }
+   return multiplier(org, mod);
  };
-
 export const getLevel = (attr, kindred) => {
   return Math.floor(
     Math.max(
@@ -27,4 +29,14 @@ export const getLevel = (attr, kindred) => {
 }
 export const attrvalue = (attr, mod) => {
   return kinmod(attr, mod);
+}
+export const getPersonalAdds = (attr, kindred) => {
+  var strtotal = multiplier(attr.str.reduce(sumofarray),kindred.strmod);
+  var dextotal = multiplier(attr.dex.reduce(sumofarray),kindred.dexmod);
+  var spdtotal = multiplier(attr.spd.reduce(sumofarray),kindred.spdmod);
+  var lktotal = multiplier(attr.lk.reduce(sumofarray),kindred.lkmod);
+  return Math.max(0,strtotal-12)+
+      Math.max(0,dextotal-12)+
+      Math.max(0,spdtotal-12)+
+      Math.max(0,lktotal-12);
 }

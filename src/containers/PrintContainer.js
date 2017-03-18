@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PrintScreen from '../component/PrintScreen.js';
-import { getLevel, attrvalue } from '../util/character.js';
+import { getLevel, attrvalue, getPersonalAdds } from '../util/character.js';
 
 const mapStateToProps = (store) => {
  return {
@@ -14,7 +14,8 @@ const mapStateToProps = (store) => {
   iq: attrvalue(store.character.attributes.iq, store.kindredlist.byId[store.character.kindred].iqmod),
   wiz: attrvalue(store.character.attributes.wiz, store.kindredlist.byId[store.character.kindred].wizmod),
   chr: attrvalue(store.character.attributes.chr, store.kindredlist.byId[store.character.kindred].chrmod),
-  kindred: store.kindredlist.byId[store.character.kindred]
+  kindred: store.kindredlist.byId[store.character.kindred],
+  personalAdds: getPersonalAdds(store.character.attributes,store.kindredlist.byId[store.character.kindred])
  };
 }
 

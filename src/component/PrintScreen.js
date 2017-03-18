@@ -16,7 +16,7 @@ class PrintScreen extends React.Component {
         <div id="iq-to-print">{this.props.iq}</div>
         <div id="wiz-to-print">{this.props.wiz}</div>
         <div id="chr-to-print">{this.props.chr}</div>
-        <div id="level-to-print">{this.props.level}</div>
+        <div id="pa-to-print">{this.props.personalAdds}</div>
       </div>
     );
   }
