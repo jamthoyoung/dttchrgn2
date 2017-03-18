@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import PrintScreen from './PrintScreen.js'
+import PrintContainer from '../containers/PrintContainer.js'
 
 class PrintModal extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class PrintModal extends React.Component {
             <Modal.Title>Character Sheet</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <PrintScreen />
+            <PrintContainer />
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.print}>Print</Button>

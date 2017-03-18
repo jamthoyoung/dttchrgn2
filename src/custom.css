@@ -53,6 +53,18 @@
     */
     width: 100%;
 }
+
+#section-to-print div {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-weight: bold;
+  border-style: border;
+  z-index: 100;
+  position: absolute;
+  color: black;
+  font-size: 12px;
+  border-style: solid;
+}
 #image {
   position: absolute;
   left: 0;
@@ -60,27 +72,60 @@
   width: 100%;
 }
 div.field-to-print {
-  z-index: 100;
-  position: absolute;
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
+}
+#charname-to-print {
+  left: 80px;
+  top: 128px;
+  width: 260px;
+}
+#kindred-name-to-print {
+  left: 100px;
+  top: 159px;
+  width: 140px;
 }
 #str-to-print {
-  z-index: 100;
-  position: absolute;
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
-  left: 49px;
+  left: 43px;
   top: 335px;
+  width: 37px;
+}
+#con-to-print {
+  left: 43px;
+  top: 384px;
+  width: 37px;
+}
+#dex-to-print {
+  left: 43px;
+  top: 433px;
+  width: 37px;
+}
+#spd-to-print {
+  left: 43px;
+  top: 482px;
+  width: 37px;
+}
+#lk-to-print {
+  left: 200px;
+  top: 335px;
+  width: 37px;
 }
 #iq-to-print {
-  z-index: 100;
-  position: absolute;
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
-  left: 205px;
+  left: 200px;
   top: 383px;
+  width: 37px;
+}
+#wiz-to-print {
+  left: 200px;
+  top: 433px;
+  width: 37px;
+}
+#chr-to-print {
+  left: 200px;
+  top: 482px;
+  width: 37px;
+}
+#level-to-print {
+  font-size: 32px;
+  left: 90px;
+  top: 555px;
+  width: 100px;
 }
