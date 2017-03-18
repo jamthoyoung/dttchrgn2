@@ -83,6 +83,11 @@ div.field-to-print {
   top: 159px;
   width: 140px;
 }
+#level-to-print {
+  left: 295px;
+  top: 159px;
+  width: 40px;
+}
 #str-to-print {
   left: 43px;
   top: 335px;

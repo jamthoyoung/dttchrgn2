@@ -8,6 +8,7 @@ class PrintScreen extends React.Component {
         <Image id="image" src="/assets/tt-character-sheet.jpg" responsive />
         <div id="charname-to-print">{this.props.charname}</div>
         <div id="kindred-name-to-print">{this.props.kindred.name}</div>
+        <div id="level-to-print">{this.props.level}</div>
         <div id="str-to-print">{this.props.str}</div>
         <div id="con-to-print">{this.props.con}</div>
         <div id="dex-to-print">{this.props.dex}</div>
