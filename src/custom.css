@@ -93,6 +93,26 @@ div.field-to-print {
   top: 191px;
   width: 190px;
 }
+#chargender-to-print {
+  left: 90px;
+  top: 221px;
+  width: 50px;
+}
+#height-to-print {
+  left: 192px;
+  top: 221px;
+  width: 45px;
+}
+#weight-to-print {
+  left: 295px;
+  top: 221px;
+  width: 50px;
+}
+#gold-to-print {
+  left: 288px;
+  top: 251px;
+  width: 55px;
+}
 #str-to-print {
   left: 43px;
   top: 335px;
@@ -138,4 +158,9 @@ div.field-to-print {
   left: 90px;
   top: 555px;
   width: 100px;
+}
+#wtpossible-to-print {
+  left: 125px;
+  top: 610px;
+  width: 65px;
 }
