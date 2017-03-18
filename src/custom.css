@@ -12,6 +12,9 @@
         appearance: none;
     }
 }
+.col-centered-xs-12{
+    text-align: center;
+}
 
 @media(max-width: 1200px) {
   h1 {

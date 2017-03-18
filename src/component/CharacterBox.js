@@ -73,7 +73,7 @@ class CharacterBox extends React.Component {
             </Panel>
           </Panel>
           <Row>
-            <Col xs={12}>
+            <Col xs={12} bsClass="col-centered">
               <PrintModal/>
             </Col>
           </Row>
