@@ -57,8 +57,12 @@ export const heightFeet = (hwAttr, kinmod) => {
   }
   return result;
 }
-export const weightLbs = (heightAttr, kinmod) => {
-  return Math.round(
-     (126.4 + (heightAttr*5.6)) * kinmod
-                             );
+export const weightLbs = (wtAttr, kinmod) => {
+  let startLbs = 60;
+  let incrementArray = [15,20,15,15,10,15,5,5,5,15,10,10,20,20,15];
+  let lbsIncremented = incrementArray.slice(0,wtAttr-3).reduce((a,b) => a+b, 0);
+  let total = startLbs + lbsIncremented;
+  total =  multiplier(total,kinmod);
+  let result = total + 'lbs';
+  return result;
 }
