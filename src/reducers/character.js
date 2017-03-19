@@ -4,7 +4,7 @@ const initialState =
 {
   "name" : "Enter name",
   "gender" : "Male",
-  "kindred": 4,
+  "kindred": 1,
   "backstory":{
     "id":0,
     "name":"None"
