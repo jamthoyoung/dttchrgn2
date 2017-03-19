@@ -40,3 +40,25 @@ export const getPersonalAdds = (attr, kindred) => {
       Math.max(0,spdtotal-12)+
       Math.max(0,lktotal-12);
 }
+export const heightFeet = (hwAttr, kinmod) => {
+  let startInches = 52;
+  let incrementArray = [3,3,3,2,2,2,1,1,1,2,2,2,2,3,3,3];
+  let inchesIncremented = incrementArray.slice(0,hwAttr-3).reduce((a,b) => a+b, 0);
+  let total = startInches + inchesIncremented;
+  total =  multiplier(total,kinmod);
+  let result = "";
+  let feet = Math.floor(total / 12);
+  if (feet > 0){
+    result = feet + '\'';
+  }
+  let inches = Math.floor(total % 12);
+  if (inches > 0) {
+    result = result + inches + '"';
+  }
+  return result;
+}
+export const weightLbs = (heightAttr, kinmod) => {
+  return Math.round(
+     (126.4 + (heightAttr*5.6)) * kinmod
+                             );
+}

@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import PrintScreen from '../component/PrintScreen.js';
-import { getLevel, attrvalue, getPersonalAdds } from '../util/character.js';
+import { heightFeet, getLevel, attrvalue, getPersonalAdds } from '../util/character.js';
 
 const mapStateToProps = (store) => {
  return {
   character: store.character,
+  height: heightFeet(store.character.height,
+      store.kindredlist.byId[store.character.kindred].heightmod),
   level: getLevel(store.character.attributes, store.kindredlist.byId[store.character.kindred]),
   str: attrvalue(store.character.attributes.str, store.kindredlist.byId[store.character.kindred].strmod),
   con: attrvalue(store.character.attributes.con, store.kindredlist.byId[store.character.kindred].conmod),

@@ -11,7 +11,7 @@ class PrintScreen extends React.Component {
         <div id="kindred-name-to-print">{this.props.kindred.name}</div>
         <div id="level-to-print">{this.props.level}</div>
         <div id="chargender-to-print">{this.props.character.gender}</div>
-        <div id="height-to-print">{this.props.character.height}</div>
+        <div id="height-to-print">{this.props.height}</div>
         <div id="weight-to-print">{this.props.character.weight}</div>
         <div id="gold-to-print">{this.props.character.gold} gp</div>
         <div id="str-to-print">{this.props.str}</div>
