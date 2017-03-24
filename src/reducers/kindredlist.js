@@ -1,4 +1,4 @@
-const initialState = 
+const initialState =
 {
  byId : {
   1 : {
@@ -363,14 +363,14 @@ const initialState =
   }
  },
  allIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-    17, 18, 19, 20, 21, 22],
+    17, 18, 19, 20, 21, 22, 23],
  goodkinIds : [ 1, 2, 3, 4, 5, 6, 7 ],
- illkinIds : [ 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+ illkinIds : [ 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 }
 
 export default function kindredlist(state = initialState, action){
  switch (action.type) {
-  //this reducer performs no action. 
+  //this reducer performs no action.
   default:
    return state;
  }
