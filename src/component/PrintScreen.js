@@ -2,6 +2,39 @@ import React from 'react';
 import jsPDF from 'jspdf';
 import { Button } from 'react-bootstrap';
 
+(function(API){
+    API.myText = function(txt, options, x, y) {
+        options = options ||{};
+        /* Use the options align property to specify desired text alignment
+         * Param x will be ignored if desired text alignment is 'center'.
+         * Usage of options can easily extend the function to apply different text
+         * styles and sizes
+        */
+        if( options.align === "center" ){
+            // Get current font size
+            let fontSize = this.internal.getFontSize();
+
+            // Get page width
+            //var pageWidth = this.internal.pageSize.width;
+
+            // Get the actual text's width
+            /* You multiply the unit width of your string by your font size and divide
+             * by the internal scale factor. The division is necessary
+             * for the case where you use units other than 'pt' in the constructor
+             * of jsPDF.
+            */
+            let txtWidth = this.getStringUnitWidth(txt)*fontSize/this.internal.scaleFactor;
+
+            // Calculate text's x coordinate
+            //x = ( pageWidth - txtWidth ) / 2;
+            x -= (txtWidth / 2);
+        }
+
+        // Draw text at x,y
+        this.text(txt,x,y);
+    }
+})(jsPDF.API);
+
 class PrintScreen extends React.Component {
 
   toDataUrl = (url, callback) => {
@@ -31,11 +64,25 @@ class PrintScreen extends React.Component {
     doc.text(81, 150, this.props.character.name);
     console.log('Done writing text "' + this.props.character.name + '" to pdf.');
     doc.text(105, 181, this.props.kindred.name);
-    //doc.text(20, 120, this.props.level);
+    doc.text(245, 181, '' + this.props.level);
     doc.text(155, 213, this.props.character.class);
     doc.text(95, 246, this.props.character.gender);
+    doc.text(200, 246, this.props.height);
+    doc.text(305, 246, this.props.weight);
+    doc.text(300, 276, this.props.character.gold + ' gp');
+    doc.myText('' + this.props.str, { align: 'center'}, 63, 364);
+    doc.myText('' + this.props.con, { align: 'center'}, 63, 414);
+    doc.myText('' + this.props.dex, { align: 'center'}, 63, 464);
+    doc.myText('' + this.props.spd, { align: 'center'}, 63, 514);
+    doc.myText('' + this.props.lk, { align: 'center'}, 223, 364);
+    doc.myText('' + this.props.iq, { align: 'center'}, 223, 414);
+    doc.myText('' + this.props.wiz, { align: 'center'}, 223, 464);
+    doc.myText('' + this.props.chr, { align: 'center'}, 223, 514);
+    doc.setFontSize(18)
+    doc.myText('' + this.props.personalAdds, { align: 'center'}, 145, 586);
+    doc.text(130, 642, '' + this.props.str * 100);
     console.log('About to save');
-    doc.save("test.pdf");
+    doc.save("character.pdf");
   }
 
   doPDF = () => {
@@ -45,25 +92,7 @@ class PrintScreen extends React.Component {
   render(){
     return (
       <div>
-          <Button id="printButton" onClick={() => {this.doPDF()}} >Print</Button>
-
-        <div id="charclass-to-print">{this.props.character.class}</div>
-        <div id="kindred-name-to-print">{this.props.kindred.name}</div>
-        <div id="level-to-print">{this.props.level}</div>
-        <div id="chargender-to-print">{this.props.character.gender}</div>
-        <div id="height-to-print">{this.props.height}</div>
-        <div id="weight-to-print">{this.props.weight}</div>
-        <div id="gold-to-print">{this.props.character.gold} gp</div>
-        <div id="str-to-print">{this.props.str}</div>
-        <div id="con-to-print">{this.props.con}</div>
-        <div id="dex-to-print">{this.props.dex}</div>
-        <div id="spd-to-print">{this.props.spd}</div>
-        <div id="lk-to-print">{this.props.lk}</div>
-        <div id="iq-to-print">{this.props.iq}</div>
-        <div id="wiz-to-print">{this.props.wiz}</div>
-        <div id="chr-to-print">{this.props.chr}</div>
-        <div id="pa-to-print">{this.props.personalAdds}</div>
-        <div id="wtpossible-to-print">{this.props.str * 100}</div>
+          <Button id="printButton" onClick={() => {this.doPDF()}}>Generate Character Sheet</Button>
       </div>
     );
   }
