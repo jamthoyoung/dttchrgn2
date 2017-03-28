@@ -71,13 +71,52 @@ class PrintScreen extends React.Component {
     doc.text(305, 246, this.props.weight);
     doc.text(300, 276, this.props.character.gold + ' gp');
     doc.myText('' + this.props.str, { align: 'center'}, 63, 364);
+    if(this.props.isStrSpecialized){
+      doc.setFontSize(6);
+      doc.myText('Specialized', { align: 'center'}, 63, 371);
+      doc.setFontSize(14);
+    }
     doc.myText('' + this.props.con, { align: 'center'}, 63, 414);
+    if(this.props.isConSpecialized){
+      doc.setFontSize(6);
+      doc.myText('Specialized', { align: 'center'}, 63, 421);
+      doc.setFontSize(14);
+    }
     doc.myText('' + this.props.dex, { align: 'center'}, 63, 464);
+    if(this.props.isDexSpecialized){
+      doc.setFontSize(6);
+      doc.myText('Specialized', { align: 'center'}, 63, 471);
+      doc.setFontSize(14);
+    }
     doc.myText('' + this.props.spd, { align: 'center'}, 63, 514);
+    if(this.props.isSpdSpecialized){
+      doc.setFontSize(6);
+      doc.myText('Specialized', { align: 'center'}, 63, 521);
+      doc.setFontSize(14);
+    }
     doc.myText('' + this.props.lk, { align: 'center'}, 223, 364);
+    if(this.props.isLkSpecialized){
+      doc.setFontSize(6);
+      doc.myText('Specialized', { align: 'center'}, 223, 371);
+      doc.setFontSize(14);
+    }
     doc.myText('' + this.props.iq, { align: 'center'}, 223, 414);
+    if(this.props.isIqSpecialized){
+      doc.setFontSize(6);
+      doc.myText('Specialized', { align: 'center'}, 223, 421);
+      doc.setFontSize(14);
+    }
     doc.myText('' + this.props.wiz, { align: 'center'}, 223, 464);
+    if(this.props.isWizSpecialized){
+      doc.setFontSize(6);
+      doc.myText('Specialized', { align: 'center'}, 223, 471);
+      doc.setFontSize(14);
+    }
     doc.myText('' + this.props.chr, { align: 'center'}, 223, 514);
+    if(this.props.isChrSpecialized){
+      doc.setFontSize(6);
+      doc.myText('Specialized', { align: 'center'}, 223, 521);
+    }
     doc.setFontSize(18)
     doc.myText('' + this.props.personalAdds, { align: 'center'}, 145, 586);
     doc.text(130, 642, '' + this.props.str * 100);

@@ -10,15 +10,6 @@ const mapStateToProps = (store) => {
     output.push(a[i]);
    }
   }
-  let attributes = store.character.attributes;
-  for (var name in attributes){
-    if(attributes.hasOwnProperty(name)){
-     var att = attributes[name];
-     if(att.length > 3) {
-       output.push("Specialized " + name.toUpperCase());
-     }
-    }
-  }
   return {
     abilities: output
   };
