@@ -68,15 +68,12 @@ class CharacterBox extends React.Component {
                 </Col>
               </Row>
             </Well>
-            <Panel header="Other Abilities">
-              <OtherAbilitiesContainer />
-            </Panel>
+            <Row>
+              <Col xs={12} bsClass="col-centered">
+                <PrintContainer/>
+              </Col>
+            </Row>
           </Panel>
-          <Row>
-            <Col xs={12} bsClass="col-centered">
-              <PrintContainer/>
-            </Col>
-          </Row>
           <Row>
             <Col xs={12} bsClass="col-centered">
               <Trademark/>
