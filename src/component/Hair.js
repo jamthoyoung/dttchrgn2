@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
-class Name extends React.Component {
+class Hair extends React.Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);

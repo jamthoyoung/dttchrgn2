@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import Age from '../component/Hair.js';
+import Hair from '../component/Hair.js';
 import { updateHair } from '../actions';
 
 const mapStateToProps = (store) => {
  return {
-  name: store.character.hair
+  hair: store.character.hair
  };
 }
 

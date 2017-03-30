@@ -67,12 +67,12 @@ export default function character(state = initialState, action){
   case UPDATE_AGE:
     return {
       ...state,
-      name: action.age
+      age: action.age
     }
   case UPDATE_HAIR:
     return {
      ...state,
-     name: action.hair
+     hair: action.hair
     }
   case UPDATE_NAME:
     return {

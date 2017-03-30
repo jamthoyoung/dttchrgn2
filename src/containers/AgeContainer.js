@@ -4,7 +4,7 @@ import { updateAge } from '../actions';
 
 const mapStateToProps = (store) => {
  return {
-  name: store.character.age
+  age: store.character.age
  };
 }
 
