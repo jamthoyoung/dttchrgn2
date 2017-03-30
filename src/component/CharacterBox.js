@@ -1,6 +1,8 @@
 import React from 'react';
 import { Well, Form, Panel, Grid, Row, Col, PageHeader } from 'react-bootstrap';
 import NameContainer from '../containers/NameContainer.js';
+import AgeContainer from '../containers/AgeContainer.js';
+import HairContainer from '../containers/HairContainer.js';
 import AttributeBoxContainer from '../containers/AttributeBoxContainer.js';
 import KindredInputContainer from '../containers/KindredInputContainer.js';
 import RerollContainer from '../containers/RerollContainer.js';
@@ -39,6 +41,12 @@ class CharacterBox extends React.Component {
           </Col>
           <Col xs={6} sm={4} md={3} lg={2}>
             <GenderContainer />
+          </Col>
+          <Col xs={6} sm={4} md={3} lg={2}>
+            <AgeContainer />
+          </Col>
+          <Col xs={6} sm={4} md={3} lg={2}>
+            <HairContainer />
           </Col>
           <Col xs={6} sm={4} md={3} lg={2}>
             <RerollContainer />
