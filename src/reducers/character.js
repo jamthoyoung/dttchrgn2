@@ -1,4 +1,4 @@
-import { SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE, UPDATE_NAME, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
+import { SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE, UPDATE_AGE, UPDATE_HAIR, UPDATE_NAME, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
 
 const initialState =
 {
@@ -23,6 +23,8 @@ const initialState =
   class: "Warrior",
   height: 3,
   weight: 3,
+  age: 18,
+  hair: "Black",
   gold: 0,
   equipment : [
     { name: "Short Sword",
@@ -62,11 +64,21 @@ export default function character(state = initialState, action){
      ...state,
      class: action.class
    }
-  case UPDATE_NAME:
-   return {
+  case UPDATE_AGE:
+    return {
+      ...state,
+      name: action.age
+    }
+  case UPDATE_HAIR:
+    return {
      ...state,
-     name: action.name
-   }
+     name: action.hair
+    }
+  case UPDATE_NAME:
+    return {
+      ...state,
+      name: action.name
+    }
   case SELECT_GENDER:
    return {
      ...state,

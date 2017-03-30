@@ -1,6 +1,6 @@
 import shortid from 'shortid';
 import { ADD_TALENT, UPDATE_TALENT, DELETE_TALENT, SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE,
-  UPDATE_NAME, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
+  UPDATE_AGE, UPDATE_HAIR, UPDATE_NAME, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
 
 export const addTalent = (text, isRogue) => {
   return {
@@ -52,6 +52,18 @@ export const updateName = (name) => {
  return {
   type: UPDATE_NAME,
   name: name
+ };
+}
+export const updateAge = (age) => {
+ return {
+  type: UPDATE_AGE,
+  age: age
+ };
+}
+export const updateHair = (hair) => {
+ return {
+  type: UPDATE_HAIR,
+  hair: hair
  };
 }
 
