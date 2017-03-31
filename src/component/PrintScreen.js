@@ -69,7 +69,9 @@ class PrintScreen extends React.Component {
     doc.text(95, 246, this.props.character.gender);
     doc.text(200, 246, this.props.height);
     doc.text(305, 246, this.props.weight);
-    doc.text(300, 276, this.props.character.gold + ' gp');
+    doc.text(70, 278, this.props.character.age);
+    doc.text(145, 278, this.props.character.hair);
+    doc.text(300, 278, this.props.character.gold + ' gp');
     doc.myText('' + this.props.str, { align: 'center'}, 63, 364);
     if(this.props.isStrSpecialized){
       doc.setFontSize(6);

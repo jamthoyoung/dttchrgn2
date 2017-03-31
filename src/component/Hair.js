@@ -16,7 +16,8 @@ class Hair extends React.Component {
           <FormControl
             type="text"
             onChange={this.onChange}
-            placeholder={this.props.hair}/>
+            value={this.props.hair}
+            placeholder="Enter hair"/>
         </FormGroup>
     );
   }

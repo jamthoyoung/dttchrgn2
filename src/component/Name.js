@@ -13,14 +13,14 @@ class Name extends React.Component {
     return (
         <FormGroup controlId="CharacterNameInput">
           <ControlLabel>Name</ControlLabel>
-          <FormControl 
+          <FormControl
             type="text" 
             onChange={this.onChange}
-            placeholder={this.props.name}/>
+            value={this.props.name}
+            placeholder="Enter name"/>
         </FormGroup>
     );
   }
 }
 
 export default Name;
-

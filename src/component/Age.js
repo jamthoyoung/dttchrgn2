@@ -16,7 +16,8 @@ class Age extends React.Component {
           <FormControl
             type="text"
             onChange={this.onChange}
-            placeholder={this.props.age}/>
+            value={this.props.age}
+            placeholder="Enter age"/>
         </FormGroup>
     );
   }
