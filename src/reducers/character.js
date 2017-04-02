@@ -2,7 +2,7 @@ import { SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE, UPDATE_AGE, UPDATE_HAIR, U
 
 const initialState =
 {
-  "name" : "Enter name",
+  "name" : "",
   "gender" : "Male",
   "kindred": 1,
   "backstory":{
@@ -23,8 +23,8 @@ const initialState =
   class: "Warrior",
   height: 3,
   weight: 3,
-  age: 18,
-  hair: "Black",
+  age: "",
+  hair: "",
   gold: 0,
   equipment : [
     { name: "Short Sword",
