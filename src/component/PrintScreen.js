@@ -62,9 +62,9 @@ class PrintScreen extends React.Component {
     doc.setFontSize(14);
     console.log('Writing name ' + this.props.character.name + ' to pdf...');
     doc.text(81, 150, ''+this.props.character.name);
-    console.log('Writing text "' + ''+this.props.kindred.name + '" to pdf.');
+    console.log('Writing text "'+this.props.kindred.name + '" to pdf.');
     doc.text(105, 181, ''+this.props.kindred.name);
-    console.log('Writing text "' + ''+this.props.level + '" to pdf.');
+    console.log('Writing text "'+this.props.level + '" to pdf.');
     doc.text(301, 181, '' + this.props.level);
     console.log('Writing text "' + this.props.character.class + '" to pdf.');
     doc.text(155, 213, ''+this.props.character.class);

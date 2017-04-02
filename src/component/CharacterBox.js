@@ -11,11 +11,11 @@ import HeightContainer from '../containers/HeightContainer.js';
 import ClassContainer from '../containers/ClassContainer.js';
 import GenderContainer from '../containers/GenderContainer.js';
 import GoldContainer from '../containers/GoldContainer.js';
-import OtherAbilitiesContainer from '../containers/OtherAbilitiesContainer.js';
 import PersonalAddsContainer from '../containers/PersonalAddsContainer.js';
 import LevelContainer from '../containers/LevelContainer.js';
 import PrintContainer from '../containers/PrintContainer.js'
 import Trademark from './Trademark.js'
+import Portrait from './Portrait.js'
 
 class CharacterBox extends React.Component {
   render(){
@@ -32,6 +32,9 @@ class CharacterBox extends React.Component {
         <Form>
           <Col xs={6} sm={4} md={3} lg={2}>
             <NameContainer />
+          </Col>
+          <Col xs={6} sm={4} md={3} lg={2}>
+            <Portrait />
           </Col>
           <Col xs={6} sm={4} md={3} lg={2}>
             <KindredInputContainer />
