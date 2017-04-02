@@ -17,13 +17,24 @@ class Portrait extends React.Component {
       postUrl: 'no-url'
     };
     // Simple callbacks work too, of course
-    this.callback = () => console.log('Hello!');
+    this.callback = file => this.getBase64(file);
 
-    this.success = file => console.log('uploaded', file);
+    this.success = file => this.getBase64(file);
 
     this.removedfile = file => console.log('removing...', file);
 
     this.dropzone = null;
+  }
+
+  getBase64(file) {
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function () {
+       console.log(reader.result);
+     };
+     reader.onerror = function (error) {
+       console.log('Error: ', error);
+     };
   }
 
   render(){
