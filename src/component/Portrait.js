@@ -1,27 +1,48 @@
 import React from 'react';
 //import { Dropzone } from 'react-dropzone';
-var Dropzone = require('react-dropzone');
+var DropzoneComponent = require('react-dropzone-component');
 class Portrait extends React.Component {
 
   constructor(props) {
     super(props);
-    this.onDrop = this.onDrop.bind(this);
-    console.log('constructing...');
-  }
+    this.djsConfig = {
+      autoProcessQueue: false,
+      addRemoveLinks: true,
+      acceptedFiles: "image/jpeg,image/png,image/gif"
 
-  onDrop(acceptedFiles, rejectedFiles) {
-      console.log('Accepted files: ', acceptedFiles);
-      console.log('Rejected files: ', rejectedFiles);
+    }
+    this.componentConfig = {
+      iconFiletypes: ['.jpg', '.png', '.gif'],
+      showFiletypeIcon: true,
+      postUrl: 'no-url'
+    };
+    // Simple callbacks work too, of course
+    this.callback = () => console.log('Hello!');
+
+    this.success = file => console.log('uploaded', file);
+
+    this.removedfile = file => console.log('removing...', file);
+
+    this.dropzone = null;
   }
 
   render(){
     console.log('rendering...');
+    const config = this.componentConfig;
+    const djsConfig = this.djsConfig;
+
+    // For a list of all possible events (there are many), see README.md!
+    const eventHandlers = {
+         init: dz => this.dropzone = dz,
+         drop: this.callbackArray,
+         addedfile: this.callback,
+         success: this.success,
+         removedfile: this.removedfile
+     }
     return (
-      <div>
-        <Dropzone onDrop={this.onDrop}>
-          <div>Try dropping some files here, or click to select files to upload.</div>
-        </Dropzone>
-      </div>
+        <DropzoneComponent config={config} eventHandlers={eventHandlers}
+                       djsConfig={djsConfig}/>
+
       );
   }
 
