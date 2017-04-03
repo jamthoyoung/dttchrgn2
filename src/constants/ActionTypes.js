@@ -3,6 +3,7 @@ export const REROLL_DICE = 'REROLL_DICE';
 export const UPDATE_AGE = 'UPDATE_AGE';
 export const UPDATE_HAIR = 'UPDATE_HAIR';
 export const UPDATE_NAME = 'UPDATE_NAME';
+export const UPDATE_BASE64_PORTRAIT = 'UPDATE_BASE64_PORTRAIT';
 export const SELECT_GENDER = 'SELECT_GENDER';
 export const SELECT_CLASS = 'SELECT_CLASS';
 export const SELECT_TALENTS = 'SELECT_TALENTS';

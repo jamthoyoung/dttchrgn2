@@ -1,10 +1,12 @@
-import { SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE, UPDATE_AGE, UPDATE_HAIR, UPDATE_NAME, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
+import { SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE, UPDATE_AGE, UPDATE_HAIR, UPDATE_NAME,
+  UPDATE_BASE64_PORTRAIT, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
 
 const initialState =
 {
   "name" : "",
   "gender" : "Male",
   "kindred": 1,
+  "base64Portrait": null,
   "backstory":{
     "id":0,
     "name":"None"
@@ -78,6 +80,11 @@ export default function character(state = initialState, action){
     return {
       ...state,
       name: action.name
+    }
+  case UPDATE_BASE64_PORTRAIT:
+    return {
+      ...state,
+      base64Portrait: action.base64Portrait
     }
   case SELECT_GENDER:
    return {

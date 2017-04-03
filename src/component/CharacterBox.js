@@ -15,7 +15,7 @@ import PersonalAddsContainer from '../containers/PersonalAddsContainer.js';
 import LevelContainer from '../containers/LevelContainer.js';
 import PrintContainer from '../containers/PrintContainer.js'
 import Trademark from './Trademark.js'
-import Portrait from './Portrait.js'
+import PortraitContainer from '../containers/PortraitContainer.js'
 
 class CharacterBox extends React.Component {
   render(){
@@ -34,9 +34,6 @@ class CharacterBox extends React.Component {
             <NameContainer />
           </Col>
           <Col xs={6} sm={4} md={3} lg={2}>
-            <Portrait />
-          </Col>
-          <Col xs={6} sm={4} md={3} lg={2}>
             <KindredInputContainer />
           </Col>
           <Col xs={6} sm={4} md={3} lg={2}>
@@ -53,6 +50,9 @@ class CharacterBox extends React.Component {
           </Col>
           <Col xs={6} sm={4} md={3} lg={2}>
             <RerollContainer />
+          </Col>
+          <Col xs={6} sm={4} md={3} lg={2}>
+            <PortraitContainer />
           </Col>
           </Form>
         </Row>

@@ -55,9 +55,13 @@ class PrintScreen extends React.Component {
     var doc = new jsPDF('p','pt','letter');
     var imgData = base64Img;
     console.log(imgData);
-    console.log('Adding to doc.');
+    console.log('Adding bkground image to doc.');
     doc.addImage(imgData, 'JPEG', 0, 0, 612, 792);
-    console.log('Image added.');
+    if(this.props.character.base64Portrait){
+      console.log('Adding portrait image to doc.');
+      console.log('Portrait image: ' +this.props.character.base64Portrait );
+      doc.addImage(this.props.character.base64Portrait, 'PNG', 100, 100, 200, 400);
+    }
     doc.setFont('Times', 'Roman');
     doc.setFontSize(14);
     console.log('Writing name ' + this.props.character.name + ' to pdf...');

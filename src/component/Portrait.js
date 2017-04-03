@@ -17,9 +17,23 @@ class Portrait extends React.Component {
       postUrl: 'no-url'
     };
     // Simple callbacks work too, of course
-    this.callback = file => this.getBase64(file);
+    this.callback = file => {
+      console.log('calling update');
+      this.getBase64(file);
+    }
 
-    this.success = file => this.getBase64(file);
+    this.success = file => {
+      console.log('success(file)...');
+      var reader = new FileReader();
+      reader.onload = function () {
+        console.log('FileReader.onload...' + reader.result);
+        this.props.updateBase64Portrait(reader.result);
+      };
+      reader.onerror = function (error) {
+        console.log('Error: ', error);
+      };
+      reader.readAsDataURL(file);
+    }
 
     this.removedfile = file => console.log('removing...', file);
 
@@ -27,14 +41,16 @@ class Portrait extends React.Component {
   }
 
   getBase64(file) {
+    console.log('getBase64(file)...');
      var reader = new FileReader();
-     reader.readAsDataURL(file);
-     reader.onload = function () {
-       console.log(reader.result);
+     reader.onload = () => {
+       console.log('FileReader.onload...' + reader.result);
+       this.props.updateBase64Portrait(reader.result);
      };
      reader.onerror = function (error) {
        console.log('Error: ', error);
      };
+     reader.readAsDataURL(file);
   }
 
   render(){
