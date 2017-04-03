@@ -54,7 +54,7 @@ class Portrait extends React.Component {
   }
 
   render(){
-    console.log('rendering...');
+    console.log('rendering image: ' + this.props.base64Portrait);
     const config = this.componentConfig;
     const djsConfig = this.djsConfig;
 
