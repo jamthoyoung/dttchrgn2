@@ -50,6 +50,7 @@ const initialState =
 };
 
 export default function character(state = initialState, action){
+  console.log('in character reducer with action: ' + action.type);
  switch (action.type) {
   case SELECT_KINDRED:
    return {

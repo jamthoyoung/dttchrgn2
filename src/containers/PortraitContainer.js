@@ -10,9 +10,9 @@ const mapStateToProps = (store) => {
 
 const mapDispatchToProps = (dispatch) => {
  return {
-  updateBase64Portrait: (p) => {
-    console.log('calling redux updateBase64Portrait: ' + p);
-   dispatch(updateBase64Portrait(p));
+  updateBase64Portrait: (age) => {
+    console.log('calling container updateBase64Portrait: ' + age);
+   dispatch(updateBase64Portrait(age));
   }
  }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-//import { Dropzone } from 'react-dropzone';
 var DropzoneComponent = require('react-dropzone-component');
 class Portrait extends React.Component {
 
@@ -35,25 +34,27 @@ class Portrait extends React.Component {
       reader.readAsDataURL(file);
     }
 
+    this.callUpdatePortrait = reader => {
+      console.log('Portrait.onload...' + reader.result);
+      this.props.updateBase64Portrait(reader.result);
+    }
+    this.getBase64 = file => {
+      console.log('getBase64(file)...');
+       var reader = new FileReader();
+       reader.onload = () => this.callUpdatePortrait(reader);
+       reader.onerror = function (error) {
+         console.log('Error: ', error);
+       };
+       reader.readAsDataURL(file);
+    }
+
     this.removedfile = file => console.log('removing...', file);
 
     this.dropzone = null;
   }
 
-  getBase64(file) {
-    console.log('getBase64(file)...');
-     var reader = new FileReader();
-     reader.onload = () => {
-       console.log('FileReader.onload...' + reader.result);
-       this.props.updateBase64Portrait(reader.result);
-     };
-     reader.onerror = function (error) {
-       console.log('Error: ', error);
-     };
-     reader.readAsDataURL(file);
-  }
-
   render(){
+
     console.log('rendering image: ' + this.props.base64Portrait);
     const config = this.componentConfig;
     const djsConfig = this.djsConfig;
@@ -67,9 +68,10 @@ class Portrait extends React.Component {
          removedfile: this.removedfile
      }
     return (
+      <div>
         <DropzoneComponent config={config} eventHandlers={eventHandlers}
                        djsConfig={djsConfig}/>
-
+      </div>
       );
   }
 

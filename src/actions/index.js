@@ -55,7 +55,6 @@ export const updateName = (name) => {
  };
 }
 export const updateBase64Portrait = (p) => {
-  console('action updateBase64Portrait: ' + p)
  return {
   type: UPDATE_BASE64_PORTRAIT,
   base64Portrait: p

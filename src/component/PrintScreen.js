@@ -58,9 +58,8 @@ class PrintScreen extends React.Component {
     console.log('Adding bkground image to doc.');
     doc.addImage(imgData, 'JPEG', 0, 0, 612, 792);
     if(this.props.character.base64Portrait){
-      console.log('Adding portrait image to doc.');
-      console.log('Portrait image: ' +this.props.character.base64Portrait );
-      doc.addImage(this.props.character.base64Portrait, 'PNG', 100, 100, 200, 400);
+      console.log('Adding portrait image: ' +this.props.character.base64Portrait );
+      doc.addImage(this.props.character.base64Portrait, 'PNG', 375, 48, 165, 165);
     }
     doc.setFont('Times', 'Roman');
     doc.setFontSize(14);

@@ -11,6 +11,7 @@ const mapStateToProps = (store) => {
 const mapDispatchToProps = (dispatch) => {
  return {
   onChange: (age) => {
+    console.log('calling container onChange: ' + age);
    dispatch(updateAge(age));
   }
  }
