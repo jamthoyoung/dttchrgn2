@@ -11,7 +11,6 @@ const mapStateToProps = (store) => {
 const mapDispatchToProps = (dispatch) => {
  return {
   updateBase64Portrait: (age) => {
-    console.log('calling container updateBase64Portrait: ' + age);
    dispatch(updateBase64Portrait(age));
   }
  }

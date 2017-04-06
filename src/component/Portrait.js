@@ -7,6 +7,7 @@ class Portrait extends React.Component {
     this.djsConfig = {
       autoProcessQueue: false,
       addRemoveLinks: true,
+      maxFiles: 1,
       acceptedFiles: "image/jpeg,image/png,image/gif"
 
     }
@@ -15,14 +16,18 @@ class Portrait extends React.Component {
       showFiletypeIcon: true,
       postUrl: 'no-url'
     };
+
+    this.maxfilesexceeded = file => console.log('maxfilesexceeded(file)');
+    this.maxfilesreached = file => console.log('maxfilesreached(file)');
+
     // Simple callbacks work too, of course
     this.callback = file => {
-      console.log('calling update');
+      console.log('Portrait.callback(file)');
       this.getBase64(file);
     }
 
     this.success = file => {
-      console.log('success(file)...');
+      console.log('Portrait.success(file)');
       var reader = new FileReader();
       reader.onload = function () {
         console.log('FileReader.onload...' + reader.result);
@@ -48,14 +53,12 @@ class Portrait extends React.Component {
        reader.readAsDataURL(file);
     }
 
-    this.removedfile = file => console.log('removing...', file);
+    this.removedfile = file => console.log('Portrait.removedfile(file)', file);
 
     this.dropzone = null;
   }
 
   render(){
-
-    console.log('rendering image: ' + this.props.base64Portrait);
     const config = this.componentConfig;
     const djsConfig = this.djsConfig;
 
@@ -65,7 +68,9 @@ class Portrait extends React.Component {
          drop: this.callbackArray,
          addedfile: this.callback,
          success: this.success,
-         removedfile: this.removedfile
+         removedfile: this.removedfile,
+         maxfilesreached: this.maxfilesreached,
+         maxfilesexceeded: this.maxfilesexceeded
      }
     return (
       <div>
