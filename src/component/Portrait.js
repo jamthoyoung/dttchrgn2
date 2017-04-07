@@ -22,8 +22,6 @@ class Portrait extends React.Component {
       this.removeAllFiles();
       this.addFile(file);
     }
-    this.maxfilesreached = file => console.log('maxfilesreached(file)');
-    this.removedfile = file => console.log('Portrait.removedfile(file)', file);
 
     // Simple callbacks work too, of course
     this.callback = file => {
@@ -72,8 +70,6 @@ class Portrait extends React.Component {
          drop: this.callbackArray,
          addedfile: this.callback,
          success: this.success,
-         removedfile: this.removedfile,
-         maxfilesreached: this.maxfilesreached,
          maxfilesexceeded: this.maxfilesexceeded
      }
     return (
