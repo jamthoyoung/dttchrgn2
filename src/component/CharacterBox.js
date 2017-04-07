@@ -28,34 +28,40 @@ class CharacterBox extends React.Component {
           </PageHeader>
         </Col>
       </Row>
+      <Form>
       <Row>
-        <Form>
-          <Col xs={6} sm={4} md={3} lg={2}>
+        <Col xs={6} sm={8} md={9}>
+          <Row>
+          <Col xs={12} sm={6} md={4}>
             <NameContainer />
           </Col>
-          <Col xs={6} sm={4} md={3} lg={2}>
+          <Col xs={12} sm={6} md={4}>
             <KindredInputContainer />
           </Col>
-          <Col xs={6} sm={4} md={3} lg={2}>
+          <Col xs={12} sm={6} md={4}>
             <ClassContainer />
           </Col>
-          <Col xs={6} sm={4} md={3} lg={2}>
+          <Col xs={12} sm={6} md={4}>
             <GenderContainer />
           </Col>
-          <Col xs={6} sm={4} md={3} lg={2}>
+          <Col xs={12} sm={6} md={4}>
             <AgeContainer />
           </Col>
-          <Col xs={6} sm={4} md={3} lg={2}>
+          <Col xs={12} sm={6} md={4}>
             <HairContainer />
           </Col>
-          <Col xs={6} sm={4} md={3} lg={2}>
+          <Col xs={12} sm={6} md={4}>
             <RerollContainer />
           </Col>
-          <Col xs={6} sm={4} md={3} lg={2}>
+          </Row>
+        </Col>
+        <Col xs={6} sm={4} md={3}>
+          <div>
             <PortraitContainer />
-          </Col>
-          </Form>
-        </Row>
+          </div>
+        </Col>
+      </Row>
+      </Form>
           <Panel header="Generated Results">
             <Well>
               <AttributeBoxContainer />
