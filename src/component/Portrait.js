@@ -17,8 +17,13 @@ class Portrait extends React.Component {
       postUrl: 'no-url'
     };
 
-    this.maxfilesexceeded = file => console.log('maxfilesexceeded(file)');
+    //this.maxfilesexceeded = file => this.removeFile(file);
+    this.maxfilesexceeded = function(file){
+      this.removeAllFiles();
+      this.addFile(file);
+    }
     this.maxfilesreached = file => console.log('maxfilesreached(file)');
+    this.removedfile = file => console.log('Portrait.removedfile(file)', file);
 
     // Simple callbacks work too, of course
     this.callback = file => {
@@ -53,7 +58,6 @@ class Portrait extends React.Component {
        reader.readAsDataURL(file);
     }
 
-    this.removedfile = file => console.log('Portrait.removedfile(file)', file);
 
     this.dropzone = null;
   }
