@@ -8,6 +8,7 @@ class Talents extends React.Component {
    this.openModal =  this.openModal.bind(this);
    this.onChange =  this.onChange.bind(this);
    this.getSelectValues = this.getSelectValues.bind(this);
+   this.compareTalents = this.compareTalents.bind(this);
    this.state = { showModal : false };
   }
   closeModal(){
@@ -38,6 +39,16 @@ class Talents extends React.Component {
     return result;
   }
 
+  compareTalents(a,b){
+    if(this.props.talentlist.byId[a].name < this.props.talentlist.byId[b].name){
+      return -1;
+    } else if (this.props.talentlist.byId[a].name > this.props.talentlist.byId[b].name){
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+
   render(){
     var pheader = (
       <Row>
@@ -54,7 +65,7 @@ class Talents extends React.Component {
      <Panel header={pheader}>
       <Row>
       {this.props.talents.map(function(t,i){
-       return <Col key={i} sm={12}>
+       return <Col key={i} xs={12} sm={6}>
                  {this.props.talentlist.byId[t].name}
               </Col>
       }, this)}
@@ -68,7 +79,7 @@ class Talents extends React.Component {
         <FormGroup controlId="formControlSelectTalents">
           <ControlLabel>Talents</ControlLabel>
           <FormControl componentClass="select" multiple value={this.props.talents} onChange={this.onChange}>
-          {this.props.talentlist.allIds.map(function(t,i){
+          {this.props.talentlist.regularIds.sort(this.compareTalents).map(function(t,i){
             return <option value={t} key={i}>
                     {this.props.talentlist.byId[t].name}
                    </option>
