@@ -30,10 +30,42 @@ const initialState =
   7 : {
         id: 7,
         name: "Animal Trainer"
+  },
+  8 : {
+        id: 8,
+        name: "Actor"
+  },
+  9 : {
+        id: 9,
+        name: "Painter"
+  },
+  10 : {
+        id: 10,
+        name: "Sculptor"
+  },
+  11 : {
+        id: 11,
+        name: "Calligrapher"
+  },
+  12 : {
+        id: 12,
+        name: "Scribe"
+  },
+  13 : {
+        id: 13,
+        name: "Jewelry maker"
+  },
+  14 : {
+        id: 14,
+        name: "Leather worker"
+  },
+  15 : {
+        id: 15,
+        name: "Musician"
   }
  },
- allIds : [ 1, 2, 3, 4, 5 ],
- regularIds : [ 1, 2, 3, 4, 5 ],
+ allIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
+ regularIds : [ 3, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
  rogueIds : [ 3 ]
 }
 
