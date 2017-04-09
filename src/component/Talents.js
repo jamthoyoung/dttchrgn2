@@ -6,6 +6,8 @@ class Talents extends React.Component {
    super(props);
    this.closeModal =  this.closeModal.bind(this);
    this.openModal =  this.openModal.bind(this);
+   this.onChange =  this.onChange.bind(this);
+   this.getSelectValues = this.getSelectValues.bind(this);
    this.state = { showModal : false };
   }
   closeModal(){
@@ -14,11 +16,33 @@ class Talents extends React.Component {
   openModal(){
    this.setState({ showModal : true });
   }
+  onChange(e){
+    //console.log("Talent.onChange() " + e.target.value + "" + e.target.selectedOptions.toString())
+    console.log("Talent.onChange() " + this.getSelectValues(e.target));
+    this.props.selectTalents(this.getSelectValues(e.target));
+  }
+  // Return an array of the selected opion values
+// select is an HTML select element
+  getSelectValues(select) {
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    for (var i=0, iLen=options.length; i<iLen; i++) {
+      opt = options[i];
+
+      if (opt.selected) {
+        result.push(opt.value || opt.text);
+      }
+    }
+    return result;
+  }
+
   render(){
     var pheader = (
       <Row>
        <Col xs={9}>Talents</Col>
-       <Col xs={3}>
+       <Col xs={3} bsClass="col-right">
          <Button onClick={this.openModal} bsSize="xsmall">
            <Glyphicon glyph="edit"/>
          </Button>
@@ -43,7 +67,7 @@ class Talents extends React.Component {
       <Modal.Body>
         <FormGroup controlId="formControlSelectTalents">
           <ControlLabel>Talents</ControlLabel>
-          <FormControl componentClass="select" multiple>
+          <FormControl componentClass="select" multiple value={this.props.talents} onChange={this.onChange}>
           {this.props.talentlist.allIds.map(function(t,i){
             return <option value={t} key={i}>
                     {this.props.talentlist.byId[t].name}

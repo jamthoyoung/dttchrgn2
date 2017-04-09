@@ -16,6 +16,7 @@ import LevelContainer from '../containers/LevelContainer.js';
 import PrintContainer from '../containers/PrintContainer.js'
 import Trademark from './Trademark.js'
 import PortraitContainer from '../containers/PortraitContainer.js'
+import TalentContainer from '../containers/TalentContainer.js'
 
 class CharacterBox extends React.Component {
   render(){
@@ -49,6 +50,9 @@ class CharacterBox extends React.Component {
           </Col>
           <Col xs={12} sm={6} md={4}>
             <HairContainer />
+          </Col>
+          <Col xs={12} sm={6} md={4}>
+            <TalentContainer />
           </Col>
           <Col xs={12} sm={6} md={4}>
             <RerollContainer />
