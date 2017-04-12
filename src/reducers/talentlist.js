@@ -5,78 +5,97 @@ const initialState =
  byId : {
   1 : {
         id: 1,
+        group: "Anatomy",
         name: "Butcher"
   },
   2 : {
         id: 2,
+        group: "Anatomy",
         name: "Surgeon"
   },
   3 : {
         id: 3,
-        name: "Anatomy"
+        group: "Anatomy",
+        name: "Specific Anatomy"
   },
   4 : {
         id: 4,
+        group: "Animal Knowledge",
         name: "Animal Husbandry"
   },
   5 : {
         id: 5,
+        group: "Animal Knowledge",
         name: "Horsemanship or Riding"
   },
   6 : {
         id: 6,
+        group: "Animal Knowledge",
         name: "Hunting and Tracking"
   },
   7 : {
         id: 7,
-        name: "Animal Trainer"
+        group: "Animal Knowledge",
+        name: "Training"
   },
   8 : {
         id: 8,
+        group: "Artisan",
         name: "Actor"
   },
   9 : {
         id: 9,
+        group: "Artisan",
         name: "Painter"
   },
   10 : {
         id: 10,
+        group: "Artisan",
         name: "Sculptor"
   },
   11 : {
         id: 11,
+        group: "Artisan",
         name: "Calligrapher"
   },
   12 : {
         id: 12,
+        group: "Artisan",
         name: "Scribe"
   },
   13 : {
         id: 13,
+        group: "Artisan",
         name: "Jewelry maker"
   },
   14 : {
         id: 14,
+        group: "Artisan",
         name: "Leather worker"
   },
   15 : {
         id: 15,
+        group: "Artisan",
         name: "Musician"
   },
   16 : {
         id: 16,
+        group: "Artisan",
         name: "Potter and ceramicist"
   },
   17 : {
         id: 17,
+        group: "Artisan",
         name: "Singer"
   },
   18 : {
         id: 18,
+        group: "Artisan",
         name: "Bard"
   },
   19 : {
         id: 19,
+        group: "Athlete",
         name: "Contortionist"
   }
  },
