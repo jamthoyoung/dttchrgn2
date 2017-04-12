@@ -62,10 +62,26 @@ const initialState =
   15 : {
         id: 15,
         name: "Musician"
+  },
+  16 : {
+        id: 16,
+        name: "Potter and ceramicist"
+  },
+  17 : {
+        id: 17,
+        name: "Singer"
+  },
+  18 : {
+        id: 18,
+        name: "Bard"
+  },
+  19 : {
+        id: 19,
+        name: "Contortionist"
   }
  },
- allIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
- regularIds : [ 3, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
+ allIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ],
+ regularIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ],
  rogueIds : [ 3 ]
 }
 
