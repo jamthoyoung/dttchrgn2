@@ -1,5 +1,5 @@
 import React from 'react';
-import { Panel, Row, Col } from 'react-bootstrap';
+import { FormGroup, ControlLabel, Panel, Row, Col } from 'react-bootstrap';
 import Multiselect from 'react-bootstrap-multiselect';
 
 class Talents extends React.Component {
@@ -15,17 +15,12 @@ class Talents extends React.Component {
    }
   }
 
-  render(){
+  render() {
     return (
-     <div>
-     <Panel header="Talents">
-      <Row>
-        <Col xs={12} sm={6}>
-          <Multiselect ref="multiRef" onChange={this.handleMulti} data={this.props.multiselectitems} multiple/>
-        </Col>
-      </Row>
-     </Panel>
-     </div>
+      <FormGroup controlId="FormGroupTalents">
+        <ControlLabel>Talents</ControlLabel>
+        <Multiselect ref="multiRef" onChange={this.handleMulti} data={this.props.multiselectitems} multiple/>
+      </FormGroup>
     );
   }
 }
