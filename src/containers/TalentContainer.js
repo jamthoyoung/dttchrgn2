@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Talents from '../component/TalentsMultiselect.js';
 import { selectTalents } from '../actions';
 
-const getGroups = (talentlist) => {
+const getGroups = (talentlist, chartalents) => {
   let result =  talentlist.allGroups.map(function(gid){
     var group = {};
     group.label = talentlist.groups[gid].name;
@@ -10,6 +10,9 @@ const getGroups = (talentlist) => {
       var talent = {};
       talent.value = id;
       talent.label = talentlist.byId[id].name;
+      if(chartalents.includes(id)){
+        talent.selected = true;
+      }
       return talent;
     });
     return group;
@@ -19,7 +22,7 @@ const getGroups = (talentlist) => {
 
 const mapStateToProps = (store) => {
  return {
-  multiselectitems: getGroups(store.talentlist),
+  multiselectitems: getGroups(store.talentlist, store.character.talents),
   talents: store.character.talents,
   talentlist: store.talentlist
  };
@@ -28,6 +31,7 @@ const mapStateToProps = (store) => {
 const mapDispatchToProps = (dispatch) => {
  return {
   selectTalents: (talentIds) => {
+    console.log(talentIds);
    dispatch(selectTalents(talentIds));
   }
  }
