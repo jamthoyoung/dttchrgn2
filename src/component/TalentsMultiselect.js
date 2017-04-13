@@ -13,7 +13,13 @@ class Talents extends React.Component {
    this.state = {
      showModal : false
    };
-   this.handleMulti = () => console.log('multiselect handled');
+   this.handleMulti = (e) => {
+     console.log('multiselect handled:');
+     let selected = [...this.refs.multiRef]
+      .filter(option => option.selected)
+      .map(option => option.value)
+    console.log('multiselect handled:' + selected);
+   }
   }
   closeModal(){
    this.setState({ showModal : false });
@@ -69,7 +75,7 @@ class Talents extends React.Component {
      <Panel header={pheader}>
       <Row>
         <Col xs={12} sm={6}>
-          <Multiselect onChange={this.handleMulti} data={this.props.multiselectitems} multiple/>
+          <Multiselect ref="multiRef" onChange={this.handleMulti} data={this.props.multiselectitems} multiple/>
         </Col>
       {this.props.talents.map(function(t,i){
        return <Col key={i} xs={12} sm={6}>
