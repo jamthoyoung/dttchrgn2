@@ -4,20 +4,12 @@ import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 class Talents extends React.Component {
   constructor(props) {
    super(props);
-   this.closeModal =  this.closeModal.bind(this);
-   this.openModal =  this.openModal.bind(this);
    this.onChange =  this.onChange.bind(this);
    this.getSelectValues = this.getSelectValues.bind(this);
    this.compareTalents = this.compareTalents.bind(this);
    this.state = { showModal : false };
  }
 
-  closeModal(){
-   this.setState({ showModal : false });
-  }
-  openModal(){
-   this.setState({ showModal : true });
-  }
   onChange(e){
     //console.log("Talent.onChange() " + e.target.value + "" + e.target.selectedOptions.toString())
     console.log("Talent.onChange() " + this.getSelectValues(e.target));
@@ -32,7 +24,6 @@ class Talents extends React.Component {
 
     for (var i=0, iLen=options.length; i<iLen; i++) {
       opt = options[i];
-
       if (opt.selected) {
         result.push(opt.value || opt.text);
       }
