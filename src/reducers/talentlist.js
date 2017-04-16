@@ -382,6 +382,101 @@ const initialState =
         id: 76,
         group: 15,
         name: "Writer"
+  },
+  77 : {
+        id: 77,
+        group: 16,
+        name: "Ancient tongues"
+  },
+  78 : {
+        id: 78,
+        group: 16,
+        name: "Codes, ciphers, and secret writing"
+  },
+  79 : {
+        id: 79,
+        group: 16,
+        name: "Translator"
+  },
+  80 : {
+        id: 80,
+        group: 16,
+        name: "Rhetoric"
+  },
+  81 : {
+        id: 81,
+        group: 17,
+        name: "Judge"
+  },
+  82 : {
+        id: 82,
+        group: 17,
+        name: "Lawyer"
+  },
+  83 : {
+        id: 83,
+        group: 18,
+        name: "Leadership"
+  },
+  84 : {
+        id: 84,
+        group: 18,
+        name: "Seduction"
+  },
+  85 : {
+        id: 85,
+        group: 19,
+        name: "Deep-water fishing"
+  },
+  86 : {
+        id: 86,
+        group: 19,
+        name: "Canoeing or kayaking"
+  },
+  87 : {
+        id: 87,
+        group: 19,
+        name: "Navigation, piloting"
+  },
+  88 : {
+        id: 88,
+        group: 19,
+        name: "Sailing"
+  },
+  89 : {
+        id: 89,
+        group: 19,
+        name: "Knot tying"
+  },
+  90 : {
+        id: 90,
+        group: 20,
+        name: "Accounting, bookkeeping"
+  },
+  91 : {
+        id: 91,
+        group: 20,
+        name: "Astrology"
+  },
+  92 : {
+        id: 92,
+        group: 20,
+        name: "Astronomy"
+  },
+  93 : {
+        id: 93,
+        group: 20,
+        name: "Gambling"
+  },
+  94 : {
+        id: 94,
+        group: 20,
+        name: "Practical arithmetic"
+  },
+  95 : {
+        id: 95,
+        group: 20,
+        name: "Theoretical math"
   }
  },
  groups: {
@@ -462,27 +557,27 @@ const initialState =
    },
    16: {
      id: 16,
-     talentIds: [],
+     talentIds: [77, 78, 79, 80],
      name: "Language Profiency"
    },
    17: {
      id: 17,
-     talentIds: [],
+     talentIds: [81, 82],
      name: "Bureaucrat"
    },
    18: {
      id: 18,
-     talentIds: [],
+     talentIds: [83, 84],
      name: "Persuasion"
    },
    19: {
      id: 19,
-     talentIds: [],
+     talentIds: [85, 86, 87, 88, 89],
      name: "Marine Knowledge"
    },
    20: {
      id: 20,
-     talentIds: [],
+     talentIds: [90, 91, 92, 93, 94, 95],
      name: "Mathematics"
    },
    21: {
@@ -519,10 +614,12 @@ const initialState =
  allGroups: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
  allIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
             30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57,
-            58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
+            58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85,
+            86, 87, 88, 89, 90, 91, 92, 93, 94, 95],
  regularIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29,
             30, 31, 32, 33, 34, 35, 36, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58,
-            59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
+            59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86,
+            87, 88, 89, 90, 91, 92, 93, 94, 95],
  rogueIds : [ 22, 37 ]
 }
 
