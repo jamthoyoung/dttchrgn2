@@ -16,22 +16,22 @@ const initialState =
   3 : {
         id: 3,
         group: 1,
-        name: "Specific Anatomy"
+        name: "Specific anatomy"
   },
   4 : {
         id: 4,
         group: 2,
-        name: "Animal Husbandry"
+        name: "Animal husbandry"
   },
   5 : {
         id: 5,
         group: 2,
-        name: "Horsemanship or Riding"
+        name: "Horsemanship or riding"
   },
   6 : {
         id: 6,
         group: 2,
-        name: "Hunting and Tracking"
+        name: "Hunting and tracking"
   },
   7 : {
         id: 7,
@@ -121,7 +121,7 @@ const initialState =
   24 : {
         id: 24,
         group: 4,
-        name: "Martial Artist"
+        name: "Martial artist"
   },
   25 : {
         id: 25,
@@ -206,7 +206,7 @@ const initialState =
   41 : {
         id: 41,
         group: 9,
-        name: "Candy Maker"
+        name: "Candy maker"
   },
   42 : {
         id: 42,
@@ -236,12 +236,12 @@ const initialState =
   47 : {
         id: 47,
         group: 9,
-        name: "Jewelry Maker"
+        name: "Jewelry maker"
   },
   48 : {
         id: 48,
         group: 9,
-        name: "Leather Worker"
+        name: "Leather worker"
   },
   49 : {
         id: 49,
@@ -262,6 +262,126 @@ const initialState =
         id: 52,
         group: 9,
         name: "Swordsmith"
+  },
+  53 : {
+        id: 53,
+        group: 10,
+        name: "Diplomat"
+  },
+  54 : {
+        id: 54,
+        group: 10,
+        name: "Species-specific lore"
+  },
+  55 : {
+        id: 55,
+        group: 10,
+        name: "Historian"
+  },
+  56 : {
+        id: 56,
+        group: 10,
+        name: "Literature"
+  },
+  57 : {
+        id: 57,
+        group: 10,
+        name: "Poet"
+  },
+  58 : {
+        id: 58,
+        group: 10,
+        name: "Social adept"
+  },
+  59 : {
+        id: 59,
+        group: 11,
+        name: "Knowledge of rites and rituals"
+  },
+  60 : {
+        id: 60,
+        group: 11,
+        name: "Mental discipline"
+  },
+  61 : {
+        id: 61,
+        group: 12,
+        name: "Archer"
+  },
+  62 : {
+        id: 62,
+        group: 12,
+        name: "Sharpshooter"
+  },
+  63 : {
+        id: 63,
+        group: 12,
+        name: "Swordsman"
+  },
+  64 : {
+        id: 64,
+        group: 13,
+        name: "Miner"
+  },
+  65 : {
+        id: 65,
+        group: 14,
+        name: "Bargaining, bartering"
+  },
+  66 : {
+        id: 66,
+        group: 14,
+        name: "Streetwise"
+  },
+  67 : {
+        id: 67,
+        group: 14,
+        name: "Merchant"
+  },
+  68 : {
+        id: 68,
+        group: 15,
+        name: "Historian (specific)"
+  },
+  69 : {
+        id: 69,
+        group: 15,
+        name: "Librarian"
+  },
+  70 : {
+        id: 70,
+        group: 15,
+        name: "Intellectual"
+  },
+  71 : {
+        id: 71,
+        group: 15,
+        name: "Literate, well-read"
+  },
+  72 : {
+        id: 72,
+        group: 15,
+        name: "Philosopher"
+  },
+  73 : {
+        id: 73,
+        group: 15,
+        name: "Playwright"
+  },
+  74 : {
+        id: 74,
+        group: 15,
+        name: "Poet"
+  },
+  75 : {
+        id: 75,
+        group: 15,
+        name: "Storytelling"
+  },
+  76 : {
+        id: 76,
+        group: 15,
+        name: "Writer"
   }
  },
  groups: {
@@ -312,32 +432,32 @@ const initialState =
    },
    10: {
      id: 10,
-     talentIds: [],
+     talentIds: [53, 54, 55, 56, 57, 58],
      name: "Culture Knowledge"
    },
    11: {
      id: 11,
-     talentIds: [],
+     talentIds: [59, 60],
      name: "Comparative Religion"
    },
    12: {
      id: 12,
-     talentIds: [],
+     talentIds: [61, 62, 63],
      name: "Exceptional Use Of Weapons"
    },
    13: {
      id: 13,
-     talentIds: [],
+     talentIds: [64],
      name: "Geology, Earth Sciences"
    },
    14: {
      id: 14,
-     talentIds: [],
+     talentIds: [65, 66, 67],
      name: "Daily Life Skills"
    },
    15: {
      id: 15,
-     talentIds: [],
+     talentIds: [68, 69, 70, 71, 72, 73, 74, 75, 76],
      name: "History"
    },
    16: {
@@ -398,9 +518,11 @@ const initialState =
  },
  allGroups: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
  allIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
-            30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52],
+            30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57,
+            58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
  regularIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29,
-            30, 31, 32, 33, 34, 35, 36, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52],
+            30, 31, 32, 33, 34, 35, 36, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58,
+            59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
  rogueIds : [ 22, 37 ]
 }
 
