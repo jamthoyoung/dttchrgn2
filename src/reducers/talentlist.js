@@ -197,6 +197,71 @@ const initialState =
         id: 39,
         group: 8,
         name: "Healer"
+  },
+  40 : {
+        id: 40,
+        group: 9,
+        name: "Brewer"
+  },
+  41 : {
+        id: 41,
+        group: 9,
+        name: "Candy Maker"
+  },
+  42 : {
+        id: 42,
+        group: 9,
+        name: "Tailer"
+  },
+  43 : {
+        id: 43,
+        group: 9,
+        name: "Weaver"
+  },
+  44 : {
+        id: 44,
+        group: 9,
+        name: "Cook"
+  },
+  45 : {
+        id: 45,
+        group: 9,
+        name: "Farmer"
+  },
+  46 : {
+        id: 46,
+        group: 9,
+        name: "Tinker"
+  },
+  47 : {
+        id: 47,
+        group: 9,
+        name: "Jewelry Maker"
+  },
+  48 : {
+        id: 48,
+        group: 9,
+        name: "Leather Worker"
+  },
+  49 : {
+        id: 49,
+        group: 9,
+        name: "Armorer"
+  },
+  50 : {
+        id: 50,
+        group: 9,
+        name: "Blacksmith"
+  },
+  51 : {
+        id: 51,
+        group: 9,
+        name: "Farrier"
+  },
+  52 : {
+        id: 52,
+        group: 9,
+        name: "Swordsmith"
   }
  },
  groups: {
@@ -242,7 +307,7 @@ const initialState =
    },
    9: {
      id: 9,
-     talentIds: [],
+     talentIds: [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52],
      name: "Crafts"
    },
    10: {
@@ -333,9 +398,9 @@ const initialState =
  },
  allGroups: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
  allIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
-            30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+            30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52],
  regularIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29,
-            30, 31, 32, 33, 34, 35, 36, 38, 39],
+            30, 31, 32, 33, 34, 35, 36, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52],
  rogueIds : [ 22, 37 ]
 }
 
