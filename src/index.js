@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import 'react-dropzone-component/styles/filepicker.css';
 import 'dropzone/dist/min/dropzone.min.css';
-import './bootstrap-multiselect.css';
+//import 'react-bootstrap-multiselect/css/bootstrap-multiselect.css';
 import './custom.css';
 
 import characterApp from './reducers';

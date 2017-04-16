@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Talents from '../component/TalentsMultiselect.js';
+import Talents from '../component/Talents.js';
 import { selectTalents } from '../actions';
 
 const getGroups = (talentlist, chartalents) => {

@@ -10,7 +10,8 @@ class Talents extends React.Component {
    this.getSelectValues = this.getSelectValues.bind(this);
    this.compareTalents = this.compareTalents.bind(this);
    this.state = { showModal : false };
-  }
+ }
+
   closeModal(){
    this.setState({ showModal : false });
   }
@@ -49,7 +50,9 @@ class Talents extends React.Component {
     }
   }
 
+
   render(){
+    console.log('Rerender with talents:' + this.props.talents.toString());
     var pheader = (
       <Row>
        <Col xs={9}>Talents</Col>
@@ -59,6 +62,18 @@ class Talents extends React.Component {
          </Button>
        </Col>
       </Row>
+    );
+    var opts = (
+      this.props.talentlist.allGroups.map(function(gid,gi){
+        return <optgroup label={this.props.talentlist.groups[gid].name} key={gi}>
+          {
+            this.props.talentlist.groups[gid].talentIds.map(function(tid,id){
+              console.log('tid:'+tid+' talents:' + this.props.talents + 'selected:' + this.props.talents.includes(tid));
+              return <option label={this.props.talentlist.byId[tid].name} key={id}>{tid}</option>
+            }, this)
+          }
+        </optgroup>
+      },this)
     );
     return (
      <div>
@@ -78,12 +93,8 @@ class Talents extends React.Component {
       <Modal.Body>
         <FormGroup controlId="formControlSelectTalents">
           <ControlLabel>Talents</ControlLabel>
-          <FormControl componentClass="select" multiple value={this.props.talents} onChange={this.onChange}>
-          {this.props.talentlist.regularIds.sort(this.compareTalents).map(function(t,i){
-            return <option value={t} key={i}>
-                    {this.props.talentlist.byId[t].name}
-                   </option>
-          }, this)}
+          <FormControl componentClass="select" multiple onChange={this.onChange} value={this.props.talents}>
+          {opts}
           </FormControl>
         </FormGroup>
       </Modal.Body>
