@@ -182,6 +182,21 @@ const initialState =
         id: 36,
         group: 6,
         name: "Shipbuilder"
+  },
+  37 : {
+        id: 37,
+        group: 7,
+        name: "Cleverness"
+  },
+  38 : {
+        id: 38,
+        group: 8,
+        name: "Poisoner"
+  },
+  39 : {
+        id: 39,
+        group: 8,
+        name: "Healer"
   }
  },
  groups: {
@@ -214,14 +229,114 @@ const initialState =
      id: 6,
      talentIds: [33, 34, 35, 36],
      name: "Botany, Knowledge of Plants"
+   },
+   7: {
+     id: 7,
+     talentIds: [37],
+     name: "Cleverness (IQ)"
+   },
+   8: {
+     id: 8,
+     talentIds: [38, 39],
+     name: "Medicine"
+   },
+   9: {
+     id: 9,
+     talentIds: [],
+     name: "Crafts"
+   },
+   10: {
+     id: 10,
+     talentIds: [],
+     name: "Culture Knowledge"
+   },
+   11: {
+     id: 11,
+     talentIds: [],
+     name: "Comparative Religion"
+   },
+   12: {
+     id: 12,
+     talentIds: [],
+     name: "Exceptional Use Of Weapons"
+   },
+   13: {
+     id: 13,
+     talentIds: [],
+     name: "Geology, Earth Sciences"
+   },
+   14: {
+     id: 14,
+     talentIds: [],
+     name: "Daily Life Skills"
+   },
+   15: {
+     id: 15,
+     talentIds: [],
+     name: "History"
+   },
+   16: {
+     id: 16,
+     talentIds: [],
+     name: "Language Profiency"
+   },
+   17: {
+     id: 17,
+     talentIds: [],
+     name: "Bureaucrat"
+   },
+   18: {
+     id: 18,
+     talentIds: [],
+     name: "Persuasion"
+   },
+   19: {
+     id: 19,
+     talentIds: [],
+     name: "Marine Knowledge"
+   },
+   20: {
+     id: 20,
+     talentIds: [],
+     name: "Mathematics"
+   },
+   21: {
+     id: 21,
+     talentIds: [],
+     name: "Mechanics"
+   },
+   22: {
+     id: 22,
+     talentIds: [],
+     name: "Leadership"
+   },
+   23: {
+     id: 23,
+     talentIds: [],
+     name: "Resilience"
+   },
+   24: {
+     id: 24,
+     talentIds: [],
+     name: "Scientist, Investigator"
+   },
+   25: {
+     id: 25,
+     talentIds: [],
+     name: "Subtlety, Roguery, Thievery"
+   },
+   26: {
+     id: 26,
+     talentIds: [],
+     name: "Wilderness Skills, Outdoormanship"
    }
  },
- allGroups: [ 1, 2, 3, 4, 5, 6],
+ allGroups: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
  allIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
-            30, 31, 32, 33, 34, 35, 36],
+            30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
  regularIds : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29,
-            30, 31, 32, 33, 34, 35, 36],
- rogueIds : [ 22 ]
+            30, 31, 32, 33, 34, 35, 36, 38, 39],
+ rogueIds : [ 22, 37 ]
 }
 
 export default function talentlist(state = initialState, action){
