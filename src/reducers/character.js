@@ -11,7 +11,7 @@ const initialState =
     "id":0,
     "name":"None"
   },
-  "talents":[ 1, 3],
+  "talents":[ 1 ],
   "attributes" : {
     str : [ -1, 0, 1 ],
     con : [ -1, 0, 1 ],
