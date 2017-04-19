@@ -131,9 +131,13 @@ class PrintScreen extends React.Component {
       doc.setFontSize(6);
       doc.myText('Specialized', { align: 'center'}, 223, 521);
     }
+    console.log('Writing text "' + this.props.talents.toString() + '" to pdf.');
+    doc.text(362, 326, this.props.talents.toString());
+
     doc.setFontSize(18)
     doc.myText('' + this.props.personalAdds, { align: 'center'}, 145, 586);
     doc.text(130, 642, '' + this.props.str * 100);
+
     console.log('About to save');
     doc.save("character.pdf");
   }

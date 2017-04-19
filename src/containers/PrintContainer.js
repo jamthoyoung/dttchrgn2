@@ -27,6 +27,7 @@ const mapStateToProps = (store) => {
   chr: attrvalue(store.character.attributes.chr, store.kindredlist.byId[store.character.kindred].chrmod),
   isChrSpecialized: (store.character.attributes.chr.length > 3),
   kindred: store.kindredlist.byId[store.character.kindred],
+  talents: store.talentlist.byId[store.character.talents].name,
   personalAdds: getPersonalAdds(store.character.attributes,store.kindredlist.byId[store.character.kindred])
  };
 }
