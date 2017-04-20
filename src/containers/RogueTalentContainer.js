@@ -6,6 +6,8 @@ const mapStateToProps = (store) => {
  return {
   groupArray: store.talentlist.rogueGroups,
   talentArray: store.talentlist.rogueIds,
+  selectProps: { multiple: true },
+  isMultiple: true,
   fieldlabel: 'Rogue Talents',
   talents: store.character.rogueTalents,
   talentlist: store.talentlist

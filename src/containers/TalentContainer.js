@@ -6,6 +6,8 @@ const mapStateToProps = (store) => {
  return {
   groupArray: store.talentlist.allGroups,
   talentArray: store.talentlist.allIds,
+  selectProps: { },
+  isMultiple: false,
   fieldlabel: 'Talent',
   talents: store.character.talents,
   talentlist: store.talentlist
