@@ -58,6 +58,7 @@ class Talents extends React.Component {
         return <optgroup label={this.props.talentlist.groups[gid].name} key={gi}>
           {
             this.props.talentlist.groups[gid].talentIds.sort(this.compareTalents).map(function(tid,id){
+              if(this.props.talentArray.includes(tid))
               return <option label={this.props.talentlist.byId[tid].name} key={id}>{tid}</option>
             }, this)
           }

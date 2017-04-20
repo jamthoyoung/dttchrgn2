@@ -4,7 +4,8 @@ import { selectRogueTalents } from '../actions';
 
 const mapStateToProps = (store) => {
  return {
-   groupArray: store.talentlist.rogueGroups,
+  groupArray: store.talentlist.rogueGroups,
+  talentArray: store.talentlist.rogueIds,
   fieldlabel: 'Rogue Talents',
   talents: store.character.rogueTalents,
   talentlist: store.talentlist
