@@ -6,12 +6,12 @@ class Talents extends React.Component {
    super(props);
    this.onChange =  this.onChange.bind(this);
    this.getSelectValues = this.getSelectValues.bind(this);
+   this.compareGroups = this.compareGroups.bind(this);
    this.compareTalents = this.compareTalents.bind(this);
    this.state = { showModal : false };
  }
 
   onChange(e){
-    //console.log("Talent.onChange() " + e.target.value + "" + e.target.selectedOptions.toString())
     console.log("Talent.onChange() " + this.getSelectValues(e.target));
     this.props.selectTalents(this.getSelectValues(e.target));
   }
@@ -41,13 +41,23 @@ class Talents extends React.Component {
     }
   }
 
+  compareGroups(a,b){
+    if(this.props.talentlist.groups[a].name < this.props.talentlist.groups[b].name){
+      return -1;
+    } else if (this.props.talentlist.groups[a].name > this.props.talentlist.groups[b].name){
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+
 
   render(){
     var opts = (
-      this.props.talentlist.allGroups.map(function(gid,gi){
+      this.props.groupArray.sort(this.compareGroups).map(function(gid,gi){
         return <optgroup label={this.props.talentlist.groups[gid].name} key={gi}>
           {
-            this.props.talentlist.groups[gid].talentIds.map(function(tid,id){
+            this.props.talentlist.groups[gid].talentIds.sort(this.compareTalents).map(function(tid,id){
               return <option label={this.props.talentlist.byId[tid].name} key={id}>{tid}</option>
             }, this)
           }
@@ -56,7 +66,7 @@ class Talents extends React.Component {
     );
     return (
         <FormGroup controlId="formControlSelectTalents">
-          <ControlLabel>Talent</ControlLabel>
+          <ControlLabel>{this.props.fieldlabel}</ControlLabel>
           <FormControl componentClass="select" onChange={this.onChange} value={this.props.talents}>
           {opts}
           </FormControl>

@@ -1,4 +1,4 @@
-import { SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE, UPDATE_AGE, UPDATE_HAIR, UPDATE_NAME,
+import { SELECT_TALENTS, SELECT_ROGUE_TALENTS, SELECT_KINDRED, REROLL_DICE, UPDATE_AGE, UPDATE_HAIR, UPDATE_NAME,
   UPDATE_BASE64_PORTRAIT, SELECT_GENDER, SELECT_CLASS } from '../constants/ActionTypes';
 
 const initialState =
@@ -12,6 +12,7 @@ const initialState =
     "name":"None"
   },
   "talents":[ 1 ],
+  "rougueTalents":[ ],
   "attributes" : {
     str : [ -1, 0, 1 ],
     con : [ -1, 0, 1 ],
@@ -58,10 +59,15 @@ export default function character(state = initialState, action){
      kindred: action.id
    }
   case SELECT_TALENTS:
-   return {
-     ...state,
-     talents: action.payload
-   }
+    return {
+      ...state,
+      talents: action.payload
+    }
+  case SELECT_ROGUE_TALENTS:
+     return {
+       ...state,
+       rogueTalents: action.payload
+     }
   case SELECT_CLASS:
    return {
      ...state,

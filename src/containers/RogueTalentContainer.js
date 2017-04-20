@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import Talents from '../component/Talents.js';
-import { selectTalents } from '../actions';
+import { selectRogueTalents } from '../actions';
 
 const mapStateToProps = (store) => {
  return {
-   groupArray: store.talentlist.allGroups,
-  fieldlabel: 'Talent',
-  talents: store.character.talents,
+   groupArray: store.talentlist.rogueGroups,
+  fieldlabel: 'Rogue Talents',
+  talents: store.character.rogueTalents,
   talentlist: store.talentlist
  };
 }
@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch) => {
  return {
   selectTalents: (talentIds) => {
     console.log(talentIds);
-   dispatch(selectTalents(talentIds));
+   dispatch(selectRogueTalents(talentIds));
   }
  }
 }

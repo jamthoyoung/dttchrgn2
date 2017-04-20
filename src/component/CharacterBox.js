@@ -17,6 +17,7 @@ import PrintContainer from '../containers/PrintContainer.js'
 import Trademark from './Trademark.js'
 import PortraitContainer from '../containers/PortraitContainer.js'
 import TalentContainer from '../containers/TalentContainer.js'
+import RogueTalentContainer from '../containers/RogueTalentContainer.js'
 
 class CharacterBox extends React.Component {
   render(){
