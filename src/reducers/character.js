@@ -12,7 +12,7 @@ const initialState =
     "name":"None"
   },
   "talents":[ 1 ],
-  "rougueTalents":[ ],
+  "rogueTalents":[ ],
   "attributes" : {
     str : [ -1, 0, 1 ],
     con : [ -1, 0, 1 ],

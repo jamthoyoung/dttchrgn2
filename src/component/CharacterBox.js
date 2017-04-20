@@ -56,6 +56,9 @@ class CharacterBox extends React.Component {
             <TalentContainer />
           </Col>
           <Col xs={12} sm={6} md={4}>
+            <RogueTalentContainer />
+          </Col>
+          <Col xs={12} sm={6} md={4}>
             <RerollContainer />
           </Col>
           </Row>
