@@ -71,7 +71,8 @@ export default function character(state = initialState, action){
   case SELECT_CLASS:
    return {
      ...state,
-     class: action.class
+     class: action.class,
+     rogueTalents: []
    }
   case UPDATE_AGE:
     return {

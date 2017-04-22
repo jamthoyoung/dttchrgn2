@@ -4,11 +4,12 @@ import { selectRogueTalents } from '../actions';
 import { getLevel } from '../util/character.js';
 
 const mapStateToProps = (store) => {
+ let totalTalents = store.character.class === "Rogue" ? Math.floor(getLevel(store.character.attributes, store.kindredlist.byId[store.character.kindred])/2) : 0;
  return {
-  numTalents: Math.floor(getLevel(store.character.attributes, store.kindredlist.byId[store.character.kindred])/2),
+  numTalents: totalTalents,
   groupArray: store.talentlist.rogueGroups,
   talentArray: store.talentlist.rogueIds,
-  selectProps: { multiple: true },
+  selectProps: { multiple: (totalTalents > 1), disabled: (store.character.class !== "Rogue") },
   fieldlabel: 'Rogue Talents',
   talents: store.character.rogueTalents,
   talentlist: store.talentlist
