@@ -6,8 +6,7 @@ const mapStateToProps = (store) => {
  return {
   groupArray: store.talentlist.allGroups,
   talentArray: store.talentlist.allIds,
-  selectProps: { },
-  isMultiple: false,
+  selectProps: { multiple: true },
   fieldlabel: 'Talent',
   talents: store.character.talents,
   talentlist: store.talentlist
@@ -17,7 +16,6 @@ const mapStateToProps = (store) => {
 const mapDispatchToProps = (dispatch) => {
  return {
   selectTalents: (talentIds) => {
-    console.log(talentIds);
    dispatch(selectTalents(talentIds));
   }
  }
