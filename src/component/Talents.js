@@ -69,7 +69,7 @@ class Talents extends React.Component {
     );
     return (
         <FormGroup controlId="formControlSelectTalents">
-          <ControlLabel>{this.props.fieldlabel}</ControlLabel>
+          <ControlLabel>{this.props.fieldlabel} - select {this.props.numTalents}</ControlLabel>
             <FormControl componentClass="select" {...this.props.selectProps} onChange={this.onChange} value={this.props.talents}>
                 {opts}
             </FormControl>

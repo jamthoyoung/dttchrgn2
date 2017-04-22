@@ -4,10 +4,11 @@ import { selectTalents } from '../actions';
 
 const mapStateToProps = (store) => {
  return {
+  numTalents: store.character.class === "Rogue" ? 2 : 1,
   groupArray: store.talentlist.allGroups,
   talentArray: store.talentlist.allIds,
   selectProps: { multiple: true },
-  fieldlabel: 'Talent',
+  fieldlabel: 'Talents',
   talents: store.character.talents,
   talentlist: store.talentlist
  };
