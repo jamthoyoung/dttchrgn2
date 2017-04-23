@@ -13,7 +13,7 @@ import './custom.css';
 import characterApp from './reducers';
 
 const store = createStore(characterApp
- ,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+ /* ,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() */ 
 );
 
 ReactDOM.render(
