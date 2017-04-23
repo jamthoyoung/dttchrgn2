@@ -130,9 +130,12 @@ class PrintScreen extends React.Component {
     if(this.props.isChrSpecialized){
       doc.setFontSize(6);
       doc.myText('Specialized', { align: 'center'}, 223, 521);
+      doc.setFontSize(14);
     }
     console.log('Writing text "' + this.props.talents.toString() + '" to pdf.');
-    doc.text(362, 326, this.props.talents.toString());
+    for(let i = 0; i < this.props.talents.length; i++){
+      doc.text(362, 326 + (i*22), this.props.talents[i]);
+    }
 
     doc.setFontSize(18)
     doc.myText('' + this.props.personalAdds, { align: 'center'}, 145, 586);
@@ -143,7 +146,11 @@ class PrintScreen extends React.Component {
   }
 
   doPDF = () => {
+    if (this.props.errors.length === 0){
       this.toDataUrl('assets/tt-character-sheet.jpg', this.performJsPdf );
+    } else {
+      alert(this.props.errors.toString());
+    }
   }
 
   render(){

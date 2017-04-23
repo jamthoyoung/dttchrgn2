@@ -2,8 +2,29 @@ import { connect } from 'react-redux';
 import PrintScreen from '../component/PrintScreen.js';
 import { weightLbs, heightFeet, getLevel, attrvalue, getPersonalAdds } from '../util/character.js';
 
+const getErrors = (store) => {
+  let errors = [];
+  let requiredTalents = store.character.class === "Rogue" ? 2 : 1;
+  if(store.character.talents.length !== requiredTalents){
+    errors.push("Please select " + requiredTalents + " talent(s). You have only selected " + store.character.talents.length + ".")
+  }
+  return errors;
+}
+
+const getTalentNames = (store) => {
+  let names = [];
+  for (let i = 0; i < store.character.talents.length; i++){
+    names.push(store.talentlist.byId[store.character.talents[i]].name);
+  }
+  for (let i = 0; i < store.character.rogueTalents.length; i++){
+    names.push(store.talentlist.byId[store.character.rogueTalents[i]].name);
+  }
+  return names;
+}
+
 const mapStateToProps = (store) => {
  return {
+  errors: getErrors(store),
   character: store.character,
   height: heightFeet(store.character.height,
       store.kindredlist.byId[store.character.kindred].heightmod),
@@ -27,7 +48,7 @@ const mapStateToProps = (store) => {
   chr: attrvalue(store.character.attributes.chr, store.kindredlist.byId[store.character.kindred].chrmod),
   isChrSpecialized: (store.character.attributes.chr.length > 3),
   kindred: store.kindredlist.byId[store.character.kindred],
-  talents: store.talentlist.byId[store.character.talents].name,
+  talents: getTalentNames(store),
   personalAdds: getPersonalAdds(store.character.attributes,store.kindredlist.byId[store.character.kindred])
  };
 }
