@@ -9,7 +9,7 @@ const mapStateToProps = (store) => {
   numTalents: totalTalents,
   groupArray: store.talentlist.rogueGroups,
   talentArray: store.talentlist.rogueIds,
-  selectProps: { multiple: (totalTalents > 1), disabled: (store.character.class !== "Rogue") },
+  selectProps: { multiple: (totalTalents > 1), disabled: (store.character.class !== "Rogue" || totalTalents < 1) },
   fieldlabel: 'Rogue Talents',
   talents: store.character.rogueTalents,
   talentlist: store.talentlist

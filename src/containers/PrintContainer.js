@@ -8,6 +8,12 @@ const getErrors = (store) => {
   if(store.character.talents.length !== requiredTalents){
     errors.push("Please select " + requiredTalents + " talent(s). You have only selected " + store.character.talents.length + ".")
   }
+
+  let requiredRogueTalents = store.character.class === "Rogue" ? Math.floor(getLevel(store.character.attributes, store.kindredlist.byId[store.character.kindred])/2) : 0;
+  if(store.character.rogueTalents.length !== requiredRogueTalents){
+    errors.push("Please select " + requiredRogueTalents + " rogue talent(s). You have only selected " + store.character.rogueTalents.length + ".")
+  }
+
   return errors;
 }
 
