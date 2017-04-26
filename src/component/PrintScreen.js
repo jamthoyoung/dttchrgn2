@@ -1,6 +1,6 @@
 import React from 'react';
 import jsPDF from 'jspdf';
-import { Button } from 'react-bootstrap';
+import { Button, Modal, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 (function(API){
     API.myText = function(txt, options, x, y) {
@@ -36,6 +36,10 @@ import { Button } from 'react-bootstrap';
 })(jsPDF.API);
 
 class PrintScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {showModal: false};
+  }
 
   toDataUrl = (url, callback) => {
     var xhr = new XMLHttpRequest();
@@ -149,14 +153,38 @@ class PrintScreen extends React.Component {
     if (this.props.errors.length === 0){
       this.toDataUrl('assets/tt-character-sheet.jpg', this.performJsPdf );
     } else {
-      alert(this.props.errors.toString());
+      this.open();
     }
+  }
+
+  close =() => {
+    this.setState({showModal: false})
+  }
+  open =() => {
+    this.setState({showModal: true})
   }
 
   render(){
     return (
       <div>
           <Button id="printButton" onClick={() => {this.doPDF()}}>Generate Character Sheet</Button>
+          <Modal show={this.state.showModal} bsSize="large" aria-labelledby="contained-modal-title-lg">
+            <Modal.Header closeButton>
+              <Modal.Title id="contained-modal-title-lg">Errors</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <ListGroup>
+                {
+                  this.props.errors.map(function(value,index){
+                    return <ListGroupItem bsStyle="danger">{value}</ListGroupItem>
+                  })
+                }
+              </ListGroup>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button onClick={this.close}>Close</Button>
+            </Modal.Footer>
+          </Modal>
       </div>
     );
   }
