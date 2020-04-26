@@ -1,5 +1,5 @@
 import shortid from 'shortid';
-import { ADD_TALENT, UPDATE_TALENT, DELETE_TALENT, SELECT_TALENTS, SELECT_KINDRED, REROLL_DICE,
+import { ADD_TALENT, UPDATE_TALENT, DELETE_TALENT, SELECT_TALENTS, SELECT_ROGUE_TALENTS, SELECT_KINDRED, REROLL_DICE,
   UPDATE_AGE, UPDATE_HAIR, UPDATE_NAME, SELECT_GENDER, SELECT_CLASS, UPDATE_BASE64_PORTRAIT } from '../constants/ActionTypes';
 
 export const addTalent = (text, isRogue) => {
@@ -37,6 +37,13 @@ export const selectKindred = (id) => {
 export const selectTalents = (payload) => {
  return {
   type: SELECT_TALENTS,
+  payload: payload
+ };
+}
+
+export const selectRogueTalents = (payload) => {
+ return {
+  type: SELECT_ROGUE_TALENTS,
   payload: payload
  };
 }
